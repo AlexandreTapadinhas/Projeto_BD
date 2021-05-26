@@ -1,0 +1,26 @@
+create table leilao  (
+   	ID_Leilao             	VARCHAR(20)                     not null,
+	Inicio                 	VARCHAR(20)                     not null,
+   	Fim                	VARCHAR(20)                     not null,
+   constraint PK_LEILAO primary key (ID_Leilao)
+);
+
+create table artigo  (
+   	ID_Artigo             	VARCHAR(20)                     not null,
+	ID_Leilao               VARCHAR(20)                     not null,
+	Inicio                 	VARCHAR(20)                     not null,
+   	Fim                		VARCHAR(20)                     not null,
+   constraint PK_ARTIGO primary key (ID_Artigo)
+);
+
+create table Utilizador  (
+   ID_Utilizador             NUMERIC(20)                     not null,
+   NOME                 VARCHAR(20)                     not null,
+   IDADE                NUMERIC(3),
+   MORADA               VARCHAR(50),
+   GENERO               VARCHAR(20),
+   NACIONALIDADE        VARCHAR(10),
+   SEXO                 CHAR(1),
+   TELEFONE             VARCHAR(15),
+   constraint PK_UTILIZADOR primary key (ID_Utilizador)
+);
