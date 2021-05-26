@@ -14,7 +14,7 @@ def getConnection():
     host = "localhost",
     database = "projeto",
     user = "postgres",
-    password = "django500",
+    password = "bd2021",
     port = 5432)
     return con
 
