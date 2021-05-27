@@ -17,6 +17,7 @@
 
  
 from flask import Flask, jsonify, request
+from datetime import datetime
 import logging, psycopg2, time
 import random
 
@@ -208,6 +209,13 @@ def update_departments():
 def geraRandom():
     return random.randint(1,2500)
 
+
+def geraId():
+    now = datetime.now()
+    dt_string = now.strftime("%d%m-%H%M%S")
+    return dt_string
+
+
 @app.route("/utilizador/", methods=['POST'])
 def registo_utilizadores():
     logger.info("###              DEMO: POST /utilizador              ###");   
@@ -240,6 +248,38 @@ def registo_utilizadores():
 
     return jsonify(result)
 
+@app.route("/leilao/", methods=['POST'])
+def criar_leilao():
+    logger.info("###              DEMO: POST /leilao              ###");   
+    payload = request.get_json()
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    logger.info("---- new leilao  ----")
+    logger.debug(f'payload: {payload}')
+
+    # parameterized queries, good for security and performance
+    statement = """
+                  INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,is_ativo,artigo_id_artigo) 
+                          VALUES ( %s,   %s ,  %s,  %s , %s,   %s)"""
+
+    values = (payload["id_leilao"], payload["data_ini"], payload["data_fim"], payload["preco_base"],payload["is_ativo"],payload["artigo_id_artigo"])
+
+    try:
+        cur.execute(statement, values)
+        cur.execute("commit")
+
+        result = 'Inserted!'
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = 'Failed!'
+    finally:
+        if conn is not None:
+            conn.close()
+
+    return jsonify(result)
+
 
 ##########################################################
 ## DATABASE ACCESS
@@ -247,7 +287,7 @@ def registo_utilizadores():
 
 def db_connection():
     db = psycopg2.connect(user = "postgres",
-                            password = "bd2021",
+                            password = "django500",
                             host = "localhost",
                             port = "5432",
                             database = "projeto")

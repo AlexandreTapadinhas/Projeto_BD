@@ -13,3 +13,13 @@ registo utilizador
     "is_admin": true
 }
 
+criar leilao
+id_leilao,data_ini,data_fim,preco_base,is_ativo,artigo_id_artigo
+{
+    "id_leilao": 12345,
+    "data_ini": "01-06-2021",
+    "data_fim": "12-06-2021",
+    "preco_base": "1500",
+    "is_ativo": true,
+    "artigo_id_artigo": 12345
+}
