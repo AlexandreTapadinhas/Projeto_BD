@@ -18,6 +18,7 @@
  
 from flask import Flask, jsonify, request
 import logging, psycopg2, time
+import random
 
 app = Flask(__name__) 
 
@@ -202,7 +203,12 @@ def update_departments():
 
 '''
 
-@app.route("/departments/", methods=['POST'])
+
+
+def geraRandom():
+    return random.randint(1,2500)
+
+@app.route("/utilizador/", methods=['POST'])
 def registo_utilizadores():
     logger.info("###              DEMO: POST /utilizador              ###");   
     payload = request.get_json()
@@ -215,15 +221,15 @@ def registo_utilizadores():
 
     # parameterized queries, good for security and performance
     statement = """
-                  INSERT INTO utilizador (user_name, email, password, genero, nif, data_nasc, estado, contato, is_admin) 
-                          VALUES ( %s,   %s ,   %s , %s,   %d ,   %s, %s,   %d ,   %d)"""
+                  INSERT INTO utilizador (user_name, email,nome, password, genero, nif, data_nasc, estado, contacto, is_ban, is_admin, token) 
+                          VALUES ( %s,   %s ,  %s,  %s , %s,   %s ,   %s, %s,   %s ,  %s,  %s,%s )"""
 
-    values = (payload["user_name"], payload["email"], payload["password"],payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contato"],payload["is_admin"],)
+    values = (payload["user_name"], payload["email"], payload["nome"], payload["password"],payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,payload["is_admin"],geraRandom())
 
     try:
         cur.execute(statement, values)
         cur.execute("commit")
-        
+
         result = 'Inserted!'
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
@@ -272,7 +278,7 @@ if __name__ == "__main__":
 
 
     logger.info("\n---------------------------------------------------------------\n" + 
-                  "API v1.0 online: http://localhost:8080/departments/\n\n")
+                  "API v1.0 online: http://localhost:8080/utilizador/\n\n")
 
 
     

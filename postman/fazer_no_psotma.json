@@ -2,13 +2,14 @@ registo utilizador
 
 {    
     "user_name": "ines",
-    "email": "ines@hotmail.com" , 
+    "email": "ines@hotmail.com" ,
+    "nome": "ines teixeira", 
     "password": "password", 
     "genero": "genero",
     "nif": 12365478 , 
-    "data_nasc": 18-12-2000,
+    "data_nasc": "18-12-2000",
     "estado": "solteiro",  
-    "contato": 963258741 , 
+    "contacto": 963258741 , 
     "is_admin": true
 }
 

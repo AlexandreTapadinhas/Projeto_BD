@@ -110,7 +110,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"user_name\": \"ines\",\n    \"email\": \"ines@hotmail.com\" , \n    \"password\": \"password\", \n    \"genero\": \"genero\",  \n    \"nif\": 12365478 ,  \n    \"data_nasc\": 18-12-2000,  \n    \"estado\": \"solteiro\",  \n    \"contato\": 963258741 ,  \n    \"is_admin\": true\n}",
+					"raw": "{\n    \"user_name\": \"ines\",\n    \"email\": \"ines@hotmail.com\" , \n    \"nome\": \"ines teixeira\",\n    \"password\": \"password\", \n    \"genero\": \"genero\",  \n    \"nif\": 12365478 ,  \n    \"data_nasc\": 18-12-2000,  \n    \"estado\": \"solteiro\",  \n    \"contacto\": 963258741 ,  \n    \"is_admin\": true\n}",
 					"options": {
 						"raw": {
 							"language": "json"
