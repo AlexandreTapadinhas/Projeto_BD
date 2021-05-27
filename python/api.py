@@ -301,6 +301,25 @@ def criar_artigo():
     return jsonify(result)
 
 
+@app.route("/leilao/", methods=['GET'], strict_slashes=True)
+def get_all_departments():
+    logger.info("###              DEMO: GET /leilao             ###");   
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("SELECT id_leilao,data_ini,data_fim,preco_base,is_ativo,artigo_id_artigo FROM leilao")
+    rows = cur.fetchall()
+
+    payload = []
+    logger.debug("---- leiloes  ----")
+    for row in rows:
+        logger.debug(row)
+        content = {'id_leilao': int(row[0]), 'data_ini': row[1], 'data_fim': row[2], 'preco_base': row[3], 'is_ativo': row[4], 'artigo_id_artigo': row[5]}
+        payload.append(content) # appending to the payload to be returned
+
+    conn.close()
+    return jsonify(payload)
 ##########################################################
 ## DATABASE ACCESS
 ##########################################################

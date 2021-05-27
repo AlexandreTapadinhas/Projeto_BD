@@ -40,3 +40,4 @@ id_leilao,data_ini,data_fim,preco_base,is_ativo,artigo_id_artigo
     "is_ativo": true,
     "artigo_id_artigo": 12345
 }
+
