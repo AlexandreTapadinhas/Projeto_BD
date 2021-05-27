@@ -248,32 +248,52 @@ def registo_utilizadores():
 
     return jsonify(result)
 
-@app.route("/leilao/", methods=['POST'])
-def criar_leilao():
-    logger.info("###              DEMO: POST /leilao              ###");   
+@app.route("/artigo/", methods=['POST'])
+def criar_artigo():
+    logger.info("###              DEMO: POST /artigo              ###");   
     payload = request.get_json()
 
     conn = db_connection()
     cur = conn.cursor()
 
-    logger.info("---- new leilao  ----")
+    logger.info("---- new artigo  ----")
     logger.debug(f'payload: {payload}')
 
     # parameterized queries, good for security and performance
     statement = """
-                  INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,is_ativo,artigo_id_artigo) 
-                          VALUES ( %s,   %s ,  %s,  %s , %s,   %s)"""
+                  INSERT INTO artigo (id_artigo,codigoisbn,nome_artigo,categoria,descricao,user_vendedor,user_vencedor,utilizador_user_name) 
+                          VALUES ( %s,   %s ,  %s,  %s , %s,   %s, %s, %s)"""
 
-    values = (payload["id_leilao"], payload["data_ini"], payload["data_fim"], payload["preco_base"],payload["is_ativo"],payload["artigo_id_artigo"])
+    values = (payload["id_artigo"],payload["codigoisbn"],payload["nome_artigo"],payload["categoria"],payload["descricao"],payload["user_vendedor"],payload["user_vencedor"],payload["utilizador_user_name"])
 
     try:
         cur.execute(statement, values)
         cur.execute("commit")
 
-        result = 'Inserted!'
+        #result = 'Inserted Artigo!'
+
+      
+        statement = """
+                INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,is_ativo,artigo_id_artigo) 
+                        VALUES ( %s,   %s ,  %s,  %s , %s,   %s)"""
+
+        values = (payload["id_leilao"],payload["data_ini"],payload["data_fim"],payload["preco_base"],payload["is_ativo"],payload["id_artigo"])
+
+        try:
+            cur.execute(statement, values)
+            cur.execute("commit")
+
+            result = {"leilaoId":payload["id_leilao"]}
+
+        except (Exception, psycopg2.DatabaseError) as error:
+            logger.error(error)
+            #result = 'Failed to insert leilao!'
+            result = {"erro" : str(error)}
+
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
-        result = 'Failed!'
+        #result = 'Failed!'
+        result = {"erro" : str(error)}
     finally:
         if conn is not None:
             conn.close()
