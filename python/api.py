@@ -223,7 +223,7 @@ def geraId():
     return dt_string
 
 
-@app.route("/utilizador/", methods=['POST'])
+@app.route("/registoUtilizador/", methods=['POST'])
 def registo_utilizadores():
     logger.info("###             POST /utilizador              ###");   
     payload = request.get_json()
@@ -415,7 +415,7 @@ def get_all_leiloes_from_user(user):
 
 
 @app.route("/login/", methods=['PUT'])
-def update_departments():
+def login():
     logger.info("###             Login              ###");   
     content = request.get_json()
 
@@ -486,7 +486,7 @@ def update_departments():
 
 def db_connection():
     db = psycopg2.connect(user = "postgres",
-                            password = "django500",
+                            password = "bd2021",
                             host = "localhost",
                             port = "5432",
                             database = "projeto")
