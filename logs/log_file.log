@@ -2733,3 +2733,2097 @@ INFO:logger:###              DEMO: POST /artigo              ###
 INFO:logger:---- new artigo  ----
 DEBUG:logger:payload: {'id_artigo': 14253, 'codigoisbn': 12345, 'nome_artigo': 'quadro', 'categoria': 'arte', 'descricao': 'abstrata', 'utilizador_user_name': 'ines', 'id_leilao': 14785, 'data_ini': '01-06-2021', 'data_fim': '14-06-2021', 'preco_base': 1675}
 INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:07:13] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:14785
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:09:04] "GET /leiloes/14785 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:str
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:09:14] "GET /leiloes/str HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:14785
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:09:38] "GET /leiloes/14785 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:12345
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:10:12] "GET /leiloes/12345 HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:40:31] "[33mGET /projeto/leiloes HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:40:35] "[33mGET /projeto/leiloes/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:40:42] "[33mGET /projeto/leiloes HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:41:02] "[33mGET /projeto/leilao/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:41:14] "[32mGET /leilao HTTP/1.1[0m" 308 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:41:14] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:keyword
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:42:35] "GET /leiloes/keyword HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:12345
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:42:41] "GET /leiloes/12345 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:tra
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:42:46] "GET /leiloes/tra HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:13245
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:43:06] "GET /leilao/13245 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:12345
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:43:10] "GET /leilao/12345 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:14785
+DEBUG:logger:(14785, 'abstrata', datetime.datetime(2021, 6, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 1675, 'quadro', 'arte')
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:43:17] "GET /leilao/14785 HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\flask\\app.py', reloading
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:41:06] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:42:30] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:43:02] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:44:06] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:44:14] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:44:46] "GET /leilao/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:47:07] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:47:42] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:48:32] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:49:21] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:49:24] "GET /leilao/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:49:50] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:49:51] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:49:52] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:50:07] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:50:08] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:50:09] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:50:09] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:50:09] "GET /leilao/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:50:46] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:50:47] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\aifc.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\antigravity.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\asynchat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\asyncore.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\binhex.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\cgi.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\cgitb.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\chunk.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\colorsys.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\compileall.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\cProfile.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\crypt.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\filecmp.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\fileinput.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\formatter.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\graphlib.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\imaplib.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\imghdr.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\mailbox.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\mailcap.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\modulefinder.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\nntplib.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\pickletools.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\pipes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\poplib.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\profile.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\pstats.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\pty.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\pyclbr.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\sched.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\shelve.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\smtpd.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\smtplib.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\sndhdr.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\stringprep.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\sunau.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\symbol.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\symtable.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tabnanny.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\telnetlib.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\this.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\timeit.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\trace.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\turtle.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\typing.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\wave.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\xdrlib.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\zipapp.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\_markupbase.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\_pyio.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\_sitebuiltins.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\appdirs.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\easy_install.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\filelock.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pefile.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\peutils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\six.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\asyncio\\__main__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\curses\\ascii.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\curses\\has_key.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\curses\\panel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\curses\\textpad.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\curses\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\dbm\\dumb.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\dbm\\gnu.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\dbm\\ndbm.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\dbm\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\distutils\\archive_util.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\sqlparse\\sql.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\sqlparse\\tokens.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\sqlparse\\utils.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\werkzeug\\wrappers\\cors.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\werkzeug\\wrappers\\json.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\win32ctypes\\core\\compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\win32ctypes\\core\\_winerrors.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\win32ctypes\\core\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\win32ctypes\\pywin32\\pywintypes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\win32ctypes\\pywin32\\win32api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\win32ctypes\\pywin32\\win32cred.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\win32ctypes\\pywin32\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\win32ctypes\\tests\\compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\win32ctypes\\tests\\test_win32api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\win32ctypes\\tests\\test_win32cred.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\win32ctypes\\tests\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\tests\\conftest.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\tests\\test_libraries.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\tests\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\lib2to3\\tests\\data\\bom.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\lib2to3\\tests\\data\\crlf.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\lib2to3\\tests\\data\\different_encoding.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\lib2to3\\tests\\data\\false_encoding.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\lib2to3\\tests\\data\\infinite_recursion.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\lib2to3\\tests\\data\\py2_test_grammar.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\lib2to3\\tests\\data\\py3_test_grammar.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\builtin\\test_finder.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\builtin\\test_loader.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\builtin\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\builtin\\__main__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\extension\\test_case_sensitivity.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\extension\\test_finder.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\extension\\test_loader.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\extension\\test_path_hook.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\extension\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\extension\\__main__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\frozen\\test_finder.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\frozen\\test_loader.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\frozen\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\frozen\\__main__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\import_\\test_api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\import_\\test_caching.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\import_\\test_fromlist.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\import_\\test_meta_path.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\import_\\test_packages.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\import_\\test_path.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\import_\\test_relative_imports.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\import_\\test___loader__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\import_\\test___package__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\import_\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\import_\\__main__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\source\\test_case_sensitivity.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\source\\test_file_loader.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\source\\test_finder.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\source\\test_path_hook.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\source\\test_source_encoding.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\source\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_importlib\\source\\__main__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_tools\\test_c_analyzer\\util.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_tools\\test_c_analyzer\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_tools\\test_c_analyzer\\__main__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_warnings\\data\\import_warning.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_warnings\\data\\stacklevel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\test\\test_zoneinfo\\data\\update_test_data.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tkinter\\test\\test_tkinter\\test_font.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tkinter\\test\\test_tkinter\\test_geometry_managers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tkinter\\test\\test_tkinter\\test_images.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tkinter\\test\\test_tkinter\\test_loadtk.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tkinter\\test\\test_tkinter\\test_misc.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tkinter\\test\\test_tkinter\\test_text.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tkinter\\test\\test_tkinter\\test_variables.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tkinter\\test\\test_tkinter\\test_widgets.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tkinter\\test\\test_ttk\\test_extensions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tkinter\\test\\test_ttk\\test_functions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tkinter\\test\\test_ttk\\test_style.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\tkinter\\test\\test_ttk\\test_widgets.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\unittest\\test\\testmock\\support.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\unittest\\test\\testmock\\testasync.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\unittest\\test\\testmock\\testcallable.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\unittest\\test\\testmock\\testhelpers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\unittest\\test\\testmock\\testmagicmethods.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\unittest\\test\\testmock\\testmock.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\unittest\\test\\testmock\\testpatch.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\unittest\\test\\testmock\\testsealable.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\unittest\\test\\testmock\\testsentinel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\unittest\\test\\testmock\\testwith.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\unittest\\test\\testmock\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\unittest\\test\\testmock\\__main__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\cli\\autocompletion.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\cli\\base_command.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\cli\\cmdoptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\cli\\command_context.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\cli\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\cli\\main_parser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\cli\\parser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\cli\\progress_bars.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\cli\\req_command.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\cli\\spinners.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\cli\\status_codes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\cli\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\cache.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\check.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\completion.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\configuration.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\debug.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\download.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\freeze.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\hash.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\help.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\install.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\list.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\search.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\show.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\uninstall.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\wheel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\commands\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\distributions\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\distributions\\installed.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\distributions\\sdist.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\distributions\\wheel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\distributions\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\index\\collector.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\index\\package_finder.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\index\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\models\\candidate.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\models\\direct_url.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\models\\format_control.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\models\\index.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\models\\link.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\models\\scheme.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\models\\search_scope.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\models\\selection_prefs.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\models\\target_python.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\models\\wheel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\models\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\network\\auth.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\network\\cache.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\network\\download.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\network\\lazy_wheel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\network\\session.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\network\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\network\\xmlrpc.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\network\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\operations\\check.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\operations\\freeze.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\operations\\prepare.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\req\\constructors.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\req\\req_file.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\req\\req_install.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\req\\req_set.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\req\\req_tracker.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\req\\req_uninstall.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\req\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\resolution\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\appdirs.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\compatibility_tags.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\datetime.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\deprecation.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\direct_url_helpers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\distutils_args.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\encoding.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\entrypoints.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\filesystem.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\filetypes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\glibc.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\hashes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\inject_securetransport.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\logging.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\misc.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\packaging.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\parallel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\pkg_resources.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\setuptools_build.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\subprocess.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\temp_dir.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\typing.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\unpacking.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\urls.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\virtualenv.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\utils\\wheel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\vcs\\bazaar.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\vcs\\git.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\vcs\\mercurial.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\vcs\\subversion.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\vcs\\versioncontrol.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_internal\\vcs\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\cachecontrol\\adapter.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\cachecontrol\\cache.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\cachecontrol\\compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\cachecontrol\\controller.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\cachecontrol\\filewrapper.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\cachecontrol\\heuristics.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\cachecontrol\\serialize.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\cachecontrol\\wrapper.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\cachecontrol\\_cmd.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\cachecontrol\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\certifi\\core.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\certifi\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\certifi\\__main__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\big5freq.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\big5prober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\chardistribution.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\charsetgroupprober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\charsetprober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\codingstatemachine.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\cp949prober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\enums.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\escprober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\escsm.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\eucjpprober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\euckrfreq.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\euckrprober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\euctwfreq.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\euctwprober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\gb2312freq.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\gb2312prober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\hebrewprober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\jisfreq.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\jpcntx.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\langbulgarianmodel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\langcyrillicmodel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\langgreekmodel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\langhebrewmodel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\langhungarianmodel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\langthaimodel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\langturkishmodel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\latin1prober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\mbcharsetprober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\mbcsgroupprober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\mbcssm.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\sbcharsetprober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\sbcsgroupprober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\sjisprober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\universaldetector.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\utf8prober.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\version.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\chardet\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\colorama\\ansi.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\colorama\\ansitowin32.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\colorama\\initialise.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\colorama\\win32.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\colorama\\winterm.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\colorama\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\database.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\index.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\locators.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\manifest.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\markers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\metadata.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\resources.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\scripts.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\util.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\version.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\wheel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\distlib\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\html5lib\\constants.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\html5lib\\html5parser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\html5lib\\serializer.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\html5lib\\_ihatexml.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\html5lib\\_inputstream.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\html5lib\\_tokenizer.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\html5lib\\_utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\html5lib\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\idna\\codec.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\idna\\compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\idna\\core.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\idna\\idnadata.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\idna\\intranges.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\idna\\package_data.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\idna\\uts46data.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\idna\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\msgpack\\exceptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\msgpack\\ext.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\msgpack\\fallback.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\msgpack\\_version.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\msgpack\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\packaging\\markers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\packaging\\requirements.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\packaging\\specifiers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\packaging\\tags.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\packaging\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\packaging\\version.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\packaging\\_compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\packaging\\_structures.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\packaging\\_typing.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\packaging\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\pep517\\build.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\pep517\\check.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\pep517\\colorlog.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\pep517\\compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\pep517\\dirtools.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\pep517\\envbuild.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\pep517\\meta.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\pep517\\wrappers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\pep517\\_in_process.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\pep517\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\pkg_resources\\py31compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\pkg_resources\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\progress\\bar.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\progress\\counter.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\progress\\spinner.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\progress\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\adapters.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\auth.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\certs.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\cookies.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\exceptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\help.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\hooks.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\packages.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\sessions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\status_codes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\structures.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\_internal_utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\requests\\__version__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\resolvelib\\providers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\resolvelib\\reporters.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\resolvelib\\resolvers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\resolvelib\\structs.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\resolvelib\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\toml\\decoder.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\toml\\encoder.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\toml\\ordered.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\toml\\tz.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\toml\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\urllib3\\connection.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\urllib3\\connectionpool.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\urllib3\\exceptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\urllib3\\fields.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\urllib3\\filepost.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\urllib3\\poolmanager.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\urllib3\\request.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\urllib3\\response.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\urllib3\\_collections.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\urllib3\\_version.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\urllib3\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\webencodings\\labels.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\webencodings\\mklabels.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\webencodings\\tests.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\webencodings\\x_user_defined.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\AppData\\Roaming\\Python\\Python39\\site-packages\\pip\\_vendor\\webencodings\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\conf\\locale\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\conf\\urls\\i18n.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\conf\\urls\\static.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\conf\\urls\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\actions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\checks.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\decorators.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\exceptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\filters.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\helpers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\options.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\sites.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\tests.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\widgets.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admin\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admindocs\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admindocs\\middleware.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admindocs\\urls.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admindocs\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admindocs\\views.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\admindocs\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\admin.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\backends.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\base_user.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\checks.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\context_processors.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\decorators.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\hashers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\middleware.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\mixins.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\password_validation.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\signals.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\tokens.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\urls.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\validators.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\views.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\auth\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\contenttypes\\admin.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\contenttypes\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\contenttypes\\checks.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\contenttypes\\fields.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\contenttypes\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\contenttypes\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\contenttypes\\views.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\contenttypes\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\flatpages\\admin.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\flatpages\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\flatpages\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\flatpages\\middleware.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\flatpages\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\flatpages\\sitemaps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\flatpages\\urls.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\flatpages\\views.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\flatpages\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\gis\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\gis\\feeds.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\gis\\geometry.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\gis\\measure.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\gis\\ptr.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\gis\\shortcuts.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\gis\\views.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\gis\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\humanize\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\humanize\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\messages\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\messages\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\messages\\constants.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\messages\\context_processors.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\messages\\middleware.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\messages\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\messages\\views.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\messages\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\postgres\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\postgres\\constraints.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\postgres\\functions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\postgres\\indexes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\postgres\\lookups.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\postgres\\operations.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\postgres\\search.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\postgres\\serializers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\postgres\\signals.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\postgres\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\postgres\\validators.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\postgres\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\redirects\\admin.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\redirects\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\redirects\\middleware.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\redirects\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\redirects\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sessions\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sessions\\base_session.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sessions\\exceptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sessions\\middleware.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sessions\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sessions\\serializers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sessions\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sitemaps\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sitemaps\\views.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sitemaps\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sites\\admin.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sites\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sites\\management.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sites\\managers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sites\\middleware.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sites\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sites\\requests.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sites\\shortcuts.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\sites\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\staticfiles\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\staticfiles\\checks.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\staticfiles\\finders.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\staticfiles\\handlers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\staticfiles\\storage.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\staticfiles\\testing.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\staticfiles\\urls.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\staticfiles\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\staticfiles\\views.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\staticfiles\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\syndication\\apps.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\syndication\\views.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\contrib\\syndication\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\cache\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\cache\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\checks\\async_checks.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\checks\\caches.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\checks\\database.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\checks\\messages.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\checks\\model_checks.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\checks\\registry.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\checks\\templates.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\checks\\translation.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\checks\\urls.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\checks\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\files\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\files\\images.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\files\\locks.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\files\\move.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\files\\storage.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\files\\temp.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\files\\uploadedfile.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\files\\uploadhandler.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\files\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\files\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\handlers\\asgi.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\handlers\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\handlers\\exception.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\handlers\\wsgi.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\mail\\message.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\mail\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\mail\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\management\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\management\\color.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\management\\sql.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\management\\templates.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\management\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\management\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\serializers\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\serializers\\json.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\serializers\\python.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\serializers\\pyyaml.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\serializers\\xml_serializer.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\serializers\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\core\\servers\\basehttp.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\backends\\ddl_references.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\backends\\signals.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\backends\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\autodetector.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\exceptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\executor.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\graph.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\loader.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\migration.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\optimizer.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\questioner.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\recorder.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\serializer.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\state.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\writer.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\migrations\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\aggregates.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\constants.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\constraints.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\deletion.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\enums.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\expressions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\indexes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\lookups.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\manager.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\options.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\query.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\query_utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\signals.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\db\\models\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\template\\backends\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\template\\backends\\django.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\template\\backends\\dummy.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\template\\backends\\jinja2.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\template\\backends\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\template\\loaders\\app_directories.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\template\\loaders\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\template\\loaders\\cached.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\template\\loaders\\filesystem.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\template\\loaders\\locmem.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\utils\\translation\\reloader.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\utils\\translation\\template.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\utils\\translation\\trans_null.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\utils\\translation\\trans_real.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\utils\\translation\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\decorators\\cache.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\decorators\\clickjacking.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\decorators\\csrf.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\decorators\\debug.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\decorators\\gzip.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\decorators\\http.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\decorators\\vary.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\generic\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\generic\\dates.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\generic\\detail.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\generic\\edit.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\generic\\list.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\django\\views\\generic\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\base64mime.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\charset.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\encoders.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\errors.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\feedparser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\generator.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\header.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\headerregistry.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\iterators.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\message.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\parser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\policy.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\quoprimime.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\_encoded_words.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\_header_value_parser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\_parseaddr.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\_policybase.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\email\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\html\\entities.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\html\\parser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\html\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\http\\client.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\http\\cookiejar.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\http\\cookies.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\http\\server.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\test\\pystone.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\test\\ssl_servers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\test\\support.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\test\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\urllib\\error.py', reloading
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\urllib\\parse.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\urllib\\request.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\urllib\\response.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\urllib\\robotparser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\xmlrpc\\client.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\xmlrpc\\server.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\backports\\xmlrpc\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\dbm\\dumb.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\dbm\\gnu.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\dbm\\ndbm.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\dbm\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\html\\entities.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\html\\parser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\html\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\http\\client.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\http\\cookiejar.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\http\\cookies.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\http\\server.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\http\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\test\\support.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\test\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\colorchooser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\commondialog.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\constants.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\dialog.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\dnd.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\filedialog.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\font.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\messagebox.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\scrolledtext.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\simpledialog.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\tix.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\ttk.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\tkinter\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\urllib\\error.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\urllib\\parse.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\urllib\\request.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\urllib\\response.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\urllib\\robotparser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\urllib\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\xmlrpc\\client.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\future\\moves\\xmlrpc\\server.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\cli\\autocompletion.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\cli\\base_command.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\cli\\cmdoptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\cli\\command_context.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\cli\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\cli\\main_parser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\cli\\parser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\cli\\progress_bars.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\cli\\req_command.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\cli\\spinners.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\cli\\status_codes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\cli\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\cache.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\check.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\completion.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\configuration.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\debug.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\download.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\freeze.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\hash.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\help.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\install.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\list.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\search.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\show.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\uninstall.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\wheel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\commands\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\distributions\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\distributions\\installed.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\distributions\\sdist.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\distributions\\wheel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\distributions\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\index\\collector.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\index\\package_finder.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\index\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\models\\candidate.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\models\\direct_url.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\models\\format_control.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\models\\index.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\models\\link.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\models\\scheme.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\models\\search_scope.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\models\\selection_prefs.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\models\\target_python.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\models\\wheel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\models\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\network\\auth.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\network\\cache.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\network\\download.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\network\\lazy_wheel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\network\\session.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\network\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\network\\xmlrpc.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\network\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\operations\\check.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\operations\\freeze.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\operations\\prepare.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\req\\constructors.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\req\\req_file.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\req\\req_install.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\req\\req_set.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\req\\req_tracker.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\req\\req_uninstall.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\req\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\resolution\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\appdirs.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\compat.py', reloading
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\compatibility_tags.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\datetime.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\deprecation.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\direct_url_helpers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\distutils_args.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\encoding.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\entrypoints.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\filesystem.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\filetypes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\glibc.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\hashes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\inject_securetransport.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\logging.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\misc.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\packaging.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\parallel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\pkg_resources.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\setuptools_build.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\subprocess.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\temp_dir.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\typing.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\unpacking.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\urls.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\virtualenv.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\utils\\wheel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\vcs\\bazaar.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\vcs\\git.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\vcs\\mercurial.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\pip\\_internal\\vcs\\subversion.py', reloading
+DEBUG:logger:142
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:51:54] "GET /leilao/ HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:52:21] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:52:53] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+DEBUG:logger:Presente
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:53:22] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:142
+DEBUG:logger:Presente
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:54:10] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:55:00] "[31m[1mGET /utilizador/ HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:55:07] "[31m[1mPUT /utilizador/ HTTP/1.1[0m" 405 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'pedro', 'email': 'pedro@hotmail.com', 'nome': 'pedro tavares', 'password': 'password', 'genero': 'genero', 'nif': 13365478, 'data_nasc': '18-12-2000', 'estado': 'solteiro', 'is_admin': True}
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:55:13] "[35m[1mPOST /utilizador/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'ines', 'email': 'ines@hotmail.com', 'nome': 'ines teixeira', 'password': 'password', 'genero': 'genero', 'nif': 12365478, 'data_nasc': '18-12-2000', 'estado': 'solteiro', 'is_admin': True}
+ERROR:logger:null value in column "contacto" of relation "utilizador" violates not-null constraint
+DETAIL:  Failing row contains (ines, ines@hotmail.com, ines teixeira, password, genero, 12365478, 2000-12-18, solteiro, null, f, f, 1349).
+
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 17:58:14] "POST /utilizador/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'ines', 'email': 'ines@hotmail.com', 'nome': 'ines teixeira', 'password': 'password', 'genero': 'genero', 'nif': 12365478, 'data_nasc': '18-12-2000', 'estado': 'solteiro', 'contacto': 74712589, 'is_admin': True}
+ERROR:logger:duplicate key value violates unique constraint "utilizador_pkey"
+DETAIL:  Key (user_name)=(ines) already exists.
+
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:00:17] "POST /utilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'pedro', 'email': 'ines@hotmail.com', 'nome': 'ines teixeira', 'password': 'password', 'genero': 'genero', 'nif': 12365478, 'data_nasc': '18-12-2000', 'estado': 'solteiro', 'contacto': 74712589, 'is_admin': True}
+ERROR:logger:duplicate key value violates unique constraint "utilizador_email_key"
+DETAIL:  Key (email)=(ines@hotmail.com) already exists.
+
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:00:27] "POST /utilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'pedro', 'email': 'pedro@hotmail.com', 'nome': 'pedro t', 'password': 'password', 'genero': 'genero', 'nif': 12365478, 'data_nasc': '18-12-2000', 'estado': 'solteiro', 'contacto': 74712589, 'is_admin': True}
+ERROR:logger:duplicate key value violates unique constraint "utilizador_nif_key"
+DETAIL:  Key (nif)=(12365478) already exists.
+
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:00:39] "POST /utilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'pedro', 'email': 'pedro@hotmail.com', 'nome': 'pedro t', 'password': 'password', 'genero': 'genero', 'nif': 12345478, 'data_nasc': '18-12-2000', 'estado': 'solteiro', 'contacto': 74712589, 'is_admin': True}
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:00:46] "POST /utilizador/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:01:17] "[31m[1mPOST /leilao/ HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:01:24] "[31m[1mPOST /leilao/ HTTP/1.1[0m" 405 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:01:27] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:18991
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:01:45] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:18995
+DEBUG:logger:Presente
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:02:00] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:18991
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:02:17] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:04:23] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:05:27] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:05:44] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:06:11] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:06:27] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:07:17] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:08:27] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:09:31] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:10:29] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:10:31] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:10:58] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:16:10] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:17:19] "GET /leilao/18991/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:19:57] "GET /leilao/18991/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:20:09] "GET /leilao/18941/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:20:16] "GET /leilao/18991/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:[]
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:21:47] "GET /leilao/18991/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:23:56] "[33mGET /llogin/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:24:03] "[31m[1mGET /login/ HTTP/1.1[0m" 405 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:24:16] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:25:26] "[32mGET /leilao/248 HTTP/1.1[0m" 308 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:[248]
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:25:26] "GET /leilao/248/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:25:43] "[32mGET /leilao/74 HTTP/1.1[0m" 308 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:[248]
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:25:43] "GET /leilao/74/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:25:47] "[32mGET /leilao/248 HTTP/1.1[0m" 308 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:[248]
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:25:47] "GET /leilao/248/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:26:46] "[31m[1mGET /login/ HTTP/1.1[0m" 405 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:26:57] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:[2993]
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:27:05] "GET /leilao/248/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:[2993]
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:27:21] "GET /leilao/2993/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:29:01] "[35m[1mPUT /login HTTP/1.1[0m" 500 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:29:07] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:29:26] "[31m[1mPUT /leilao/ HTTP/1.1[0m" 405 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:29:32] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:[7187]
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:29:48] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:31:49] "[31m[1mGET /login/ HTTP/1.1[0m" 405 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:32:18] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:32:39] "[32mGET /leilao HTTP/1.1[0m" 308 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:32:39] "[31m[1mGET /leilao/ HTTP/1.1[0m" 400 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:32:42] "[31m[1mGET /leilao/ HTTP/1.1[0m" 400 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:33:03] "[31m[1mGET /leilao/ HTTP/1.1[0m" 400 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:33:10] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:str
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:33:30] "GET /leiloes/str HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:12345
+DEBUG:logger:(14785, 'abstrata', 12345)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:33:41] "GET /leiloes/12345 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:12345
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:33:59] "GET /leilao/12345 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:14785
+DEBUG:logger:(14785, 'abstrata', datetime.datetime(2021, 6, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 1675, 'quadro', 'arte')
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 18:34:07] "GET /leilao/14785 HTTP/1.1" 200 -

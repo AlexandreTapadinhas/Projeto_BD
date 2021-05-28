@@ -236,11 +236,11 @@ def registo_utilizadores():
 
     # parameterized queries, good for security and performance
     statement = """
-                  INSERT INTO utilizador (user_name, email,nome, password, genero, nif, data_nasc, estado, contacto, is_ban, is_admin, token) 
-                          VALUES ( %s,   %s ,  %s,  %s , %s,   %s ,   %s, %s,   %s ,  %s,  %s,%s )"""
+                  INSERT INTO utilizador (user_name, email,nome, password, genero, nif, data_nasc, estado,contacto, is_admin,token) 
+                          VALUES ( %s,   %s ,  %s,  %s , %s,   %s ,   %s, %s,   %s, %s, %s  )"""
 
     token_aux = geraToken()
-    values = (payload["user_name"], payload["email"], payload["nome"], payload["password"],payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,payload["is_admin"],token_aux)
+    values = (payload["user_name"], payload["email"], payload["nome"], payload["password"],payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,token_aux)
 
     try:
         cur.execute(statement, values)
@@ -312,7 +312,13 @@ def criar_artigo():
 @app.route("/leilao/", methods=['GET'], strict_slashes=True)
 def get_all_leiloes():
     logger.info("###              DEMO: GET /leilao             ###");   
-
+    
+    dados = request.get_json()
+    
+    if(dados["token"] not in tokens_online):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+    
     conn = db_connection()
     cur = conn.cursor()
 
@@ -320,6 +326,9 @@ def get_all_leiloes():
     rows = cur.fetchall()
 
     payload = []
+    
+  
+
     logger.debug("---- leiloes  ----")
     for row in rows:
         logger.debug(row)
@@ -335,11 +344,19 @@ def get_all_leiloes():
 def search_leilao(keyword):
     logger.info("###              DEMO: GET /leilao             ###");   
 
+    dados = request.get_json()
+    
+    if(dados["token"] not in tokens_online):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+
     conn = db_connection()
     cur = conn.cursor()
 
     cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn FROM leilao,artigo""")
+    dados = request.get_json()
     
+
     payload = []
 
     logger.debug("---- leiloes  ----")
@@ -364,6 +381,12 @@ def search_leilao(keyword):
 @app.route("/leilao/<leilaoId>", methods=['GET'])
 def consult_leilao(leilaoId):
     logger.info("###              DEMO: GET /leilao             ###");   
+
+    dados = request.get_json()
+    
+    if(dados["token"] not in tokens_online):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
 
     conn = db_connection()
     cur = conn.cursor()

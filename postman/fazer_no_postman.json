@@ -9,7 +9,7 @@ registo utilizador
     "nif": 12365478 , 
     "data_nasc": "18-12-2000",
     "estado": "solteiro",  
-    "contacto": 963258741 , 
+    "contacto": 74712589,
     "is_admin": true
 }
 
@@ -24,11 +24,12 @@ POST criar leilao -> /projeto/artigo
     "id_leilao": 14785,
     "data_ini": "01-06-2021",
     "data_fim": "14-06-2021",
-    "preco_base": 1675
+    "preco_base": 1675,
+    "token": 5519
 }
 
-GET Listar leiloes existentes-> .../projeto/leiloes
-GET Pesquisar leiloes existentes-> .../projeto/leiloes/keyword
-GET Consultar leilao-> .../
+GET Listar leiloes existentes-> .../leilao/
+GET Pesquisar leiloes existentes-> .../leiloes/keyword
+GET Consultar leilao-> .../leilao/leilaoId
 
 
