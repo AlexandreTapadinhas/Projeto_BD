@@ -10,12 +10,11 @@ def geraId():
 
 
 def getConnection():
-    con = psycopg2.connect(
-    host = "localhost",
-    database = "projeto",
-    user = "postgres",
-    password = "bd2021",
-    port = 5432)
+    con = psycopg2.connect(user = "postgres",
+                            password = "django500",
+                            host = "localhost",
+                            port = "5432",
+                            database = "projeto")
     return con
 
 
@@ -191,5 +190,21 @@ def menu():
 #insertArtigo(geraId(),123456,'30/05','07/06')
 #printArtigo()
 
-cleanUtilizador()
-menu()
+def procuraItem(keyword):
+    con = getConnection()
+    cursor = con.cursor()
+
+    cursor.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn FROM leilao,artigo""")
+    for row in cursor.fetchall():
+        if(keyword.isdecimal()):
+            if(row[2] == int(keyword)):
+                print(row)
+        else:
+            if(keyword in row[1]):
+                print(row)
+    
+
+    cursor.close()
+    con.close()
+
+procuraItem('12345')

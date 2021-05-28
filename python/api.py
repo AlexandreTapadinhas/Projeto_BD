@@ -302,22 +302,54 @@ def criar_artigo():
 
 
 @app.route("/leilao/", methods=['GET'], strict_slashes=True)
-def get_all_departments():
+def get_all_leiloes():
     logger.info("###              DEMO: GET /leilao             ###");   
 
     conn = db_connection()
     cur = conn.cursor()
 
-    cur.execute("SELECT id_leilao,data_ini,data_fim,preco_base,is_ativo,artigo_id_artigo FROM leilao")
+    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn FROM leilao,artigo""")
     rows = cur.fetchall()
 
     payload = []
     logger.debug("---- leiloes  ----")
     for row in rows:
         logger.debug(row)
-        content = {'id_leilao': int(row[0]), 'data_ini': row[1], 'data_fim': row[2], 'preco_base': row[3], 'is_ativo': row[4], 'artigo_id_artigo': row[5]}
+        content = {'leilaoId': int(row[0]), 'descricao': row[1]}
         payload.append(content) # appending to the payload to be returned
 
+    cur.close()
+    conn.close()
+    return jsonify(payload)
+
+
+@app.route("/leilao/<keyword>", methods=['GET'])
+def search_leilao(keyword):
+    logger.info("###              DEMO: GET /leilao             ###");   
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn FROM leilao,artigo""")
+    
+    payload = []
+
+    logger.debug("---- leiloes  ----")
+    logger.debug(keyword)
+    for row in cur.fetchall():
+        logger.debug(row)
+        if(keyword.isdecimal()):
+            if(int(keyword) == row[2]):
+                content = {'leilaoId': row[0],'descricao': row[1]}
+                payload.append(content)
+
+        else:
+            if(keyword in row[1]):
+                content = {'leilaoId': row[0],'descricao': row[1]}
+                payload.append(content)
+    
+
+    cur.close()
     conn.close()
     return jsonify(payload)
 ##########################################################
