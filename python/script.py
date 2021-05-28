@@ -207,4 +207,17 @@ def procuraItem(keyword):
     cursor.close()
     con.close()
 
-procuraItem('12345')
+
+def consultaItem(keyword):
+    con = getConnection()
+    cursor = con.cursor()
+
+    cursor.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn FROM leilao,artigo
+            WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s;""", (str(keyword),) )
+    for row in cursor.fetchall():
+        print(row)
+
+    cursor.close()
+    con.close()
+
+consultaItem(77451)
