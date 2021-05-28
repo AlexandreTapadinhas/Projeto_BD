@@ -262,6 +262,10 @@ def criar_artigo():
     logger.info("###              DEMO: POST /artigo              ###");   
     payload = request.get_json()
 
+    if(payload["token"] not in tokens_online):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': payload["token"]}))
+   
     conn = db_connection()
     cur = conn.cursor()
 
@@ -313,7 +317,13 @@ def criar_artigo():
 @app.route("/leilao/", methods=['GET'], strict_slashes=True)
 def get_all_leiloes():
     logger.info("###              DEMO: GET /leilao             ###");   
-
+    
+    dados = request.get_json()
+    
+    if(dados["token"] not in tokens_online):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+    
     conn = db_connection()
     cur = conn.cursor()
 
@@ -321,6 +331,9 @@ def get_all_leiloes():
     rows = cur.fetchall()
 
     payload = []
+    
+  
+
     logger.debug("---- leiloes  ----")
     for row in rows:
         logger.debug(row)
@@ -336,11 +349,19 @@ def get_all_leiloes():
 def search_leilao(keyword):
     logger.info("###              DEMO: GET /leilao             ###");   
 
+    dados = request.get_json()
+    
+    if(dados["token"] not in tokens_online):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+
     conn = db_connection()
     cur = conn.cursor()
 
     cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn FROM leilao,artigo""")
+    dados = request.get_json()
     
+
     payload = []
 
     logger.debug("---- leiloes  ----")
@@ -365,6 +386,12 @@ def search_leilao(keyword):
 @app.route("/leilao/<leilaoId>", methods=['GET'])
 def consult_leilao(leilaoId):
     logger.info("###              DEMO: GET /leilao             ###");   
+
+    dados = request.get_json()
+    
+    if(dados["token"] not in tokens_online):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
 
     conn = db_connection()
     cur = conn.cursor()
