@@ -34,13 +34,11 @@ POST criar leilao -> /projeto/leilao
     "nome_artigo": "quadro",
     "categoria": "arte",
     "descricao": "abstrata",
-    "user_vencedor": "",
-    "utilizador_user_name": "pedro",
+    "utilizador_user_name": "ines",
     "id_leilao": 14785,
     "data_ini": "01-06-2021",
     "data_fim": "14-06-2021",
-    "preco_base": 1675,
-    "is_ativo": false
+    "preco_base": 1675
 }
 
 GET Listar leiloes existentes-> .../projeto/leiloes
