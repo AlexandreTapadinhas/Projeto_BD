@@ -264,7 +264,7 @@ def criar_artigo():
                   INSERT INTO artigo (id_artigo,codigoisbn,nome_artigo,categoria,descricao,user_vendedor,user_vencedor,utilizador_user_name) 
                           VALUES ( %s,   %s ,  %s,  %s , %s,   %s, %s, %s)"""
 
-    values = (payload["id_artigo"],payload["codigoisbn"],payload["nome_artigo"],payload["categoria"],payload["descricao"],payload["user_vendedor"],payload["user_vencedor"],payload["utilizador_user_name"])
+    values = (payload["id_artigo"],payload["codigoisbn"],payload["nome_artigo"],payload["categoria"],payload["descricao"],payload["utilizador_user_name"],payload["user_vencedor"],payload["utilizador_user_name"])
 
     try:
         cur.execute(statement, values)
