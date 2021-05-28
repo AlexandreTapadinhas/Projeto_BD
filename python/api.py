@@ -17,6 +17,7 @@
 
  
 from flask import Flask, jsonify, request
+from datetime import datetime
 import logging, psycopg2, time
 import random
 
@@ -215,6 +216,13 @@ def geraToken():
     tokens_online.append(aux)
     return aux
 
+
+def geraId():
+    now = datetime.now()
+    dt_string = now.strftime("%d%m-%H%M%S")
+    return dt_string
+
+
 @app.route("/utilizador/", methods=['POST'])
 def registo_utilizadores():
     logger.info("###             POST /utilizador              ###");   
@@ -247,6 +255,163 @@ def registo_utilizadores():
             conn.close()
 
     return jsonify(result)
+
+@app.route("/artigo/", methods=['POST'])
+def criar_artigo():
+    logger.info("###              DEMO: POST /artigo              ###");   
+    payload = request.get_json()
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    logger.info("---- new artigo  ----")
+    logger.debug(f'payload: {payload}')
+
+    # parameterized queries, good for security and performance
+    statement = """
+                  INSERT INTO artigo (id_artigo,codigoisbn,nome_artigo,categoria,descricao,user_vendedor,user_vencedor,utilizador_user_name) 
+                          VALUES ( %s,   %s ,  %s,  %s , %s,   %s, %s, %s)"""
+
+    values = (payload["id_artigo"],payload["codigoisbn"],payload["nome_artigo"],payload["categoria"],payload["descricao"],payload["utilizador_user_name"],payload["user_vencedor"],payload["utilizador_user_name"])
+
+    try:
+        cur.execute(statement, values)
+        cur.execute("commit")
+
+        #result = 'Inserted Artigo!'
+
+      
+        statement = """
+                INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,is_ativo,artigo_id_artigo) 
+                        VALUES ( %s,   %s ,  %s,  %s , %s,   %s)"""
+
+        values = (payload["id_leilao"],payload["data_ini"],payload["data_fim"],payload["preco_base"],payload["is_ativo"],payload["id_artigo"])
+
+        try:
+            cur.execute(statement, values)
+            cur.execute("commit")
+
+            result = {"leilaoId":payload["id_leilao"]}
+
+        except (Exception, psycopg2.DatabaseError) as error:
+            logger.error(error)
+            #result = 'Failed to insert leilao!'
+            result = {"erro" : str(error)}
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        #result = 'Failed!'
+        result = {"erro" : str(error)}
+    finally:
+        if conn is not None:
+            conn.close()
+
+    return jsonify(result)
+
+
+@app.route("/leilao/", methods=['GET'], strict_slashes=True)
+def get_all_leiloes():
+    logger.info("###              DEMO: GET /leilao             ###");   
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn FROM leilao,artigo""")
+    rows = cur.fetchall()
+
+    payload = []
+    logger.debug("---- leiloes  ----")
+    for row in rows:
+        logger.debug(row)
+        content = {'leilaoId': int(row[0]), 'descricao': row[1]}
+        payload.append(content) # appending to the payload to be returned
+
+    cur.close()
+    conn.close()
+    return jsonify(payload)
+
+
+@app.route("/leiloes/<keyword>", methods=['GET'])
+def search_leilao(keyword):
+    logger.info("###              DEMO: GET /leilao             ###");   
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn FROM leilao,artigo""")
+    
+    payload = []
+
+    logger.debug("---- leiloes  ----")
+    logger.debug(keyword)
+    for row in cur.fetchall():
+        logger.debug(row)
+        if(keyword.isdecimal()):
+            if(int(keyword) == row[2]):
+                content = {'leilaoId': row[0],'descricao': row[1]}
+                payload.append(content)
+
+        else:
+            if(keyword in row[1]):
+                content = {'leilaoId': row[0],'descricao': row[1]}
+                payload.append(content)
+    
+
+    cur.close()
+    conn.close()
+    return jsonify(payload)
+
+@app.route("/leilao/<leilaoId>", methods=['GET'])
+def consult_leilao(leilaoId):
+    logger.info("###              DEMO: GET /leilao             ###");   
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,leilao.data_ini,leilao.data_fim,leilao.preco_base,artigo.nome_artigo,artigo.categoria FROM leilao,artigo
+            WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s;""", (str(leilaoId),) )
+    
+    payload = []
+
+    logger.debug("---- leiloes  ----")
+    logger.debug(leilaoId)
+    for row in cur.fetchall():
+        logger.debug(row)
+        content = {'leilaoId': row[0],'descricao': row[1],"data_ini": row[2],"data_fim":row[3],"preco_base":row[4],"nome_artigo": row[5],"categoria": row[6]}
+        payload.append(content)
+
+
+    cur.close()
+    conn.close()
+    return jsonify(payload)
+#7
+@app.route("/leiloes/<user>", methods=['GET'])
+def get_all_leiloes_from_user(user):
+    logger.info("###              DEMO: GET /user/leiloes             ###");   
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("""SELECT id_leilao, user_name FROM registolicitacao""")
+
+    content = {}
+    leiloes = []
+    
+    logger.debug("Vou imprimir da tabela registolicitacao")
+    for row in cur.fetchall():
+        #logger.debug(f'row: {row}')
+        #logger.debug(f'user = {user}')
+        if (row[1] == user):
+            #logger.debug("encontrei")
+            leiloes.append(row[0])
+            
+    payload = {'leiloesIds':leiloes}
+
+        
+    cur.close()
+    conn.close()
+    return jsonify(payload)
+
+
 
 
 @app.route("/login/", methods=['PUT'])
@@ -321,7 +486,7 @@ def update_departments():
 
 def db_connection():
     db = psycopg2.connect(user = "postgres",
-                            password = "bd2021",
+                            password = "django500",
                             host = "localhost",
                             port = "5432",
                             database = "projeto")

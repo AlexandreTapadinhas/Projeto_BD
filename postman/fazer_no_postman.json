@@ -1,0 +1,36 @@
+registo utilizador
+
+{    
+    "user_name": "ines",
+    "email": "ines@hotmail.com" ,
+    "nome": "ines teixeira", 
+    "password": "password", 
+    "genero": "genero",
+    "nif": 12365478 , 
+    "data_nasc": "18-12-2000",
+    "estado": "solteiro",  
+    "contacto": 963258741 , 
+    "is_admin": true
+}
+
+POST criar leilao -> /projeto/leilao
+{
+    "id_artigo": 14253,
+    "codigoisbn": 12345,
+    "nome_artigo": "quadro",
+    "categoria": "arte",
+    "descricao": "abstrata",
+    "user_vencedor": "",
+    "utilizador_user_name": "pedro",
+    "id_leilao": 14785,
+    "data_ini": "01-06-2021",
+    "data_fim": "14-06-2021",
+    "preco_base": 1675,
+    "is_ativo": false
+}
+
+GET Listar leiloes existentes-> .../projeto/leiloes
+GET Pesquisar leiloes existentes-> .../projeto/leiloes/keyword
+GET Consultar leilao-> .../
+
+
