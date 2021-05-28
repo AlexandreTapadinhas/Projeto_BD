@@ -269,10 +269,10 @@ def criar_artigo():
 
     # parameterized queries, good for security and performance
     statement = """
-                  INSERT INTO artigo (id_artigo,codigoisbn,nome_artigo,categoria,descricao,user_vendedor,user_vencedor,utilizador_user_name) 
-                          VALUES ( %s,   %s ,  %s,  %s , %s,   %s, %s, %s)"""
+                  INSERT INTO artigo (id_artigo,codigoisbn,nome_artigo,categoria,descricao,user_vencedor,utilizador_user_name) 
+                          VALUES (%s ,  %s,  %s , %s,   %s, %s, %s)"""
 
-    values = (payload["id_artigo"],payload["codigoisbn"],payload["nome_artigo"],payload["categoria"],payload["descricao"],payload["utilizador_user_name"],payload["user_vencedor"],payload["utilizador_user_name"])
+    values = (payload["id_artigo"],payload["codigoisbn"],payload["nome_artigo"],payload["categoria"],payload["descricao"],"",payload["utilizador_user_name"])
 
     try:
         cur.execute(statement, values)
@@ -285,7 +285,7 @@ def criar_artigo():
                 INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,is_ativo,artigo_id_artigo) 
                         VALUES ( %s,   %s ,  %s,  %s , %s,   %s)"""
 
-        values = (payload["id_leilao"],payload["data_ini"],payload["data_fim"],payload["preco_base"],payload["is_ativo"],payload["id_artigo"])
+        values = (payload["id_leilao"],payload["data_ini"],payload["data_fim"],payload["preco_base"],True,payload["id_artigo"])
 
         try:
             cur.execute(statement, values)

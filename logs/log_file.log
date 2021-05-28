@@ -2655,3 +2655,81 @@ DEBUG:logger:---- leiloes  ----
 DEBUG:logger:7
 INFO:werkzeug:192.168.4.6 - - [28/May/2021 12:29:26] "GET /leilao/7 HTTP/1.1" 200 -
 >>>>>>> 086fb9814a6d927c27ad089b61979f0890c7baf2
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:05:09] "[33mPOST /projeto/artigo HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\flask\\app.py', reloading
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:05:26] "[35m[1mPOST /artigo HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 14253, 'codigoisbn': 12345, 'nome_artigo': 'quadro', 'categoria': 'arte', 'descricao': 'abstrata', 'utilizador_user_name': 'pedro', 'id_leilao': 14785, 'data_ini': '01-06-2021', 'data_fim': '14-06-2021', 'preco_base': 1675}
+ERROR:logger:insert or update on table "artigo" violates foreign key constraint "artigo_fk1"
+DETAIL:  Key (utilizador_user_name)=(pedro) is not present in table "utilizador".
+
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:05:59] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:06:46] "[35m[1mPOST /utilizador HTTP/1.1[0m" 500 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'ines', 'email': 'ines@hotmail.com', 'nome': 'ines teixeira', 'password': 'password', 'genero': 'genero', 'nif': 12365478, 'data_nasc': '18-12-2000', 'estado': 'solteiro', 'contacto': 963258741, 'is_admin': True}
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:06:56] "POST /utilizador/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 14253, 'codigoisbn': 12345, 'nome_artigo': 'quadro', 'categoria': 'arte', 'descricao': 'abstrata', 'utilizador_user_name': 'ines', 'id_leilao': 14785, 'data_ini': '01-06-2021', 'data_fim': '14-06-2021', 'preco_base': 1675}
+INFO:werkzeug:192.168.4.6 - - [28/May/2021 16:07:13] "POST /artigo/ HTTP/1.1" 200 -

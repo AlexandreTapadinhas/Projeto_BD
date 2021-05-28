@@ -220,4 +220,17 @@ def consultaItem(keyword):
     cursor.close()
     con.close()
 
-consultaItem(77451)
+def testeArgumentos(id_leilao,preco_base):
+    con = getConnection()
+    cursor = con.cursor()
+
+    cursor.execute("""SELECT id_leilao,artigo_id_artigo FROM leilao WHERE id_leilao = %s and preco_base = %s;""",(id_leilao,preco_base))
+    for row in cursor.fetchall():
+        print(row)
+
+    cursor.close()
+    con.close()
+
+
+testeArgumentos(778451,1750)
+
