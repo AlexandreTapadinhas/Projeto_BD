@@ -352,13 +352,44 @@ def search_leilao(keyword):
     cur.close()
     conn.close()
     return jsonify(payload)
+
+#7
+@app.route("/leiloes/<user>", methods=['GET'])
+def get_all_leiloes_from_user(user):
+    logger.info("###              DEMO: GET /user/leiloes             ###");   
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("""SELECT id_leilao, user_name FROM registolicitacao""")
+
+    content = {}
+    leiloes = []
+    
+    logger.debug("Vou imprimir da tabela registolicitacao")
+    for row in cur.fetchall():
+        #logger.debug(f'row: {row}')
+        #logger.debug(f'user = {user}')
+        if (row[1] == user):
+            #logger.debug("encontrei")
+            leiloes.append(row[0])
+            
+    payload = {'leiloesIds':leiloes}
+
+        
+    cur.close()
+    conn.close()
+    return jsonify(payload)
+
+
+
+
 ##########################################################
 ## DATABASE ACCESS
 ##########################################################
 
 def db_connection():
     db = psycopg2.connect(user = "postgres",
-                            password = "django500",
+                            password = "postgresql1",
                             host = "localhost",
                             port = "5432",
                             database = "projeto")

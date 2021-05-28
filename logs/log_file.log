@@ -1442,3 +1442,467 @@ INFO:werkzeug: * Debugger PIN: 109-500-291
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 04:19:34] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 04:21:07] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 14253, 'codigoisbn': 12345, 'nome_artigo': 'quadro', 'categoria': 'arte', 'descricao': 'abstrata', 'user_vendedor': 'ines', 'user_vencedor': 'pedro', 'utilizador_user_name': 'pedro', 'id_leilao': 14785, 'data_ini': '01-06-2021', 'data_fim': '14-06-2021', 'preco_base': 1675, 'is_ativo': True}
+ERROR:logger:insert or update on table "artigo" violates foreign key constraint "artigo_fk1"
+DETAIL:  Key (utilizador_user_name)=(pedro) is not present in table "utilizador".
+
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 04:22:42] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 14253, 'codigoisbn': 12345, 'nome_artigo': 'quadro', 'categoria': 'arte', 'descricao': 'abstrata', 'user_vendedor': '', 'user_vencedor': 'alex', 'utilizador_user_name': 'alex', 'id_leilao': 14785, 'data_ini': '01-06-2021', 'data_fim': '14-06-2021', 'preco_base': 1675, 'is_ativo': True}
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 04:23:50] "POST /artigo/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 04:24:13] "[31m[1mPUT /artigo/ HTTP/1.1[0m" 405 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 14253, 'codigoisbn': 12345, 'nome_artigo': 'quadro', 'categoria': 'arte', 'descricao': 'abstrata', 'user_vendedor': '', 'user_vencedor': 'alex', 'utilizador_user_name': 'alex', 'id_leilao': 14785, 'data_ini': '01-06-2021', 'data_fim': '14-06-2021', 'preco_base': 1675, 'is_ativo': False}
+ERROR:logger:duplicate key value violates unique constraint "artigo_pkey"
+DETAIL:  Key (id_artigo)=(14253) already exists.
+
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 04:24:17] "POST /artigo/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 05:11:08] "GET /leiloes/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 05:11:48] "GET /leiloes/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 05:15:31] "GET /leiloes/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 05:18:34] "GET /leiloes/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 05:19:24] "GET /leiloes/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:row: 
+DEBUG:logger:(14785, 'alex')
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 05:34:05] "GET /leiloes/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:row: (14785, 'alex')
+DEBUG:logger:user = alex
+DEBUG:logger:encontrei
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 05:38:39] "GET /leiloes/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:encontrei
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 05:51:29] "GET /leiloes/alex HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'ines', 'email': 'ines@hotmail.com', 'nome': 'ines teixeira', 'password': 'password', 'genero': 'genero', 'nif': 12365478, 'data_nasc': '18-12-2000', 'estado': 'solteiro', 'contacto': 963258741, 'is_admin': True}
+ERROR:logger:duplicate key value violates unique constraint "utilizador_contacto_key"
+DETAIL:  Key (contacto)=(963258741) already exists.
+
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 05:55:49] "POST /utilizador/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'ines', 'email': 'ines@hotmail.com', 'nome': 'ines teixeira', 'password': 'password', 'genero': 'feminino', 'nif': 987654321, 'data_nasc': '20-12-2000', 'estado': 'solteiro', 'contacto': 987654321, 'is_admin': True}
+ERROR:logger:duplicate key value violates unique constraint "utilizador_nif_key"
+DETAIL:  Key (nif)=(987654321) already exists.
+
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 05:57:01] "POST /utilizador/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'ines', 'email': 'ines@hotmail.com', 'nome': 'ines teixeira', 'password': 'password', 'genero': 'feminino', 'nif': 145698723, 'data_nasc': '20-12-2000', 'estado': 'solteiro', 'contacto': 523164978, 'is_admin': True}
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 05:57:43] "POST /utilizador/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:encontrei
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 05:59:59] "GET /leiloes/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:encontrei
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 06:00:37] "[35m[1mGET /leiloes/alex HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:encontrei
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 06:01:42] "GET /leiloes/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:encontrei
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 06:04:03] "GET /leiloes/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:encontrei
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 06:04:37] "[35m[1mGET /leiloes/alex HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:encontrei
+INFO:werkzeug:192.168.1.87 - - [28/May/2021 06:06:07] "GET /leiloes/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
