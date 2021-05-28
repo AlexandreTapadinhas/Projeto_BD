@@ -202,15 +202,22 @@ def update_departments():
 
 
 '''
+tokens_online=list()
 
 
-
-def geraRandom():
-    return random.randint(1,2500)
+def geraToken():
+    global tokens_online
+    aux = random.randint(1,25000)
+    
+    while(aux in tokens_online):
+        aux = random.randint(1,25000)
+    
+    tokens_online.append(aux)
+    return aux
 
 @app.route("/utilizador/", methods=['POST'])
 def registo_utilizadores():
-    logger.info("###              DEMO: POST /utilizador              ###");   
+    logger.info("###             POST /utilizador              ###");   
     payload = request.get_json()
 
     conn = db_connection()
@@ -224,21 +231,88 @@ def registo_utilizadores():
                   INSERT INTO utilizador (user_name, email,nome, password, genero, nif, data_nasc, estado, contacto, is_ban, is_admin, token) 
                           VALUES ( %s,   %s ,  %s,  %s , %s,   %s ,   %s, %s,   %s ,  %s,  %s,%s )"""
 
-    values = (payload["user_name"], payload["email"], payload["nome"], payload["password"],payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,payload["is_admin"],geraRandom())
+    token_aux = geraToken()
+    values = (payload["user_name"], payload["email"], payload["nome"], payload["password"],payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,payload["is_admin"],token_aux)
 
     try:
         cur.execute(statement, values)
         cur.execute("commit")
 
-        result = 'Inserted!'
+        result = {"user_name":  payload["user_name"] , "authToken": token_aux}
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
-        result = 'Failed!'
+        result = {"erro" : str(error)}
     finally:
         if conn is not None:
             conn.close()
 
     return jsonify(result)
+
+
+@app.route("/login/", methods=['PUT'])
+def update_departments():
+    logger.info("###             Login              ###");   
+    content = request.get_json()
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+
+    #if content["ndep"] is None or content["nome"] is None :
+    #    return 'ndep and nome are required to update'
+
+    if "user_name" not in content or "password" not in content:
+        return 'user_name and password are required to login'
+
+
+    logger.info("---- login  ----")
+    logger.info(f'content: {content}')
+
+    # parameterized queries, good for security and performance
+    #como o user_name e unico basta fazermos assim e nao temos que contar as rows
+    statement ="""
+
+                select user_name , password
+                from utilizador
+                where user_name = %s and password = %s """
+
+
+    values = (content["user_name"], content["password"])
+
+    token_aux = geraToken()
+    try:
+        res = cur.execute(statement, values)
+        result = 'login correto'
+        cur.execute("commit")
+
+        
+        statement2 ="""
+
+                UPDATE utilizador
+                SET token = %s
+                WHERE user_name = %s """
+
+        values = (token_aux,content["user_name"])
+
+        try:
+            res = cur.execute(statement2, values)
+            result = {"authToken": token_aux}
+            cur.execute("commit")
+        except (Exception, psycopg2.DatabaseError) as error:
+            logger.error(error)
+            result = {"erro" : str(error)}
+
+
+
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+    finally:
+        if conn is not None:
+            conn.close()
+    return jsonify(result)
+
 
 
 ##########################################################

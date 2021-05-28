@@ -1,48 +1,45 @@
 CREATE TABLE artigo (
 	id_artigo		 INTEGER UNIQUE NOT NULL,
 	codigoisbn		 INTEGER NOT NULL,
-	nome_artigo		  VARCHAR NOT NULL,
-	categoria		  VARCHAR,
-	descricao		  VARCHAR NOT NULL,
-	user_vendedor	  VARCHAR NOT NULL,
-	user_vencedor	  VARCHAR DEFAULT null,
-	utilizador_user_name  VARCHAR NOT NULL,
+	nome_artigo		 VARCHAR(512) NOT NULL,
+	categoria		 VARCHAR(512),
+	descricao		 VARCHAR(512) NOT NULL,
+	user_vencedor	 VARCHAR(512) DEFAULT null,
+	utilizador_user_name VARCHAR(512) NOT NULL,
 	PRIMARY KEY(id_artigo)
 );
 
 CREATE TABLE registolicitacao (
 	id_leilao		 INTEGER UNIQUE NOT NULL,
-	user_name		  VARCHAR NOT NULL,
 	preco_licitacao	 BIGINT UNIQUE NOT NULL,
 	data_licitacao	 TIMESTAMP NOT NULL,
 	leilao_id_leilao	 INTEGER,
-	utilizador_user_name  VARCHAR,
+	utilizador_user_name VARCHAR(512),
 	PRIMARY KEY(leilao_id_leilao,utilizador_user_name)
 );
 
 CREATE TABLE comentarios (
-	user_name		  VARCHAR NOT NULL,
 	id_leilao		 INTEGER UNIQUE NOT NULL,
-	 VARCHARo		  VARCHAR NOT NULL,
+	texto		 VARCHAR(512) NOT NULL,
 	data_pub		 TIMESTAMP NOT NULL,
 	leilao_id_leilao	 INTEGER,
-	utilizador_user_name  VARCHAR,
+	utilizador_user_name VARCHAR(512),
 	PRIMARY KEY(leilao_id_leilao,utilizador_user_name)
 );
 
 CREATE TABLE utilizador (
-	user_name  VARCHAR UNIQUE NOT NULL,
-	email	  VARCHAR  UNIQUE NOT NULL,
-	nome	  VARCHAR  NOT NULL,
-	password	  VARCHAR  NOT NULL,
-	genero	  VARCHAR  DEFAULT null,
+	user_name VARCHAR(512) UNIQUE NOT NULL,
+	email	 VARCHAR(512) UNIQUE NOT NULL,
+	nome	 VARCHAR(512) NOT NULL,
+	password	 VARCHAR(512) NOT NULL,
+	genero	 VARCHAR(512) DEFAULT null,
 	nif	 BIGINT UNIQUE NOT NULL,
 	data_nasc DATE NOT NULL,
-	estado	  VARCHAR ,
+	estado	 VARCHAR(512),
 	contacto	 BIGINT UNIQUE NOT NULL,
 	is_ban	 BOOL NOT NULL DEFAULT false,
 	is_admin	 BOOL NOT NULL,
-	token	  VARCHAR  NOT NULL,
+	token	 VARCHAR(512) UNIQUE NOT NULL,
 	PRIMARY KEY(user_name)
 );
 
@@ -58,16 +55,16 @@ CREATE TABLE leilao (
 
 CREATE TABLE notificacao (
 	id_noti		 INTEGER UNIQUE NOT NULL,
-	msg			  VARCHAR  NOT NULL,
+	msg			 VARCHAR(512) NOT NULL,
 	data		 TIMESTAMP NOT NULL,
 	is_open		 BOOL NOT NULL DEFAULT false,
-	utilizador_user_name  VARCHAR  NOT NULL,
+	utilizador_user_name VARCHAR(512) NOT NULL,
 	PRIMARY KEY(id_noti)
 );
 
 CREATE TABLE updateartigo (
 	id_leilao	 INTEGER NOT NULL,
-	descricao	  VARCHAR  NOT NULL,
+	descricao	 VARCHAR(512) NOT NULL,
 	artigo_id_artigo INTEGER,
 	PRIMARY KEY(artigo_id_artigo)
 );

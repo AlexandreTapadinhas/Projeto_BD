@@ -106,7 +106,7 @@
 		{
 			"name": "Registo Utilizadores",
 			"request": {
-				"method": "PUT",
+				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -131,6 +131,36 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\": \"ines\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/utilizador/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"utilizador",
+						""
+					]
+				}
+			},
+			"response": []
 		}
+
 	]
 }
