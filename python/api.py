@@ -261,6 +261,10 @@ def criar_artigo():
     logger.info("###              DEMO: POST /artigo              ###");   
     payload = request.get_json()
 
+    if(payload["token"] not in tokens_online):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': payload["token"]}))
+   
     conn = db_connection()
     cur = conn.cursor()
 
