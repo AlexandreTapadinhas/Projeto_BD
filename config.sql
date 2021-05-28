@@ -39,7 +39,6 @@ CREATE TABLE utilizador (
 	contacto	 BIGINT UNIQUE NOT NULL,
 	is_ban	 BOOL NOT NULL DEFAULT false,
 	is_admin	 BOOL NOT NULL,
-	token	 VARCHAR(512) UNIQUE NOT NULL,
 	PRIMARY KEY(user_name)
 );
 

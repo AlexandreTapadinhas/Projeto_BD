@@ -236,23 +236,24 @@ def registo_utilizadores():
 
     # parameterized queries, good for security and performance
     statement = """
-                  INSERT INTO utilizador (user_name, email,nome, password, genero, nif, data_nasc, estado, contacto, is_ban, is_admin, token) 
+                  INSERT INTO utilizador (user_name, email,nome, password, genero, nif, data_nasc, estado, contacto, is_ban, is_admin) 
                           VALUES ( %s,   %s ,  %s,  %s , %s,   %s ,   %s, %s,   %s ,  %s,  %s,%s )"""
 
-    token_aux = geraToken()
-    values = (payload["user_name"], payload["email"], payload["nome"], payload["password"],payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,payload["is_admin"],token_aux)
+    
+    values = (payload["user_name"], payload["email"], payload["nome"], payload["password"],payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,payload["is_admin"])
 
     try:
         cur.execute(statement, values)
         cur.execute("commit")
 
-        result = {"user_name":  payload["user_name"] , "authToken": token_aux}
+        result = {"user_name":  payload["user_name"]}
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
         result = {"erro" : str(error)}
     finally:
         if conn is not None:
             conn.close()
+            cur.close()
 
     return jsonify(result)
 
@@ -476,6 +477,7 @@ def login():
     finally:
         if conn is not None:
             conn.close()
+            cur.close()
     return jsonify(result)
 
 
