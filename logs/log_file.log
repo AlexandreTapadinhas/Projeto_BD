@@ -4888,6 +4888,7 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 755-629-396
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -4906,6 +4907,17 @@ DEBUG:logger:payload: {'user_name': 'ines', 'email': 'ines@hotmail.com', 'nome':
 ERROR:logger:tuple index out of range
 INFO:werkzeug:192.168.1.7 - - [29/May/2021 19:53:24] "POST /registoUtilizador/ HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.1.87 - - [29/May/2021 04:04:24] "[35m[1mGET /leiloes/alex HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.1.87 - - [29/May/2021 04:57:30] "[35m[1mGET /leiloes/alex HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> 5c1276ef2f56ba5d4ee96a431c1fd5af9d3514aa
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -4913,6 +4925,7 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 755-629-396
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -5675,6 +5688,15 @@ DEBUG:logger:id_leilao: 1236
 DEBUG:logger:[]
 INFO:werkzeug:192.168.1.7 - - [29/May/2021 21:06:30] "GET /leiloes/1236/20 HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+INFO:werkzeug:192.168.1.87 - - [29/May/2021 04:58:34] "[35m[1mGET /leiloes/user/alex HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> 5c1276ef2f56ba5d4ee96a431c1fd5af9d3514aa
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5682,6 +5704,7 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 755-629-396
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -5695,6 +5718,24 @@ DEBUG:logger:---- licitou  ----
 DEBUG:logger:(datetime.datetime(2021, 4, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 20, True)
 INFO:werkzeug:192.168.1.7 - - [29/May/2021 21:06:55] "GET /leiloes/1236/22 HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:(14785, 'abstrata', datetime.datetime(2021, 6, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 1675, 'quadro', 'arte')
+INFO:werkzeug:192.168.1.87 - - [29/May/2021 04:59:03] "[35m[1mGET /leiloes/user/alex HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.87 - - [29/May/2021 05:25:29] "[33mGET /leila/ HTTP/1.1[0m" 404 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.1.87 - - [29/May/2021 05:25:42] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:(14785, 'abstrata', datetime.datetime(2021, 6, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 1675, 'quadro', 'arte')
+INFO:werkzeug:192.168.1.87 - - [29/May/2021 05:41:49] "[35m[1mGET /leiloes/user/alex HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> 5c1276ef2f56ba5d4ee96a431c1fd5af9d3514aa
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5702,9 +5743,21 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 755-629-396
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 455-358-522
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:(14785, 'abstrata', datetime.datetime(2021, 6, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 1675, 'quadro', 'arte')
+INFO:werkzeug:192.168.1.87 - - [29/May/2021 05:42:20] "GET /leiloes/user/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> 5c1276ef2f56ba5d4ee96a431c1fd5af9d3514aa
 INFO:werkzeug: * Restarting with stat
