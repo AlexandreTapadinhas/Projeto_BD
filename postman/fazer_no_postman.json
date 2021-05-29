@@ -9,7 +9,7 @@
     "nif": 12365478 , 
     "data_nasc": "18-12-2000",
     "estado": "solteiro",  
-    "contacto": 9632598741 , 
+    "contacto": 74712589,
     "is_admin": true
 }
 
@@ -22,23 +22,24 @@
 
 enviar token -> usado em todas as funcionalidades 
 {
-    "token": 22435
+    "token": 17987
 }
 
 
 
-POST criar leilao -> /projeto/leilao
+POST criar leilao -> /artigo/
 {
     "id_artigo": 14253,
     "codigoisbn": 12345,
-    "nome_artigo": "quadro",
-    "categoria": "arte",
+    "nome_artigo": "caneta",
+    "categoria": "escola",
     "descricao": "abstrata",
     "utilizador_user_name": "ines",
-    "id_leilao": 14785,
-    "data_ini": "01-06-2021",
+    "id_leilao": 1236,
+    "data_ini": "01-04-2021",
     "data_fim": "14-06-2021",
-    "preco_base": 1675
+    "preco_base": 2,
+    "token": 5284
 }
 
 
@@ -55,8 +56,11 @@ editar leilao -> PUT /leilao/editar/<leilaoId> (todos os atributos sao opcionais
     "utilizador_user_name":"ines"
 }
 
-GET Listar leiloes existentes-> .../projeto/leiloes
-GET Pesquisar leiloes existentes-> .../projeto/leiloes/keyword
-GET Consultar leilao-> .../
+
+GET Listar leiloes existentes-> .../leilao/
+GET Pesquisar leiloes existentes-> .../leiloes/keyword
+GET Consultar leilao-> .../leilao/leilaoId
+
+GET licitar leilao -> ../leiloes/1236/20
 
 
