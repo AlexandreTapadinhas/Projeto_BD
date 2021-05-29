@@ -1,6 +1,6 @@
 CREATE TABLE artigo (
 	id_artigo		 INTEGER UNIQUE NOT NULL,
-	codigoisbn		 INTEGER NOT NULL,
+	codigoisbn		 INTEGER UNIQUE NOT NULL,
 	nome_artigo		 VARCHAR(512) NOT NULL,
 	categoria		 VARCHAR(512),
 	descricao		 VARCHAR(512) NOT NULL,

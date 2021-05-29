@@ -237,7 +237,7 @@ def registo_utilizadores():
     # parameterized queries, good for security and performance
     statement = """
                   INSERT INTO utilizador (user_name, email,nome, password, genero, nif, data_nasc, estado, contacto, is_ban, is_admin) 
-                          VALUES ( %s,   %s ,  %s,  %s , %s,   %s ,   %s, %s,   %s ,  %s,  %s,%s )"""
+                          VALUES ( %s,   %s ,  %s,  %s , %s,   %s ,   %s, %s,   %s ,  %s,  %s )"""
 
     
     values = (payload["user_name"], payload["email"], payload["nome"], payload["password"],payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,payload["is_admin"])
@@ -475,27 +475,8 @@ def login():
     token_aux = geraToken()
     try:
         res = cur.execute(statement, values)
-        result = 'login correto'
+        result = {'authToken': token_aux}
         cur.execute("commit")
-
-        
-        statement2 ="""
-
-                UPDATE utilizador
-                SET token = %s
-                WHERE user_name = %s """
-
-        values = (token_aux,content["user_name"])
-
-        try:
-            res = cur.execute(statement2, values)
-            result = {"authToken": token_aux}
-            cur.execute("commit")
-        except (Exception, psycopg2.DatabaseError) as error:
-            logger.error(error)
-            result = {"erro" : str(error)}
-
-
 
 
     except (Exception, psycopg2.DatabaseError) as error:
@@ -506,6 +487,77 @@ def login():
             conn.close()
             cur.close()
     return jsonify(result)
+
+
+@app.route("/leiloes/<id_leilao>/<licitacao>", methods=['GET'])
+def licitar(id_leilao, licitacao):
+    logger.info("###              DEMO: GET /licitar              ###");   
+
+    logger.debug(f'id_leilao: {id_leilao}')
+
+
+    payload = request.get_json()
+
+    if(payload["token"] not in tokens_online):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': payload["token"]}))
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("begin transaction")
+
+    cur.execute("SELECT data_ini, data_fim, preco_base, is_ativo FROM leilao where id_leilao = %s", (id_leilao,) )
+    rows = cur.fetchall()
+
+    row = rows[0]
+
+    if(row[3] == True):
+        if(row[0]<= datetime.today() and row[1]>datetime.today()):
+            if(row[2]<int(licitacao)):
+                    statement = """
+                        UPDATE leilao
+                        SET preco_base = %s
+                        WHERE id_leilao = %s"""
+
+        
+                    values = (licitacao, id_leilao)                                
+
+                    try:
+                        cur.execute(statement, values)
+                        cur.execute("commit")
+
+                        content = 'Sucesso'
+                    except (Exception, psycopg2.DatabaseError) as error:
+                        logger.error(error)
+                        result = {"erro" : str(error)}
+                    finally:
+                        if conn is not None:
+                            cur.close()
+                            conn.close()
+                            
+            else:
+                cur.execute("commit")
+                cur.close()
+                conn.close ()
+                return 'Erro: o valor do artigo e maior que a licitacao'
+        else:
+            cur.execute("commit")
+            cur.close()
+            conn.close ()
+            return'Erro leilao ja acabou/ainda nao comecou'
+    else:
+        cur.execute("commit")
+        cur.close()
+        conn.close ()
+        return'Erro: leilao foi desativado pelo admin'
+
+
+    logger.debug("---- licitou  ----")
+    logger.debug(row)
+
+    return jsonify(content)
+
 
 
 
