@@ -413,7 +413,7 @@ def consult_leilao(leilaoId):
     conn.close()
     return jsonify(payload)
 #7
-@app.route("/leiloes/<user>", methods=['GET'])
+@app.route("/leiloes/user/<user>", methods=['GET'])
 def get_all_leiloes_from_user(user):
     logger.info("###              DEMO: GET /user/leiloes             ###");   
     conn = db_connection()
@@ -431,13 +431,24 @@ def get_all_leiloes_from_user(user):
         if (row[1] == user):
             #logger.debug("encontrei")
             leiloes.append(row[0])
-            
-    payload = {'leiloesIds':leiloes}
 
-        
+
+
+    #payload = {'leiloesIds':leiloes}
+    payload = []
+
+    #cur.execute("""SELECT * FROM leilao""")
+    for leilaoId in leiloes:
+        cur.execute("""SELECT leilao.id_leilao,artigo.descricao,leilao.data_ini,leilao.data_fim,leilao.preco_base,artigo.nome_artigo,artigo.categoria FROM leilao,artigo
+                    WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s;""", (str(leilaoId),) )
+        for row in cur.fetchall():
+            logger.debug(row)
+            content = {'leilaoId': row[0],'descricao': row[1],"data_ini": row[2],"data_fim":row[3],"preco_base":row[4],"nome_artigo": row[5],"categoria": row[6]}
+            payload.append(content)
+
     cur.close()
     conn.close()
-    return jsonify(payload)
+    return jsonify({'leiloes':payload})
 
 
 
@@ -515,7 +526,7 @@ def login():
 
 def db_connection():
     db = psycopg2.connect(user = "postgres",
-                            password = "bd2021",
+                            password = "postgresql1",
                             host = "localhost",
                             port = "5432",
                             database = "projeto")
