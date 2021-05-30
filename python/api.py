@@ -203,14 +203,14 @@ def update_departments():
 
 
 '''
-tokens_online={}
+tokens_online={}  #{"token" : "user_name"}
 
 
 def geraToken(user_name):
     global tokens_online
     aux = random.randint(1,25000)
     
-    while(aux in tokens_online):
+    while(aux in tokens_online.keys()):
         aux = random.randint(1,25000)
     
     tokens_online[aux] = user_name
@@ -434,7 +434,7 @@ def get_all_leiloes_from_user(user):
     dados = request.get_json()
     #TODO: Verificar datas
     #TODO: Falta checkar os criadores do leilão
-    if(dados["token"] not in tokens_online):
+    if(dados["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
 
@@ -600,15 +600,16 @@ def licitar(id_leilao, licitacao):
                             cur.execute("commit")
 
                         except (Exception, psycopg2.DatabaseError) as error:
+                            cur.rollback()
                             logger.error(error)
-                            result = {"erro" : str(error)}
+                            content = {"erro" : str(error)}
                 
 
                         content = 'Sucesso'
                     except (Exception, psycopg2.DatabaseError) as error:
                         logger.error(error)
                         cur.rollback()
-                        result = {"erro" : str(error)}
+                        content = {"erro" : str(error)}
                     finally:
                         if conn is not None:
                             cur.close()
@@ -645,7 +646,7 @@ def editar_leilao(leilaoId):
     logger.info("###          Editar Leilão           ###");   
     content = request.get_json()
 
-    if(content["token"] not in tokens_online):
+    if(content["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': content["token"]}))
 
