@@ -893,7 +893,7 @@ def editar_leilao(leilaoId):
 
                 # dar reset ao preco atual dos leiloes
             statement = """UPDATE leilao
-                        SET preco_atual = %s
+                        SET preco_atual = %s, is_ativo = True, is_canceled = False
                         WHERE id_leilao = %s"""
             values = (str(content['preco_base']), str(leilaoId))
 
