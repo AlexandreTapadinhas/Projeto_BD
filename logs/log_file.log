@@ -5893,3 +5893,338 @@ INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\flask\\app.py', reloading
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:18:22] "[35m[1mPUT /login/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\psycopg2\\__init__.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:20:26] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:22:48] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 432, 'id_artigo': 1111, 'codigoisbn': 121212, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'A250', 'utilizador_user_name': 'pedro'}
+ERROR:logger:column "user_vencedor" of relation "artigo" does not exist
+LINE 2: ...artigo,codigoisbn,nome_artigo,categoria,descricao,user_vence...
+                                                             ^
+
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:23:19] "[35m[1mPOST /artigo/ HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 432, 'id_artigo': 1111, 'codigoisbn': 121212, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'A250', 'utilizador_user_name': 'pedro'}
+ERROR:logger:column "user_vencedor" of relation "artigo" does not exist
+LINE 2: ...artigo,codigoisbn,nome_artigo,categoria,descricao,user_vence...
+                                                             ^
+
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:23:58] "[35m[1mPOST /artigo/ HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 432, 'id_artigo': 1111, 'codigoisbn': 121212, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'A250', 'utilizador_user_name': 'pedro'}
+ERROR:logger:column "user_vencedor" of relation "artigo" does not exist
+LINE 2: ...artigo,codigoisbn,nome_artigo,categoria,descricao,user_vence...
+                                                             ^
+
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:24:06] "[35m[1mPOST /artigo/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: POST /artigo              ###
+DEBUG:logger:{}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:25:53] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:26:27] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:27:08] "[31m[1mPUT /artigo/ HTTP/1.1[0m" 405 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 24574, 'id_artigo': 1111, 'codigoisbn': 121212, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'A250', 'utilizador_user_name': 'pedro'}
+ERROR:logger:not all arguments converted during string formatting
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:27:17] "[35m[1mPOST /artigo/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:32:13] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 15384, 'id_artigo': 1111, 'codigoisbn': 121212, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'A250', 'utilizador_user_name': 'pedro'}
+ERROR:logger:not all arguments converted during string formatting
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:32:43] "[35m[1mPOST /artigo/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:37:03] "[35m[1mPOST /artigo/ HTTP/1.1[0m" 500 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:37:11] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:37:22] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 4965, 'id_artigo': 1111, 'codigoisbn': 121212, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'A250', 'utilizador_user_name': 'pedro'}
+ERROR:logger:not all arguments converted during string formatting
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:37:36] "[35m[1mPOST /artigo/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:42:22] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 2259, 'id_artigo': 1111, 'codigoisbn': 121212, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'A250', 'utilizador_user_name': 'pedro'}
+ERROR:logger:not all arguments converted during string formatting
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:42:37] "[35m[1mPOST /artigo/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:46:28] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:47:06] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 5885, 'id_artigo': 1111, 'codigoisbn': 121212, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'A250', 'utilizador_user_name': 'pedro'}
+ERROR:logger:not all arguments converted during string formatting
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:47:29] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 5885, 'id_artigo': 1111, 'codigoisbn': 121212, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'A250', 'utilizador_user_name': 'pedro'}
+ERROR:logger:not all arguments converted during string formatting
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:47:36] "POST /artigo/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:50:59] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 24994, 'id_artigo': 1111, 'codigoisbn': 121212, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'A250', 'utilizador_user_name': 'pedro'}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:51:15] "[35m[1mPOST /artigo/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:53:49] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:54:05] "[31m[1mPOST /login/ HTTP/1.1[0m" 405 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 24743, 'id_artigo': 1111, 'codigoisbn': 121212, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'A250', 'utilizador_user_name': 'pedro'}
+ERROR:logger:duplicate key value violates unique constraint "artigo_pkey"
+DETAIL:  Key (id_artigo)=(1111) already exists.
+
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:54:14] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 24743, 'id_artigo': 1121, 'codigoisbn': 121322, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'A250', 'utilizador_user_name': 'pedro'}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:54:23] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:56:16] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 14253, 'id_leilao': 1236, 'data_ini': '01-04-2021', 'data_fim': '14-06-2021', 'preco_base': 2, 'token': 9258}
+ERROR:logger:insert or update on table "leilao" violates foreign key constraint "leilao_fk1"
+DETAIL:  Key (artigo_id_artigo)=(14253) is not present in table "artigo".
+
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:57:49] "POST /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 1121, 'id_leilao': 1236, 'data_ini': '01-04-2021', 'data_fim': '14-06-2021', 'preco_base': 2, 'token': 9258}
+INFO:werkzeug:192.168.4.6 - - [30/May/2021 17:58:21] "POST /leilao/ HTTP/1.1" 200 -

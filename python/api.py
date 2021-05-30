@@ -251,13 +251,61 @@ def registo_utilizadores():
         result = {"user_name":  payload["user_name"]}
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
-        cur.rollback()
+        cur.execute("rollback")
         result = {"erro" : str(error)}
     finally:
         if conn is not None:
             conn.close()
             cur.close()
 
+    return jsonify(result)
+#2
+@app.route("/login/", methods=['PUT'])
+def login():
+    logger.info("###             Login              ###");   
+    content = request.get_json()
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+
+    #if content["ndep"] is None or content["nome"] is None :
+    #    return 'ndep and nome are required to update'
+
+    if "user_name" not in content or "password" not in content:
+        return 'user_name and password are required to login'
+
+
+    logger.info("---- login  ----")
+    logger.info(f'content: {content}')
+
+    # parameterized queries, good for security and performance
+    #como o user_name e unico basta fazermos assim e nao temos que contar as rows
+    statement ="""
+
+                select user_name , password
+                from utilizador
+                where user_name = %s and password = %s """
+
+
+    values = (content["user_name"], content["password"])
+    token_aux = geraToken(content["user_name"])
+
+    try:
+        res = cur.execute(statement, values)
+        result = {'authToken': token_aux}
+        cur.execute("commit")
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        cur.execute("rollback")
+        result = {"erro":str(error)}
+        cur.close()
+        conn.close()
+        return jsonify(result)
+    finally:
+        if conn is not None:
+            conn.close()
+            cur.close()
     return jsonify(result)
 
 #3
@@ -278,45 +326,63 @@ def criar_artigo():
 
     # parameterized queries, good for security and performance
     statement = """
-                  INSERT INTO artigo (id_artigo,codigoisbn,nome_artigo,categoria,descricao,user_vencedor,utilizador_user_name) 
-                          VALUES (%s ,  %s,  %s , %s,   %s, %s, %s)"""
+                  INSERT INTO artigo (id_artigo,codigoisbn,nome_artigo,categoria,descricao,utilizador_user_name) 
+                          VALUES (%s ,  %s,  %s , %s,   %s, %s)"""
 
-    values = (payload["id_artigo"],payload["codigoisbn"],payload["nome_artigo"],payload["categoria"],payload["descricao"],"",payload["utilizador_user_name"])
+    values = (payload["id_artigo"],payload["codigoisbn"],payload["nome_artigo"],payload["categoria"],payload["descricao"],payload["utilizador_user_name"])
 
     try:
         cur.execute(statement, values)
-        #cur.execute("commit")
-
-        #result = 'Inserted Artigo!'
-
-      
-        statement = """
-                INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,artigo_id_artigo) 
-                        VALUES ( %s,   %s ,  %s,  %s , %s)"""
-
-        values = (payload["id_leilao"],payload["data_ini"],payload["data_fim"],payload["preco_base"],payload["id_artigo"])
-
-        try:
-            cur.execute(statement, values)
-            cur.execute("commit")
-
-            result = {"leilaoId":payload["id_leilao"]}
-
-        except (Exception, psycopg2.DatabaseError) as error:
-            logger.error(error)
-            cur.rollback()
-            #result = 'Failed to insert leilao!'
-            result = {"erro" : str(error)}
-
+        cur.execute("commit")
+        result = {"artigoId": payload["id_artigo"]}
+        
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
-        cur.rollback()
+        cur.execute("rollback")
         #result = 'Failed!'
         result = {"erro" : str(error)}
     finally:
         if conn is not None:
             conn.close()
 
+    return jsonify(result)
+
+@app.route("/leilao/", methods=['POST'])
+def criar_leilao():
+    logger.info("###              DEMO: POST /leilao              ###");   
+    payload = request.get_json()
+
+    if(payload["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': payload["token"]}))
+   
+    conn = db_connection()
+    cur = conn.cursor()
+
+    logger.info("---- new artigo  ----")
+    logger.debug(f'payload: {payload}')
+
+
+      
+    statement = """
+            INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ative,is_canceled,user_vencedor,artigo_id_artigo) 
+                    VALUES ( %s,   %s ,  %s,  %s , %s,%s,   %s ,  %s,  %s)"""
+
+    values = (payload["id_leilao"],payload["data_ini"],payload["data_fim"],payload["preco_base"],payload["preco_base"],True,False,"",payload["id_artigo"])
+
+    try:
+        cur.execute(statement, values)
+        cur.execute("commit")
+        result = {"leilaoId":payload["id_leilao"]}
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        cur.execute("rollback")
+        #result = 'Failed to insert leilao!'
+        result = {"erro" : str(error)}
+    finally:
+        if conn is not None:
+            conn.close()
     return jsonify(result)
 
 #4
@@ -448,7 +514,7 @@ def get_all_leiloes_from_user(user):
 
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
-        cur.rollback()
+        cur.execute("rollback")
         result = {"erro":str(error)}
         cur.close()
         conn.close()
@@ -479,7 +545,7 @@ def get_all_leiloes_from_user(user):
             cur.execute("commit")
         except (Exception, psycopg2.DatabaseError) as error:
             logger.error(error)
-            cur.rollback()
+            cur.execute("rollback")
             result = {"erro":str(error)}
             cur.close()
             conn.close()
@@ -494,58 +560,6 @@ def get_all_leiloes_from_user(user):
     conn.close()
     return jsonify({'leiloes':payload})
 
-
-
-#2
-@app.route("/login/", methods=['PUT'])
-def login():
-    logger.info("###             Login              ###");   
-    content = request.get_json()
-
-    conn = db_connection()
-    cur = conn.cursor()
-
-
-    #if content["ndep"] is None or content["nome"] is None :
-    #    return 'ndep and nome are required to update'
-
-    if "user_name" not in content or "password" not in content:
-        return 'user_name and password are required to login'
-
-
-    logger.info("---- login  ----")
-    logger.info(f'content: {content}')
-
-    # parameterized queries, good for security and performance
-    #como o user_name e unico basta fazermos assim e nao temos que contar as rows
-    statement ="""
-
-                select user_name , password
-                from utilizador
-                where user_name = %s and password = %s """
-
-
-    values = (content["user_name"], content["password"])
-
-    token_aux = geraToken(content["user_name"])
-    try:
-        res = cur.execute(statement, values)
-        result = {'authToken': token_aux}
-        cur.execute("commit")
-
-
-    except (Exception, psycopg2.DatabaseError) as error:
-        logger.error(error)
-        cur.rollback()
-        result = {"erro":str(error)}
-        cur.close()
-        conn.close()
-        return jsonify(result)
-    finally:
-        if conn is not None:
-            conn.close()
-            cur.close()
-    return jsonify(result)
 
 #8
 @app.route("/leiloes/<id_leilao>/<licitacao>", methods=['GET'])
@@ -602,7 +616,7 @@ def licitar(id_leilao, licitacao):
                                 cur.execute("commit")
 
                             except (Exception, psycopg2.DatabaseError) as error:
-                                cur.rollback()
+                                cur.execute("rollback")
                                 logger.error(error)
                                 content = {"erro" : str(error)}
                     
@@ -610,7 +624,7 @@ def licitar(id_leilao, licitacao):
                             content = 'Sucesso'
                         except (Exception, psycopg2.DatabaseError) as error:
                             logger.error(error)
-                            cur.rollback()
+                            cur.execute("rollback")
                             content = {"erro" : str(error)}
                         finally:
                             if conn is not None:
@@ -673,7 +687,7 @@ def editar_leilao(leilaoId):
     
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
-        cur.rollback()
+        cur.execute("rollback")
         result = {"erro":str(error)}
         cur.close()
         conn.close()
@@ -697,7 +711,7 @@ def editar_leilao(leilaoId):
         cur.execute("commit")
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
-        cur.rollback()
+        cur.execute("rollback")
         result = {"erro":str(error)}
         cur.close()
         conn.close()
@@ -734,7 +748,7 @@ def editar_leilao(leilaoId):
             cur.execute("commit")
         except (Exception, psycopg2.DatabaseError) as error:
             logger.error(error)
-            cur.rollback()
+            cur.execute("rollback")
             result = {"erro":str(error)}
             cur.close()
             conn.close()
@@ -750,7 +764,7 @@ def editar_leilao(leilaoId):
         rows = cur.fetchall()
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
-        cur.rollback()
+        cur.execute("rollback")
         result = {"erro":str(error)}
         cur.close()
         conn.close()
@@ -799,7 +813,7 @@ def escreve_msg_mural():
         result = 'Mensagem publicada com sucesso'
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
-        cur.rollback()
+        cur.execute("rollback")
         result = {"erro" : str(error)}
     finally:
         if conn is not None:
@@ -880,7 +894,7 @@ def terminar_leiloes():
 
 def db_connection():
     db = psycopg2.connect(user = "postgres",
-                            password = "bd2021",
+                            password = "django500",
                             host = "localhost",
                             port = "5432",
                             database = "projeto")

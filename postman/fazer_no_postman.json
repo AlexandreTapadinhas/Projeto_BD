@@ -25,7 +25,16 @@ enviar token -> usado em todas as funcionalidades
     "token": 16340
 }
 
-
+POST criar artigo -> /artigo
+{
+    "token": 24574,
+    "id_artigo": 1111,
+    "codigoisbn": 121212,
+    "nome_artigo": "computador",
+    "categoria": "tecnologia",
+    "descricao": "A250",
+    "utilizador_user_name": "pedro"
+}
 
 POST criar leilao -> /artigo/
 {
