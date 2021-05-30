@@ -524,16 +524,23 @@ def get_all_leiloes_from_user(user):
     logger.info("###              DEMO: GET /user/leiloes             ###");   
 
     dados = request.get_json()
-    #TODO: Verificar datas
-    #TODO: Falta checkar os criadores do leilão
+
     if(dados["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
 
     conn = db_connection()
     cur = conn.cursor()
+
+    statement = """SELECT id_leilao
+                    FROM registolicitacao
+                    WHERE utilizador_user_name = %s;"""
+
+    values = (user,)
+
+
     try:
-        cur.execute("""SELECT id_leilao, user_name FROM registolicitacao""")
+        cur.execute(statement, values)
         cur.execute("commit")
 
     except (Exception, psycopg2.DatabaseError) as error:
@@ -550,13 +557,26 @@ def get_all_leiloes_from_user(user):
     
     logger.debug("Vou imprimir da tabela registolicitacao")
     for row in cur.fetchall():
-        #logger.debug(f'row: {row}')
-        #logger.debug(f'user = {user}')
-        if (row[1] == user):
-            #logger.debug("encontrei")
-            leiloes.append(row[0])
+        leiloes.append(row[0])
 
+    # adicionar os usernames dos vendedores
 
+    statement = """SELECT id_leilao
+                FROM leilao, artigo
+                WHERE artigo_id_artigo = id_artigo and utilizador_user_name = %s;"""
+    values = (str(user),)
+
+    try:
+        cur.execute(statement, values)
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        cur.execute("rollback")
+        result = {"erro" : str(error)}
+
+    rows = cur.fetchall()
+    for row in rows:
+        leiloes.append(row[0])
 
     #payload = {'leiloesIds':leiloes}
     payload = []
