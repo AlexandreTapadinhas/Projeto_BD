@@ -18,3 +18,12 @@ INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ative,
 VALUES (137,'01-06-2021','15-06-2021',1500,1500,true,false,'',132245);
 INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ative,is_canceled,user_vencedor,artigo_id_artigo)
 VALUES (140,'01-06-2021','15-06-2021',1500,1500,true,false,'',125545);
+
+
+INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('comentario','123','01-01-2000',1236,'pedro');
+INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('queixa','456','01-01-2000',1236,'ines');
+INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('comentario','789','01-01-2000',1236,'tapadinhas');
+
+INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (2500,'01-01-2000',1236,'pedro');
+INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (2600,'02-01-2000',1236,'tapadinhas');
+INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (2800,'03-01-2000',1236,'ines');
