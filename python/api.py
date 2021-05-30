@@ -590,8 +590,8 @@ def licitar(id_leilao, licitacao):
                         statement = """
                                 INSERT INTO registolicitacao (preco_licitacao,data_licitacao, leilao_id_leilao, utilizador_user_name) 
                                 VALUES (  %s,   %s ,  %s,  %s )"""
+                                 
 
-        
                         values = (licitacao,datetime.today(), id_leilao , tokens_online[payload["token"]])  
                         
 
@@ -758,6 +758,82 @@ def editar_leilao(leilaoId):
     return jsonify({'leilao':rows})
 
 
+#10
+@app.route("/escreve_msg_mural", methods=['POST'])
+def escreve_msg_mural():
+
+    content = request.get_json()
+
+    if(content["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': content["token"]}))
+
+
+    logger.info("###             POST /escreve_msg_mural              ###");   
+
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    logger.info("---- new msg  ----")
+    logger.debug(f'content: {content}')
+
+    # parameterized queries, good for security and performance
+    statement = """
+                  INSERT INTO utilizador (texto, data_pub, leilao_id_leilao, utilizador_user_name) 
+                          VALUES ( %s,   %s ,  %s,  %s , %s )"""
+
+    
+    values = (content["texto"], datetime.today(), content["id_leilao"], tokens_online[content["token"]])
+
+    try:
+        cur.execute(statement, values)
+        cur.execute("commit")
+
+        result = 'Mensagem publicada com sucesso'
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        cur.rollback()
+        result = {"erro" : str(error)}
+    finally:
+        if conn is not None:
+            conn.close()
+            cur.close()
+
+    return jsonify(result)
+
+#extra1
+@app.route("/comentarios/<leilaoId>", methods=['GET'])
+def listar_comentarios(leilaoId):
+    dados = request.get_json()
+    if(dados["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+
+        
+    logger.info("###              DEMO: GET /comentario            ###");   
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+
+    cur.execute("""SELECT texto, data_pub, utilizador_user_name
+                FROM comentarios
+                WHERE leilao_id_leilao = %s""", (str(leilaoId),) )
+    
+    payload = []
+
+    logger.debug("---- mural do leilao  ----")
+    logger.debug(leilaoId)
+    for row in cur.fetchall():
+        logger.debug(row)
+        content = {'utilizador_user_name': row[2],'data_pub': row[1],"texto": row[0]}
+        payload.append(content)
+
+
+    cur.close()
+    conn.close()
+    return jsonify({'MURAL LEILAO':payload})
 
 
 ##########################################################
