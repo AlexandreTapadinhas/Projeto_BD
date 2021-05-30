@@ -592,6 +592,65 @@ def licitar(id_leilao, licitacao):
 
 
 
+#9
+@app.route("/leilao/editar/<leilaoId>", methods=['PUT'])
+def editar_leilao(leilaoId):
+    logger.info("###          Editar Leilão           ###");   
+    content = request.get_json()
+
+    if(content["token"] not in tokens_online):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': content["token"]}))
+
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    #TODO:Copiar as rows que sao alteradas para a tabela updateartigo e alterar a tabela para guardar todos os dados que podem ser alterados
+    statement = """SELECT artigo_id_artigo FROM leilao
+                    WHERE id_leilao = %s;"""
+    values = (str(leilaoId),)
+
+    cur.execute(statement, values)
+    rows = cur.fetchall()
+    leilaoId = rows[0][0]
+    logger.debug("leilaoId = " + str(leilaoId))
+
+    keys_leilao = ['data_ini', 'data_fim', 'preco_base']
+    keys_artigo = ['codigoisbn', 'nome_artigo', 'categoria', 'descricao', 'user_vendedor', 'utilizador_user_name']
+
+    logger.debug(content)
+    for key,val in content.items():
+        if key in keys_leilao:
+            statement = """UPDATE leilao
+                    SET """ + key + """ = %s
+                    WHERE id_leilao = %s"""
+            values = (str(val), str(leilaoId))
+        elif key in keys_artigo:
+            statement = """UPDATE artigo
+                    SET """ + key + """ = %s
+                    WHERE id_artigo = %s"""
+            values = (str(val), str(leilaoId))
+        elif key == "token":
+            continue
+        else:
+            logger.debug("parametro nao existe nas tabelas leilao ou artigo")
+            return
+        
+        cur.execute(statement, values)
+
+    statement = """SELECT * FROM leilao,artigo
+                WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s;"""
+    values = (str(leilaoId),)
+    cur.execute(statement, values)
+
+    rows = cur.fetchall()
+
+
+    return jsonify({'leilao':rows})
+
+
+
 ##########################################################
 ## DATABASE ACCESS
 ##########################################################

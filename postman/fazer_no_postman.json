@@ -42,6 +42,21 @@ POST criar leilao -> /artigo/
     "token": 5284
 }
 
+
+editar leilao -> PUT /leilao/editar/<leilaoId> (todos os atributos sao opcionais, colocal apenas os que quer editar)
+{
+    "data_ini":"22-06-2020",
+    "data_fim":"22-06-2021",
+    "preco_base":5,
+    "codigoisbn":741852963,
+    "nome_artigo":"livro bd",
+    "categoria":"livros",
+    "descricao":"livro sobre bases de dados",
+    "user_vendedor":"ines",
+    "utilizador_user_name":"ines"
+}
+
+
 GET Listar leiloes existentes-> .../leilao/
 GET Pesquisar leiloes existentes-> .../leiloes/keyword
 GET Consultar leilao-> .../leilao/leilaoId
