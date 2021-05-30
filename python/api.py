@@ -861,7 +861,7 @@ def terminar_leiloes():
 
     logger.debug("---- mural do leilao  ----")
     for row in rows:
-        
+        print("oi")
 
 
 
