@@ -38,17 +38,12 @@ POST criar artigo -> /artigo
 
 POST criar leilao -> /artigo/
 {
-    "id_artigo": 14253,
-    "codigoisbn": 12345,
-    "nome_artigo": "caneta",
-    "categoria": "escola",
-    "descricao": "abstrata",
-    "utilizador_user_name": "ines",
+    "id_artigo": 1121,
     "id_leilao": 1236,
     "data_ini": "01-04-2021",
     "data_fim": "14-06-2021",
     "preco_base": 2,
-    "token": 5284
+    "token": 9258
 }
 
 

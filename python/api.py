@@ -365,10 +365,10 @@ def criar_leilao():
 
       
     statement = """
-            INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ative,is_canceled,user_vencedor,artigo_id_artigo) 
+            INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ative,is_canceled,user_vencedor,artigo_id_artigo)
                     VALUES ( %s,   %s ,  %s,  %s , %s,%s,   %s ,  %s,  %s)"""
 
-    values = (payload["id_leilao"],payload["data_ini"],payload["data_fim"],payload["preco_base"],payload["preco_base"],True,False,"",payload["id_artigo"])
+    values = (payload["id_leilao"],payload["data_ini"],payload["data_fim"],payload["preco_base"],payload["preco_base"],True,False,payload["id_artigo"])
 
     try:
         cur.execute(statement, values)
