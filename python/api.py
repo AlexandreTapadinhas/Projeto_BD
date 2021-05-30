@@ -269,6 +269,9 @@ def login():
     cur = conn.cursor()
 
 
+    #if content["ndep"] is None or content["nome"] is None :
+    #    return 'ndep and nome are required to update'
+
     if "user_name" not in content or "password" not in content:
         return 'user_name and password are required to login'
 
@@ -276,6 +279,8 @@ def login():
     logger.info("---- login  ----")
     logger.info(f'content: {content}')
 
+    # parameterized queries, good for security and performance
+    #como o user_name e unico basta fazermos assim e nao temos que contar as rows
     statement ="""
 
                 select user_name , password
@@ -399,13 +404,7 @@ def get_all_leiloes():
                 WHERE leilao.artigo_id_artigo = artigo.id_artigo""")
     
     rows = cur.fetchall()
-
-    if(len(rows) == 0):
-        cur.execute("commit")
-        cur.close()
-        conn.close()
-        return 'Erro esse leilao não existe'
-    
+    print(rows)
     payload = []
     
   
@@ -489,6 +488,9 @@ def consult_leilao(leilaoId):
     logger.debug(leilaoId)
     for row in cur.fetchall():
         if(row[2]<= datetime.today() and row[3]>datetime.today()): 
+            comentarios = []
+            licitacoes = []
+
             logger.debug(row)
             content = {'leilaoId': row[0],'descricao': row[1],"data_ini": row[2],"data_fim":row[3],"preco_base":row[4],"nome_artigo": row[5],"categoria": row[6]}
             payload.append(content)
@@ -497,15 +499,17 @@ def consult_leilao(leilaoId):
                 WHERE leilao_id_leilao = %s""",(row[0],))
             for line in cur.fetchall():
                 content = {'comentario': line[0],'tipo': line[1],'user': line[3]}
-                payload.append(content)
+                comentarios.append(content)
             
             cur.execute("""SELECT preco_licitacao,data_licitacao,utilizador_user_name
                 FROM registolicitacao
                 WHERE leilao_id_leilao = %s""",(row[0],))
             for line in cur.fetchall():
                 content = {'preco da licitacao': line[0],'data da licitacao': line[1],'utilizador': line[2]}
-                payload.append(content)
-            
+                licitacoes.append(content)
+
+            payload.append({'Comentarios': comentarios})
+            payload.append({'Licitacoes': licitacoes})
             
     cur.close()
     conn.close()
@@ -597,7 +601,7 @@ def put_is_ativo_false( id_leilao):
         cur.execute("commit")
 
     except (Exception, psycopg2.DatabaseError) as error:
-        cur.execute("rollback")
+        cur.rollback()
         logger.error(error)
 
     #notificar o user !!! vencedor 
@@ -640,7 +644,7 @@ def put_is_ativo_false( id_leilao):
         cur.execute("commit")
 
     except (Exception, psycopg2.DatabaseError) as error:
-        cur.execute("rollback")
+        cur.rollback()
         logger.error(error)
 
     finally:
@@ -669,15 +673,8 @@ def licitar(id_leilao, licitacao):
     #cur.execute("begin transaction")
     #execute -> ja comeca a transation
 
-    cur.execute("SELECT data_ini, data_fim, preco_atual, is_ative, leilao.is_canceled FROM leilao where id_leilao = %s", (id_leilao,) )
+    cur.execute("SELECT data_ini, data_fim, preco_atual, is_ativo, is_canceled FROM leilao where id_leilao = %s", (id_leilao,) )
     rows = cur.fetchall()
-
-    if(len(rows) == 0):
-        cur.execute("commit")
-        cur.close()
-        conn.close()
-        return 'Erro esse leilao não existe'
-
 
     row = rows[0]
     if(row[3] == True):
@@ -792,14 +789,6 @@ def editar_leilao(leilaoId):
         return jsonify(result)
 
     rows = cur.fetchall()
-
-    if(len(rows) == 0):
-        cur.execute("commit")
-        cur.close()
-        conn.close()
-        return 'Erro esse leilao não existe'
-
-    
     logger.debug("len(rows) = " + str(len(rows)))
     row = rows[0]
     logger.debug("len(row) = " + str(len(row)))
@@ -828,6 +817,8 @@ def editar_leilao(leilaoId):
 
     keys_leilao = ['data_ini', 'data_fim', 'preco_base']
     keys_artigo = ['nome_artigo', 'categoria', 'descricao']
+
+    #
 
     logger.debug(content)
     for key,val in content.items():
@@ -904,11 +895,11 @@ def escreve_msg_mural():
 
     # parameterized queries, good for security and performance
     statement = """
-                  INSERT INTO comentarios (type, texto, data_pub, leilao_id_leilao, utilizador_user_name) 
+                  INSERT INTO utilizador (texto, data_pub, leilao_id_leilao, utilizador_user_name) 
                           VALUES ( %s,   %s ,  %s,  %s , %s )"""
 
     
-    values = (content["type"], content["texto"], datetime.today(), content["id_leilao"], tokens_online[content["token"]])
+    values = (content["texto"], datetime.today(), content["id_leilao"], tokens_online[content["token"]])
 
     try:
         cur.execute(statement, values)
@@ -959,7 +950,9 @@ def listar_comentarios(leilaoId):
     conn.close()
     return jsonify({'MURAL LEILAO':payload})
 
-
+def atualizaLicitacoes():
+    print("TRIGGER RECEBIDO")
+    
 #13 -> termina e lista
 @app.route("/terminarLeiloes", methods=['GET'])
 def terminar_leiloes():
@@ -977,12 +970,6 @@ def terminar_leiloes():
     try:
         cur.execute("SELECT  data_fim, is_canceled,id_leilao, is_ative FROM leilao" )
         rows = cur.fetchall()
-
-        if(len(rows) == 0):
-            cur.execute("commit")
-            cur.close()
-            conn.close()
-            return 'Erro nao existe leiloes'
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
         result = {"erro" : str(error)}
@@ -1014,7 +1001,7 @@ def terminar_leiloes():
 
 def db_connection():
     db = psycopg2.connect(user = "postgres",
-                            password = "bd2021",
+                            password = "django500",
                             host = "localhost",
                             port = "5432",
                             database = "projeto")  #dbname
