@@ -365,7 +365,7 @@ def criar_leilao():
 
       
     statement = """
-            INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ative,is_canceled,user_vencedor,artigo_id_artigo)
+            INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ativo,is_canceled,user_vencedor,artigo_id_artigo)
                     VALUES ( %s,   %s ,  %s,  %s , %s,%s,   %s ,  %s,  %s)"""
 
     values = (payload["id_leilao"],payload["data_ini"],payload["data_fim"],payload["preco_base"],payload["preco_base"],True,False,payload["id_artigo"])
@@ -981,7 +981,7 @@ def terminar_leiloes():
     cur = conn.cursor()
 
     try:
-        cur.execute("SELECT  data_fim, is_canceled,id_leilao, is_ative FROM leilao" )
+        cur.execute("SELECT  data_fim, is_canceled,id_leilao, is_ativo FROM leilao" )
         rows = cur.fetchall()
         if(len(rows) == 0):
             cur.close()
@@ -1018,7 +1018,7 @@ def terminar_leiloes():
 
 def db_connection():
     db = psycopg2.connect(user = "postgres",
-                            password = "django500",
+                            password = "bd2021",
                             host = "localhost",
                             port = "5432",
                             database = "projeto")  #dbname
