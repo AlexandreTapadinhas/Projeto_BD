@@ -488,6 +488,9 @@ def consult_leilao(leilaoId):
     logger.debug(leilaoId)
     for row in cur.fetchall():
         if(row[2]<= datetime.today() and row[3]>datetime.today()): 
+            comentarios = []
+            licitacoes = []
+
             logger.debug(row)
             content = {'leilaoId': row[0],'descricao': row[1],"data_ini": row[2],"data_fim":row[3],"preco_base":row[4],"nome_artigo": row[5],"categoria": row[6]}
             payload.append(content)
@@ -496,15 +499,17 @@ def consult_leilao(leilaoId):
                 WHERE leilao_id_leilao = %s""",(row[0],))
             for line in cur.fetchall():
                 content = {'comentario': line[0],'tipo': line[1],'user': line[3]}
-                payload.append(content)
+                comentarios.append(content)
             
             cur.execute("""SELECT preco_licitacao,data_licitacao,utilizador_user_name
                 FROM registolicitacao
                 WHERE leilao_id_leilao = %s""",(row[0],))
             for line in cur.fetchall():
                 content = {'preco da licitacao': line[0],'data da licitacao': line[1],'utilizador': line[2]}
-                payload.append(content)
-            
+                licitacoes.append(content)
+
+            payload.append({'Comentarios': comentarios})
+            payload.append({'Licitacoes': licitacoes})
             
     cur.close()
     conn.close()
@@ -576,58 +581,6 @@ def get_all_leiloes_from_user(user):
     conn.close()
     return jsonify({'leiloes':payload})
 
-
-
-#2
-@app.route("/login/", methods=['PUT'])
-def login():
-    logger.info("###             Login              ###");   
-    content = request.get_json()
-
-    conn = db_connection()
-    cur = conn.cursor()
-
-
-    #if content["ndep"] is None or content["nome"] is None :
-    #    return 'ndep and nome are required to update'
-
-    if "user_name" not in content or "password" not in content:
-        return 'user_name and password are required to login'
-
-
-    logger.info("---- login  ----")
-    logger.info(f'content: {content}')
-
-    # parameterized queries, good for security and performance
-    #como o user_name e unico basta fazermos assim e nao temos que contar as rows
-    statement ="""
-
-                select user_name , password
-                from utilizador
-                where user_name = %s and password = %s """
-
-
-    values = (content["user_name"], content["password"])
-
-    token_aux = geraToken(content["user_name"])
-    try:
-        res = cur.execute(statement, values)
-        result = {'authToken': token_aux}
-        cur.execute("commit")
-
-
-    except (Exception, psycopg2.DatabaseError) as error:
-        logger.error(error)
-        cur.rollback()
-        result = {"erro":str(error)}
-        cur.close()
-        conn.close()
-        return jsonify(result)
-    finally:
-        if conn is not None:
-            conn.close()
-            cur.close()
-    return jsonify(result)
 
 #colocar is_ativo == false
 def put_is_ativo_false( id_leilao):
@@ -997,7 +950,9 @@ def listar_comentarios(leilaoId):
     conn.close()
     return jsonify({'MURAL LEILAO':payload})
 
-
+def atualizaLicitacoes():
+    print("TRIGGER RECEBIDO")
+    
 #13 -> termina e lista
 @app.route("/terminarLeiloes", methods=['GET'])
 def terminar_leiloes():
