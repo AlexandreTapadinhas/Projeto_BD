@@ -396,7 +396,7 @@ def get_all_leiloes():
 
     cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn,leilao.data_ini,leilao.data_fim
                 FROM leilao,artigo
-                WHERE artigo_id_artigo = id_artigo""")
+                WHERE leilao.artigo_id_artigo = artigo.id_artigo""")
     
     rows = cur.fetchall()
 
@@ -438,7 +438,7 @@ def search_leilao(keyword):
     conn = db_connection()
     cur = conn.cursor()
 
-    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn,leilao.data_ini,leilao.data_fim FROM leilao,artigo""")
+    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn,leilao.data_ini,leilao.data_fim FROM leilao,artigo """)
     dados = request.get_json()
     
 
@@ -492,8 +492,21 @@ def consult_leilao(leilaoId):
             logger.debug(row)
             content = {'leilaoId': row[0],'descricao': row[1],"data_ini": row[2],"data_fim":row[3],"preco_base":row[4],"nome_artigo": row[5],"categoria": row[6]}
             payload.append(content)
-
-
+            cur.execute("""SELECT texto,type,data_pub,utilizador_user_name
+                FROM comentarios
+                WHERE leilao_id_leilao = %s""",(row[0],))
+            for line in cur.fetchall():
+                content = {'comentario': line[0],'tipo': line[1],'user': line[3]}
+                payload.append(content)
+            
+            cur.execute("""SELECT preco_licitacao,data_licitacao,utilizador_user_name
+                FROM registolicitacao
+                WHERE leilao_id_leilao = %s""",(row[0],))
+            for line in cur.fetchall():
+                content = {'preco da licitacao': line[0],'data da licitacao': line[1],'utilizador': line[2]}
+                payload.append(content)
+            
+            
     cur.close()
     conn.close()
     return jsonify(payload)
@@ -891,11 +904,11 @@ def escreve_msg_mural():
 
     # parameterized queries, good for security and performance
     statement = """
-                  INSERT INTO utilizador (texto, data_pub, leilao_id_leilao, utilizador_user_name) 
+                  INSERT INTO comentarios (type, texto, data_pub, leilao_id_leilao, utilizador_user_name) 
                           VALUES ( %s,   %s ,  %s,  %s , %s )"""
 
     
-    values = (content["texto"], datetime.today(), content["id_leilao"], tokens_online[content["token"]])
+    values = (content["type"], content["texto"], datetime.today(), content["id_leilao"], tokens_online[content["token"]])
 
     try:
         cur.execute(statement, values)
