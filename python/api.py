@@ -404,7 +404,10 @@ def get_all_leiloes():
                 WHERE leilao.artigo_id_artigo = artigo.id_artigo""")
     
     rows = cur.fetchall()
-    print(rows)
+    if(len(rows) == 0):
+        cur.close()
+        conn.close()
+        return 'Erro esse leilao nao existe'
     payload = []
     
   
@@ -601,7 +604,7 @@ def put_is_ativo_false( id_leilao):
         cur.execute("commit")
 
     except (Exception, psycopg2.DatabaseError) as error:
-        cur.rollback()
+        cur.execute("rollback")
         logger.error(error)
 
     #notificar o user !!! vencedor 
@@ -644,7 +647,7 @@ def put_is_ativo_false( id_leilao):
         cur.execute("commit")
 
     except (Exception, psycopg2.DatabaseError) as error:
-        cur.rollback()
+        cur.execute("rollback")
         logger.error(error)
 
     finally:
@@ -675,7 +678,10 @@ def licitar(id_leilao, licitacao):
 
     cur.execute("SELECT data_ini, data_fim, preco_atual, is_ativo, is_canceled FROM leilao where id_leilao = %s", (id_leilao,) )
     rows = cur.fetchall()
-
+    if(len(rows) == 0):
+        cur.close()
+        conn.close()
+        return 'Erro esse leilao nao existe'
     row = rows[0]
     if(row[3] == True):
         if(row[4] == False):
@@ -789,6 +795,13 @@ def editar_leilao(leilaoId):
         return jsonify(result)
 
     rows = cur.fetchall()
+    if(len(rows) == 0):
+        cur.close()
+        conn.close()
+        return 'Erro esse leilao nao existe'
+
+
+
     logger.debug("len(rows) = " + str(len(rows)))
     row = rows[0]
     logger.debug("len(row) = " + str(len(row)))
@@ -970,6 +983,10 @@ def terminar_leiloes():
     try:
         cur.execute("SELECT  data_fim, is_canceled,id_leilao, is_ative FROM leilao" )
         rows = cur.fetchall()
+        if(len(rows) == 0):
+            cur.close()
+            conn.close()
+            return 'Erro não existe leiloes'
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
         result = {"erro" : str(error)}
