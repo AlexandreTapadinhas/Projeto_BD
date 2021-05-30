@@ -48,7 +48,7 @@ CREATE TABLE leilao (
 	preco_atual	 BIGINT,
 	is_ative	 BOOL NOT NULL DEFAULT true,
 	is_canceled	 BOOL NOT NULL DEFAULT false,
-	user_vencedor	 VARCHAR(512) DEFAULT "",
+	user_vencedor	 VARCHAR(512) DEFAULT null,
 	artigo_id_artigo INTEGER NOT NULL,
 	PRIMARY KEY(id_leilao)
 );

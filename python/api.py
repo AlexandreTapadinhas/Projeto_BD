@@ -577,6 +577,129 @@ def get_all_leiloes_from_user(user):
     return jsonify({'leiloes':payload})
 
 
+
+#2
+@app.route("/login/", methods=['PUT'])
+def login():
+    logger.info("###             Login              ###");   
+    content = request.get_json()
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+
+    #if content["ndep"] is None or content["nome"] is None :
+    #    return 'ndep and nome are required to update'
+
+    if "user_name" not in content or "password" not in content:
+        return 'user_name and password are required to login'
+
+
+    logger.info("---- login  ----")
+    logger.info(f'content: {content}')
+
+    # parameterized queries, good for security and performance
+    #como o user_name e unico basta fazermos assim e nao temos que contar as rows
+    statement ="""
+
+                select user_name , password
+                from utilizador
+                where user_name = %s and password = %s """
+
+
+    values = (content["user_name"], content["password"])
+
+    token_aux = geraToken(content["user_name"])
+    try:
+        res = cur.execute(statement, values)
+        result = {'authToken': token_aux}
+        cur.execute("commit")
+
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        cur.rollback()
+        result = {"erro":str(error)}
+        cur.close()
+        conn.close()
+        return jsonify(result)
+    finally:
+        if conn is not None:
+            conn.close()
+            cur.close()
+    return jsonify(result)
+
+#colocar is_ativo == false
+def put_is_ativo_false( id_leilao):
+    conn = db_connection()
+    cur = conn.cursor()
+
+    statement = """
+            UPDATE leilao
+            SET is_ativo = %s
+            WHERE id_leilao = %s"""
+
+
+    values = (False, id_leilao)  
+    
+
+    try:
+        cur.execute(statement, values)
+        cur.execute("commit")
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        cur.rollback()
+        logger.error(error)
+
+    #notificar o user !!! vencedor 
+
+    statement = """
+                INSERT INTO notificacao (id_noti,msg, data, is_open, utilizador_user_name) 
+                VALUES (  %s,   %s ,  %s,  %s ,%s)"""
+
+
+    msg="Parabéns : Ganhou o leilao "+id_leilao+"!!!"
+
+    try:
+        cur.execute("""
+                select user_vencedor
+                from leilao
+                WHERE id_leilao = %s""", (id_leilao,))
+
+        username= cur.fetchall()
+        username=username[0][0]
+        cur.execute("commit")
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+
+    try:
+        cur.execute("""
+                select max(id_noti)
+                from notificacao """)
+        id_noti=cur.fetchall()
+        id_noti = id_noti[0][0]
+        cur.execute("commit")
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+
+    id_noti = id_noti+1
+    values = (id_noti, msg, datetime.today(), False, username )  
+    
+
+    try:
+        cur.execute(statement, values)
+        cur.execute("commit")
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        cur.rollback()
+        logger.error(error)
+
+    finally:
+        if conn is not None:
+            cur.close()
+            conn.close()
+       
+
 #8
 @app.route("/leiloes/<id_leilao>/<licitacao>", methods=['GET'])
 def licitar(id_leilao, licitacao):
@@ -597,7 +720,7 @@ def licitar(id_leilao, licitacao):
     #cur.execute("begin transaction")
     #execute -> ja comeca a transation
 
-    cur.execute("SELECT data_ini, data_fim, preco_base, is_ativo, is_canceled FROM leilao where id_leilao = %s", (id_leilao,) )
+    cur.execute("SELECT data_ini, data_fim, preco_atual, is_ativo, is_canceled FROM leilao where id_leilao = %s", (id_leilao,) )
     rows = cur.fetchall()
 
     row = rows[0]
@@ -607,7 +730,7 @@ def licitar(id_leilao, licitacao):
                 if(row[2]<int(licitacao)):
                         statement = """
                             UPDATE leilao
-                            SET preco_base = %s , user_vencedor = %s
+                            SET preco_atual = %s , user_vencedor = %s
                             WHERE id_leilao = %s"""
 
             
@@ -653,12 +776,15 @@ def licitar(id_leilao, licitacao):
                     conn.close ()
                     return 'Erro: o valor do artigo e maior que a licitacao'
             else:
+                #por o is_ativo a false
                 cur.execute("commit")
+                put_is_ativo_false( id_leilao)
                 cur.close()
                 conn.close ()
                 return'Erro leilao ja acabou/ainda nao comecou'
         else:
             cur.execute("commit")
+            put_is_ativo_false( id_leilao)
             cur.close()
             conn.close ()
             return'Erro: leilao foi desativado pelo admin'
@@ -872,7 +998,7 @@ def listar_comentarios(leilaoId):
     return jsonify({'MURAL LEILAO':payload})
 
 
-#13
+#13 -> termina e lista
 @app.route("/terminarLeiloes", methods=['GET'])
 def terminar_leiloes():
     dados = request.get_json()
@@ -886,21 +1012,31 @@ def terminar_leiloes():
     conn = db_connection()
     cur = conn.cursor()
 
-    cur.execute("SELECT  data_fim, is_canceled FROM leilao " )
-    rows = cur.fetchall()
+    try:
+        cur.execute("SELECT  data_fim, is_canceled,id_leilao, is_ative FROM leilao" )
+        rows = cur.fetchall()
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.execute("commit")
+        cur.close()
+        conn.close()
+        return jsonify(result)
 
-    logger.debug("---- mural do leilao  ----")
+    
+
+    logger.debug("---- terminar leiloes  ----")
+
+    payload = []
+
     for row in rows:
-        print("oi")
+        if((row[0]<= datetime.today() or row[1] == True)and row[3] == True):
+            put_is_ativo_false(row[2])
 
-
-
-
-
-
+    result="Leiloes terminados!!"
     cur.close()
     conn.close()
-    return jsonify({'MURAL LEILAO':payload})
+    return jsonify(result)
 
 
 
@@ -913,7 +1049,7 @@ def db_connection():
                             password = "django500",
                             host = "localhost",
                             port = "5432",
-                            database = "projeto")
+                            database = "projeto")  #dbname
     return db
 
 

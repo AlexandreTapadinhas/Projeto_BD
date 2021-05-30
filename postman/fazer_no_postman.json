@@ -40,8 +40,8 @@ POST criar leilao -> /artigo/
 {
     "id_artigo": 1121,
     "id_leilao": 1236,
-    "data_ini": "01-04-2021",
-    "data_fim": "14-06-2021",
+    "data_ini": "01-04-2021 12:30:30",
+    "data_fim": "14-06-2021 13:30:30",
     "preco_base": 2,
     "token": 9258
 }
@@ -49,8 +49,8 @@ POST criar leilao -> /artigo/
 
 editar leilao -> PUT /leilao/editar/<leilaoId> (todos os atributos sao opcionais, colocal apenas os que quer editar)
 {
-    "data_ini":"22-06-2020",
-    "data_fim":"22-06-2021",
+    "data_ini":"22-06-2020 12:30:30",
+    "data_fim":"22-06-2021 13:30:30",
     "preco_base":5,
     "codigoisbn":741852963,
     "nome_artigo":"livro bd",
