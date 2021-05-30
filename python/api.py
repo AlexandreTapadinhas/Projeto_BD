@@ -633,7 +633,10 @@ def put_is_ativo_false( id_leilao):
                 select max(id_noti)
                 from notificacao """)
         id_noti=cur.fetchall()
-        id_noti = id_noti[0][0]
+        if(len(id_noti) == 0):
+            id_noti=-1
+        else:
+            id_noti = id_noti[0][0]
         cur.execute("commit")
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
@@ -967,11 +970,11 @@ def escreve_msg_mural():
 
     # parameterized queries, good for security and performance
     statement = """
-                  INSERT INTO utilizador (texto, data_pub, leilao_id_leilao, utilizador_user_name) 
-                          VALUES ( %s,   %s ,  %s,  %s , %s )"""
+                  INSERT INTO comentarios (type, texto, data_pub, leilao_id_leilao, utilizador_user_name) 
+                          VALUES (  %s,   %s ,  %s,  %s , %s );"""
 
     
-    values = (content["texto"], datetime.today(), content["id_leilao"], tokens_online[content["token"]])
+    values = (content["type"],content["texto"], datetime.today(), content["id_leilao"], tokens_online[content["token"]])
 
     try:
         cur.execute(statement, values)

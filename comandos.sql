@@ -30,6 +30,8 @@ INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ativo,
 VALUES (12,'01-06-2021 23:03:02','15-06-2021 15:03:08',1500,1500,true,false,'',132245);
 INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ativo,is_canceled,user_vencedor,artigo_id_artigo)
 VALUES (1,'30-06-2021 20:02:02','15-07-2021 20:30:30',1500,1500,true,false,'',125545);
+INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ativo,is_canceled,user_vencedor,artigo_id_artigo)
+VALUES (1,'30-06-2021 20:02:02','15-07-2021 20:30:30',1500,1500,true,false,'',125545);
 
 
 INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('comentario','queixa1','30-05-2021 12:02:03',134,'pedro');
