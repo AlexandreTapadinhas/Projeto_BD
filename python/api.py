@@ -399,7 +399,7 @@ def get_all_leiloes():
     conn = db_connection()
     cur = conn.cursor()
 
-    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn
+    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn,leilao.data_ini,leilao.data_fim
                 FROM leilao,artigo
                 WHERE artigo_id_artigo = id_artigo""")
     
@@ -408,13 +408,14 @@ def get_all_leiloes():
     payload = []
     
   
-
+    now = datetime.now()
     logger.debug("---- leiloes  ----")
     for row in rows:
-        content = {}
-        logger.debug(row)
-        content = {'leilaoId': int(row[0]), 'descricao': row[1]}
-        payload.append(content) # appending to the payload to be returned
+        if(row[3]<= datetime.today() and row[4]>datetime.today()):
+            content = {}
+            logger.debug(row)
+            content = {'leilaoId': int(row[0]), 'descricao': row[1]}
+            payload.append(content) # appending to the payload to be returned
 
     cur.close()
     conn.close()
@@ -436,7 +437,7 @@ def search_leilao(keyword):
     conn = db_connection()
     cur = conn.cursor()
 
-    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn FROM leilao,artigo""")
+    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn,leilao.data_ini,leilao.data_fim FROM leilao,artigo""")
     dados = request.get_json()
     
 
@@ -446,16 +447,17 @@ def search_leilao(keyword):
     logger.debug(keyword)
     for row in cur.fetchall():
         logger.debug(row)
-        if(keyword.isdecimal()):
-            if(int(keyword) == row[2]):
-                content = {'leilaoId': row[0],'descricao': row[1]}
-                payload.append(content)
+        if(row[3]<= datetime.today() and row[4]>datetime.today()):    
+            if(keyword.isdecimal()):
+                if(int(keyword) == row[2]):
+                    content = {'leilaoId': row[0],'descricao': row[1]}
+                    payload.append(content)
 
-        else:
-            if(keyword in row[1]):
-                content = {'leilaoId': row[0],'descricao': row[1]}
-                payload.append(content)
-    
+            else:
+                if(keyword in row[1]):
+                    content = {'leilaoId': row[0],'descricao': row[1]}
+                    payload.append(content)
+        
 
     cur.close()
     conn.close()
@@ -476,7 +478,7 @@ def consult_leilao(leilaoId):
     cur = conn.cursor()
 
 
-    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,leilao.data_ini,leilao.data_fim,leilao.preco_base,artigo.nome_artigo,artigo.categoria
+    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,leilao.data_ini,leilao.data_fim,leilao.preco_base,artigo.nome_artigo,artigo.categoria,leilao.data_ini,leilao.data_fim
                 FROM leilao,artigo
                 WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s""", (str(leilaoId),) )
     
@@ -485,9 +487,10 @@ def consult_leilao(leilaoId):
     logger.debug("---- leiloes  ----")
     logger.debug(leilaoId)
     for row in cur.fetchall():
-        logger.debug(row)
-        content = {'leilaoId': row[0],'descricao': row[1],"data_ini": row[2],"data_fim":row[3],"preco_base":row[4],"nome_artigo": row[5],"categoria": row[6]}
-        payload.append(content)
+        if(row[2]<= datetime.today() and row[3]>datetime.today()): 
+            logger.debug(row)
+            content = {'leilaoId': row[0],'descricao': row[1],"data_ini": row[2],"data_fim":row[3],"preco_base":row[4],"nome_artigo": row[5],"categoria": row[6]}
+            payload.append(content)
 
 
     cur.close()

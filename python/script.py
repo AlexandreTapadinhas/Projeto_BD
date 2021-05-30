@@ -267,11 +267,13 @@ def comparaDatas(inicio,now,fim):
             
    
    
-
+def teste(data):
+    return data.year
    
 
-print(comparaDatas("01-06-2021","02-06-2021","03-07-2021"))
+#print(comparaDatas("01-06-2021","02-06-2021","03-07-2021"))
 
+print(teste(datetime.now()))
 #"data_ini": "01-06-2021",
 #    "data_fim": "14-06-2021",
 #print(geraId())
