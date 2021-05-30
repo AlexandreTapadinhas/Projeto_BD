@@ -8,7 +8,6 @@ def geraId():
     dt_string = now.strftime("%d%m-%H%M%S")
     return dt_string
 
-
 def getConnection():
     con = psycopg2.connect(user = "postgres",
                             password = "django500",
@@ -231,6 +230,52 @@ def testeArgumentos(id_leilao,preco_base):
     cursor.close()
     con.close()
 
+def comparaDatas(inicio,now,fim):
+    ini = inicio.split("-")
+    f = fim.split("-")
+    n = now.split("-")
+    for i in range(len(ini)):
+        ini[i] = int(ini[i])
+        n[i] = int(n[i])
+        f[i] = int(f[i])
 
-testeArgumentos(778451,1750)
+    if((ini[2] <= n[2]) and (n[2] <= f[2])):
+        if((ini[2] < n[2]) and (n[2] < f[2])):
+            return True
+        elif(ini[2] == n[2]): #comparar o now ao inicio
+            if(ini[1] < n[1]):
+                return True
+            elif(ini[1] == n[1]):
+                if(ini[0] < n[0]):
+                    return True
+                else:
+                    return False 
+            else:
+                return False
+        else: #comparar o now ao fim
+            if(n[1] < f[1]):
+                return True
+            elif(n[1] == f[1]):
+                if(n[0] < f[0]):
+                    return True
+                else:
+                    return False
+            
+            else:
+                return False
+
+            
+   
+   
+def teste(data):
+    return data.year
+   
+
+#print(comparaDatas("01-06-2021","02-06-2021","03-07-2021"))
+
+print(teste(datetime.now()))
+#"data_ini": "01-06-2021",
+#    "data_fim": "14-06-2021",
+#print(geraId())
+#testeArgumentos(778451,1750)
 
