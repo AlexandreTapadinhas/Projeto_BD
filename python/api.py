@@ -21,6 +21,8 @@ from datetime import datetime
 import logging, psycopg2, time
 import random
 
+from encryption_functions import *
+
 app = Flask(__name__) 
 
 
@@ -778,6 +780,7 @@ def db_connection():
 ##########################################################
 if __name__ == "__main__":
 
+    read_encryption_key()
     # Set up the logging
     logging.basicConfig(filename="logs/log_file.log")
     logger = logging.getLogger('logger')
