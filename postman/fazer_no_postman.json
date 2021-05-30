@@ -1,4 +1,4 @@
-   registo utilizador  ->  POST   ../registoUtilizador
+   registo utilizador  ->  POST   ../registoUtilizador/
 
 {    
     "user_name": "ines",
@@ -60,7 +60,6 @@ editar leilao -> PUT /leilao/editar/<leilaoId> (todos os atributos sao opcionais
 GET Listar leiloes existentes-> .../leilao/
 GET Pesquisar leiloes existentes-> .../leiloes/keyword
 GET Consultar leilao-> .../leilao/leilaoId
-
-GET licitar leilao -> ../leiloes/1236/20
-
+GET licitar leilao -> .../leiloes/1236/20
+GET listar leiloes do user -> .../leiloes/user/<user>
 

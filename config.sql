@@ -10,7 +10,6 @@ CREATE TABLE artigo (
 );
 
 CREATE TABLE registolicitacao (
-	id_leilao		 INTEGER UNIQUE NOT NULL,
 	preco_licitacao	 BIGINT UNIQUE NOT NULL,
 	data_licitacao	 TIMESTAMP NOT NULL,
 	leilao_id_leilao	 INTEGER,
@@ -19,7 +18,7 @@ CREATE TABLE registolicitacao (
 );
 
 CREATE TABLE comentarios (
-	id_leilao		 INTEGER UNIQUE NOT NULL,
+	type		 VARCHAR(512) NOT NULL,
 	texto		 VARCHAR(512) NOT NULL,
 	data_pub		 TIMESTAMP NOT NULL,
 	leilao_id_leilao	 INTEGER,
@@ -47,7 +46,6 @@ CREATE TABLE leilao (
 	data_ini	 TIMESTAMP NOT NULL,
 	data_fim	 TIMESTAMP NOT NULL,
 	preco_base	 BIGINT NOT NULL,
-	is_ativo	 BOOL NOT NULL,
 	artigo_id_artigo INTEGER NOT NULL,
 	PRIMARY KEY(id_leilao)
 );
@@ -62,7 +60,13 @@ CREATE TABLE notificacao (
 );
 
 CREATE TABLE updateartigo (
+	data_alteracao	 TIMESTAMP NOT NULL,
 	id_leilao	 INTEGER NOT NULL,
+	data_ini	 TIMESTAMP NOT NULL,
+	data_fim	 TIMESTAMP NOT NULL,
+	preco_base	 FLOAT(8) NOT NULL,
+	nome_artigo	 VARCHAR(512) NOT NULL,
+	categoria	 VARCHAR(512) NOT NULL,
 	descricao	 VARCHAR(512) NOT NULL,
 	artigo_id_artigo INTEGER,
 	PRIMARY KEY(artigo_id_artigo)

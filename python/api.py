@@ -222,7 +222,7 @@ def geraId():
     dt_string = now.strftime("%d%m-%H%M%S")
     return dt_string
 
-
+#1
 @app.route("/registoUtilizador/", methods=['POST'])
 def registo_utilizadores():
     logger.info("###             POST /utilizador              ###");   
@@ -249,6 +249,7 @@ def registo_utilizadores():
         result = {"user_name":  payload["user_name"]}
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
+        cur.rollback()
         result = {"erro" : str(error)}
     finally:
         if conn is not None:
@@ -257,6 +258,7 @@ def registo_utilizadores():
 
     return jsonify(result)
 
+#3
 @app.route("/artigo/", methods=['POST'])
 def criar_artigo():
     logger.info("###              DEMO: POST /artigo              ###");   
@@ -281,16 +283,16 @@ def criar_artigo():
 
     try:
         cur.execute(statement, values)
-        cur.execute("commit")
+        #cur.execute("commit")
 
         #result = 'Inserted Artigo!'
 
       
         statement = """
-                INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,is_ativo,artigo_id_artigo) 
-                        VALUES ( %s,   %s ,  %s,  %s , %s,   %s)"""
+                INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,artigo_id_artigo) 
+                        VALUES ( %s,   %s ,  %s,  %s , %s)"""
 
-        values = (payload["id_leilao"],payload["data_ini"],payload["data_fim"],payload["preco_base"],True,payload["id_artigo"])
+        values = (payload["id_leilao"],payload["data_ini"],payload["data_fim"],payload["preco_base"],payload["id_artigo"])
 
         try:
             cur.execute(statement, values)
@@ -300,11 +302,13 @@ def criar_artigo():
 
         except (Exception, psycopg2.DatabaseError) as error:
             logger.error(error)
+            cur.rollback()
             #result = 'Failed to insert leilao!'
             result = {"erro" : str(error)}
 
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
+        cur.rollback()
         #result = 'Failed!'
         result = {"erro" : str(error)}
     finally:
@@ -313,7 +317,7 @@ def criar_artigo():
 
     return jsonify(result)
 
-
+#4
 @app.route("/leilao/", methods=['GET'], strict_slashes=True)
 def get_all_leiloes():
     logger.info("###              DEMO: GET /leilao             ###");   
@@ -327,24 +331,30 @@ def get_all_leiloes():
     conn = db_connection()
     cur = conn.cursor()
 
-    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn FROM leilao,artigo""")
+    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,artigo.codigoisbn
+                FROM leilao,artigo
+                WHERE artigo_id_artigo = id_artigo""")
+    
     rows = cur.fetchall()
-
+    print(rows)
     payload = []
     
   
 
     logger.debug("---- leiloes  ----")
     for row in rows:
+        content = {}
         logger.debug(row)
         content = {'leilaoId': int(row[0]), 'descricao': row[1]}
         payload.append(content) # appending to the payload to be returned
 
     cur.close()
     conn.close()
-    return jsonify(payload)
+    result = {}
+    result["lista_leiloes"] = payload
+    return jsonify(result)
 
-
+#5
 @app.route("/leiloes/<keyword>", methods=['GET'])
 def search_leilao(keyword):
     logger.info("###              DEMO: GET /leilao             ###");   
@@ -383,12 +393,13 @@ def search_leilao(keyword):
     conn.close()
     return jsonify(payload)
 
+#6
 @app.route("/leilao/<leilaoId>", methods=['GET'])
 def consult_leilao(leilaoId):
     logger.info("###              DEMO: GET /leilao             ###");   
-
     dados = request.get_json()
-    
+    #TODO: Verificar datas
+    #TODO: Dar print das msgs no mural e do historico das licitações
     if(dados["token"] not in tokens_online):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
@@ -396,8 +407,10 @@ def consult_leilao(leilaoId):
     conn = db_connection()
     cur = conn.cursor()
 
-    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,leilao.data_ini,leilao.data_fim,leilao.preco_base,artigo.nome_artigo,artigo.categoria FROM leilao,artigo
-            WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s;""", (str(leilaoId),) )
+
+    cur.execute("""SELECT leilao.id_leilao,artigo.descricao,leilao.data_ini,leilao.data_fim,leilao.preco_base,artigo.nome_artigo,artigo.categoria
+                FROM leilao,artigo
+                WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s""", (str(leilaoId),) )
     
     payload = []
 
@@ -412,14 +425,33 @@ def consult_leilao(leilaoId):
     cur.close()
     conn.close()
     return jsonify(payload)
+
 #7
 @app.route("/leiloes/user/<user>", methods=['GET'])
 def get_all_leiloes_from_user(user):
     logger.info("###              DEMO: GET /user/leiloes             ###");   
+
+    dados = request.get_json()
+    #TODO: Verificar datas
+    #TODO: Falta checkar os criadores do leilão
+    if(dados["token"] not in tokens_online):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+
     conn = db_connection()
     cur = conn.cursor()
+    try:
+        cur.execute("""SELECT id_leilao, user_name FROM registolicitacao""")
+        cur.execute("commit")
 
-    cur.execute("""SELECT id_leilao, user_name FROM registolicitacao""")
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        cur.rollback()
+        result = {"erro":str(error)}
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
 
     content = {}
     leiloes = []
@@ -439,8 +471,18 @@ def get_all_leiloes_from_user(user):
 
     #cur.execute("""SELECT * FROM leilao""")
     for leilaoId in leiloes:
-        cur.execute("""SELECT leilao.id_leilao,artigo.descricao,leilao.data_ini,leilao.data_fim,leilao.preco_base,artigo.nome_artigo,artigo.categoria FROM leilao,artigo
-                    WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s;""", (str(leilaoId),) )
+        try:
+            cur.execute("""SELECT leilao.id_leilao,artigo.descricao,leilao.data_ini,leilao.data_fim,leilao.preco_base,artigo.nome_artigo,artigo.categoria FROM leilao,artigo
+                        WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s;""", (str(leilaoId),) )
+            cur.execute("commit")
+        except (Exception, psycopg2.DatabaseError) as error:
+            logger.error(error)
+            cur.rollback()
+            result = {"erro":str(error)}
+            cur.close()
+            conn.close()
+            return jsonify(result)
+
         for row in cur.fetchall():
             logger.debug(row)
             content = {'leilaoId': row[0],'descricao': row[1],"data_ini": row[2],"data_fim":row[3],"preco_base":row[4],"nome_artigo": row[5],"categoria": row[6]}
@@ -452,7 +494,7 @@ def get_all_leiloes_from_user(user):
 
 
 
-
+#2
 @app.route("/login/", methods=['PUT'])
 def login():
     logger.info("###             Login              ###");   
@@ -492,14 +534,18 @@ def login():
 
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
-        result = {"erro" : str(error)}
+        cur.rollback()
+        result = {"erro":str(error)}
+        cur.close()
+        conn.close()
+        return jsonify(result)
     finally:
         if conn is not None:
             conn.close()
             cur.close()
     return jsonify(result)
 
-
+#8
 @app.route("/leiloes/<id_leilao>/<licitacao>", methods=['GET'])
 def licitar(id_leilao, licitacao):
     logger.info("###              DEMO: GET /licitar              ###");   
@@ -541,6 +587,7 @@ def licitar(id_leilao, licitacao):
                         content = 'Sucesso'
                     except (Exception, psycopg2.DatabaseError) as error:
                         logger.error(error)
+                        cur.rollback()
                         result = {"erro" : str(error)}
                     finally:
                         if conn is not None:
@@ -586,18 +633,56 @@ def editar_leilao(leilaoId):
     conn = db_connection()
     cur = conn.cursor()
 
-    #TODO:Copiar as rows que sao alteradas para a tabela updateartigo e alterar a tabela para guardar todos os dados que podem ser alterados
-    statement = """SELECT artigo_id_artigo FROM leilao
-                    WHERE id_leilao = %s;"""
-    values = (str(leilaoId),)
+    statement = """SELECT leilao.id_leilao, leilao.data_ini, leilao.data_fim, leilao.preco_base, artigo.nome_artigo, artigo.categoria, artigo.descricao, leilao.artigo_id_artigo
+                FROM leilao, artigo
+                WHERE leilao.id_leilao = %s and artigo.id_artigo = leilao.artigo_id_artigo;"""
 
-    cur.execute(statement, values)
+    values = (leilaoId,)
+    
+    try:
+        cur.execute(statement, values)
+        cur.execute("commit")
+
+    
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        cur.rollback()
+        result = {"erro":str(error)}
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
     rows = cur.fetchall()
-    leilaoId = rows[0][0]
+    logger.debug("len(rows) = " + str(len(rows)))
+    row = rows[0]
+    logger.debug("len(row) = " + str(len(row)))
+
+
+    statement = """INSERT INTO updateartigo 
+                VALUES (%s, %s ,%s, %s, %s, %s, %s, %s, %s);"""
+    
+    values = (datetime.today(), row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7])
+
+    leilaoId = row[0]
+
+    try:
+        cur.execute(statement, values)
+        cur.execute("commit")
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        cur.rollback()
+        result = {"erro":str(error)}
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
+    
     logger.debug("leilaoId = " + str(leilaoId))
 
     keys_leilao = ['data_ini', 'data_fim', 'preco_base']
-    keys_artigo = ['codigoisbn', 'nome_artigo', 'categoria', 'descricao', 'user_vendedor', 'utilizador_user_name']
+    keys_artigo = ['nome_artigo', 'categoria', 'descricao']
+
+    #
 
     logger.debug(content)
     for key,val in content.items():
@@ -617,17 +702,40 @@ def editar_leilao(leilaoId):
             logger.debug("parametro nao existe nas tabelas leilao ou artigo")
             return
         
-        cur.execute(statement, values)
+        try:
+            cur.execute(statement, values)
+            cur.execute("commit")
+        except (Exception, psycopg2.DatabaseError) as error:
+            logger.error(error)
+            cur.rollback()
+            result = {"erro":str(error)}
+            cur.close()
+            conn.close()
+            return jsonify(result)
 
     statement = """SELECT * FROM leilao,artigo
                 WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s;"""
     values = (str(leilaoId),)
-    cur.execute(statement, values)
+    try:
+        cur.execute(statement, values)
+        cur.execute("commit")
 
-    rows = cur.fetchall()
+        rows = cur.fetchall()
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        cur.rollback()
+        result = {"erro":str(error)}
+        cur.close()
+        conn.close()
+        return jsonify(result)
+    finally:
+        if conn is not None:
+            cur.close()
+            conn.close()
 
-
+    
     return jsonify({'leilao':rows})
+
 
 
 
