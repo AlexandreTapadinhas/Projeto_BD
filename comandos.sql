@@ -17,13 +17,13 @@ VALUES (134,'28-05-2021 12:06:12','15-06-2021 12:20:30',1500,1500,true,false,'',
 INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ative,is_canceled,user_vencedor,artigo_id_artigo)
 VALUES (137,'01-06-2021 21:02:03','15-06-2021 14:12:02',1500,1500,true,false,'',132245);
 INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ative,is_canceled,user_vencedor,artigo_id_artigo)
-VALUES (140,'01-06-2021','15-06-2021',1500,1500,true,false,'',125545);
+VALUES (140,'01-06-2021 20:02:02','15-07-2021 20:30:30',1500,1500,true,false,'',125545);
 
 
-INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('comentario','123','30-05-2021 12:02:03',1236,'pedro');
-INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('queixa','456','01-01-2000',1236,'ines');
-INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('comentario','789','01-01-2000',1236,'tapadinhas');
+INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('comentario','queixa1','30-05-2021 12:02:03',134,'pedro');
+INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('queixa','queixa2','29-05-2021 15:02:03 ',134,'ines');
+INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('comentario','queixa3','29-05-2021 21:02:06',134,'tapadinhas');
 
-INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (2500,'01-01-2000',1236,'pedro');
-INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (2600,'02-01-2000',1236,'tapadinhas');
-INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (2800,'03-01-2000',1236,'ines');
+INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (123,'30-05-2021 12:30:03',134,'pedro');
+INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (156,'28-05-2021 06:02:15',134,'tapadinhas');
+INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (196,'29-05-2021 19:19:19',134,'ines');
