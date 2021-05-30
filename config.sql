@@ -4,7 +4,6 @@ CREATE TABLE artigo (
 	nome_artigo		 VARCHAR(512) NOT NULL,
 	categoria		 VARCHAR(512),
 	descricao		 VARCHAR(512) NOT NULL,
-	user_vencedor	 VARCHAR(512) DEFAULT null,
 	utilizador_user_name VARCHAR(512) NOT NULL,
 	PRIMARY KEY(id_artigo)
 );
@@ -46,6 +45,10 @@ CREATE TABLE leilao (
 	data_ini	 TIMESTAMP NOT NULL,
 	data_fim	 TIMESTAMP NOT NULL,
 	preco_base	 BIGINT NOT NULL,
+	preco_atual	 BIGINT,
+	is_ative	 BOOL NOT NULL DEFAULT true,
+	is_canceled	 BOOL NOT NULL DEFAULT false,
+	user_vencedor	 VARCHAR(512) DEFAULT "",
 	artigo_id_artigo INTEGER NOT NULL,
 	PRIMARY KEY(id_leilao)
 );

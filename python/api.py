@@ -567,72 +567,76 @@ def licitar(id_leilao, licitacao):
     #cur.execute("begin transaction")
     #execute -> ja comeca a transation
 
-    cur.execute("SELECT data_ini, data_fim, preco_base, is_ativo FROM leilao where id_leilao = %s", (id_leilao,) )
+    cur.execute("SELECT data_ini, data_fim, preco_base, is_ativo, is_canceled FROM leilao where id_leilao = %s", (id_leilao,) )
     rows = cur.fetchall()
 
     row = rows[0]
-
     if(row[3] == True):
-        if(row[0]<= datetime.today() and row[1]>datetime.today()):
-            if(row[2]<int(licitacao)):
-                    statement = """
-                        UPDATE leilao
-                        SET preco_base = %s
-                        WHERE id_leilao = %s"""
-
-        
-                    values = (licitacao, id_leilao)                                
-
-                    try:
-                        cur.execute(statement, values)
-                        cur.execute("commit")
-                        #cur.commit()
-
-                        #por na tabela registo licitacao
+        if(row[4] == False):
+            if(row[0]<= datetime.today() and row[1]>datetime.today()):
+                if(row[2]<int(licitacao)):
                         statement = """
-                                INSERT INTO registolicitacao (preco_licitacao,data_licitacao, leilao_id_leilao, utilizador_user_name) 
-                                VALUES (  %s,   %s ,  %s,  %s )"""
-                                 
+                            UPDATE leilao
+                            SET preco_base = %s , user_vencedor = %s
+                            WHERE id_leilao = %s"""
 
-                        values = (licitacao,datetime.today(), id_leilao , tokens_online[payload["token"]])  
-                        
+            
+                        values = (licitacao,tokens_online[payload["token"]], id_leilao)                                
 
                         try:
                             cur.execute(statement, values)
                             cur.execute("commit")
+                            #cur.commit()
 
-                        except (Exception, psycopg2.DatabaseError) as error:
-                            cur.rollback()
-                            logger.error(error)
-                            content = {"erro" : str(error)}
-                
+                            #por na tabela registo licitacao
+                            statement = """
+                                    INSERT INTO registolicitacao (preco_licitacao,data_licitacao, leilao_id_leilao, utilizador_user_name) 
+                                    VALUES (  %s,   %s ,  %s,  %s )"""
+                                    
 
-                        content = 'Sucesso'
-                    except (Exception, psycopg2.DatabaseError) as error:
-                        logger.error(error)
-                        cur.rollback()
-                        content = {"erro" : str(error)}
-                    finally:
-                        if conn is not None:
-                            cur.close()
-                            conn.close()
+                            values = (licitacao,datetime.today(), id_leilao , tokens_online[payload["token"]])  
                             
+
+                            try:
+                                cur.execute(statement, values)
+                                cur.execute("commit")
+
+                            except (Exception, psycopg2.DatabaseError) as error:
+                                cur.rollback()
+                                logger.error(error)
+                                content = {"erro" : str(error)}
+                    
+
+                            content = 'Sucesso'
+                        except (Exception, psycopg2.DatabaseError) as error:
+                            logger.error(error)
+                            cur.rollback()
+                            content = {"erro" : str(error)}
+                        finally:
+                            if conn is not None:
+                                cur.close()
+                                conn.close()
+                                
+                else:
+                    cur.execute("commit")
+                    cur.close()
+                    conn.close ()
+                    return 'Erro: o valor do artigo e maior que a licitacao'
             else:
                 cur.execute("commit")
                 cur.close()
                 conn.close ()
-                return 'Erro: o valor do artigo e maior que a licitacao'
+                return'Erro leilao ja acabou/ainda nao comecou'
         else:
             cur.execute("commit")
             cur.close()
             conn.close ()
-            return'Erro leilao ja acabou/ainda nao comecou'
+            return'Erro: leilao foi desativado pelo admin'
     else:
-        cur.execute("commit")
-        cur.close()
-        conn.close ()
-        return'Erro: leilao foi desativado pelo admin'
-
+            cur.execute("commit")
+            cur.close()
+            conn.close ()
+            return'Erro: leilao ja terminou'
 
     logger.debug("---- licitou  ----")
     logger.debug(row)
@@ -836,6 +840,38 @@ def listar_comentarios(leilaoId):
     cur.close()
     conn.close()
     return jsonify({'MURAL LEILAO':payload})
+
+
+#13
+@app.route("/terminarLeiloes", methods=['GET'])
+def terminar_leiloes():
+    dados = request.get_json()
+    if(dados["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+
+        
+    logger.info("###              DEMO: GET /terminar leiloes            ###");   
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("SELECT  data_fim, is_canceled FROM leilao " )
+    rows = cur.fetchall()
+
+    logger.debug("---- mural do leilao  ----")
+    for row in rows:
+        
+
+
+
+
+
+
+    cur.close()
+    conn.close()
+    return jsonify({'MURAL LEILAO':payload})
+
 
 
 ##########################################################
