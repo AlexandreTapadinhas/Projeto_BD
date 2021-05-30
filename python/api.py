@@ -634,7 +634,7 @@ def put_is_ativo_false( id_leilao):
                 VALUES (  %s,   %s ,  %s,  %s ,%s)"""
 
 
-    msg="Parabéns : Ganhou o leilao "+id_leilao+"!!!"
+    msg="Parabéns : Ganhou o leilao "+str(id_leilao)+"!!!"
 
     try:
         cur.execute("""
@@ -652,17 +652,17 @@ def put_is_ativo_false( id_leilao):
         cur.execute("""
                 select max(id_noti)
                 from notificacao """)
-        id_noti=cur.fetchall()
-        if(len(id_noti) == 0):
-            id_noti=-1
+        id_noti_aux=cur.fetchall()
+
+        if(id_noti_aux[0][0] == None):
+            id_noti=0
         else:
-            id_noti = id_noti[0][0]
+            id_noti = id_noti_aux[0][0]
         cur.execute("commit")
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
-
-    id_noti = id_noti+1
-    values = (id_noti, msg, datetime.today(), False, username )  
+    id_noti += 1
+    values = (id_noti, msg, datetime.today(), False, username)  
     
 
     try:
@@ -1082,9 +1082,13 @@ def terminar_leiloes():
     logger.debug("---- terminar leiloes  ----")
 
     payload = []
-
+    
     for row in rows:
+        print("-----------------------")
+        print(row)
         if((row[0]<= datetime.today() or row[1] == True)and row[3] == True):
+            print("***********************")
+            print(row[2])
             put_is_ativo_false(row[2])
 
     result="Leiloes terminados!!"

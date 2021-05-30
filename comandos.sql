@@ -23,6 +23,8 @@ INSERT INTO artigo (id_artigo,codigoisbn,nome_artigo,categoria,descricao,utiliza
 VALUES (12347,785674326,'carro','veiculo','carro','tapadinhas');
 INSERT INTO artigo (id_artigo,codigoisbn,nome_artigo,categoria,descricao,utilizador_user_name) 
 VALUES (1123,786574326,'moto','veiculo','motociclo','pedro');
+INSERT INTO artigo (id_artigo,codigoisbn,nome_artigo,categoria,descricao,utilizador_user_name) 
+VALUES (7,852,'artigo_fim','terminado','atrigo para leilao terminado','pedro');
 
 INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ativo,is_canceled,user_vencedor,artigo_id_artigo)
 VALUES (123,'28-05-2021 21:30:12','02-06-2021 14:12:03',1500,1500,true,false,'',123345);
@@ -31,7 +33,9 @@ VALUES (12,'01-06-2021 23:03:02','15-06-2021 15:03:08',1500,1500,true,false,'',1
 INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ativo,is_canceled,user_vencedor,artigo_id_artigo)
 VALUES (1,'30-06-2021 20:02:02','15-07-2021 20:30:30',1500,1500,true,false,'',125545);
 INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ativo,is_canceled,user_vencedor,artigo_id_artigo)
-VALUES (1,'30-06-2021 20:02:02','15-07-2021 20:30:30',1500,1500,true,false,'',125545);
+VALUES (2,'30-06-2021 20:02:02','30-06-2021 20:30:30',20,1500,true,false,'ines',7);
+INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ativo,is_canceled,user_vencedor,artigo_id_artigo)
+VALUES (4,'30-05-2021 20:02:02','30-05-2021 20:30:30',20,1500,true,false,'ines',7);
 
 
 INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('comentario','queixa1','30-05-2021 12:02:03',134,'pedro');
