@@ -13,8 +13,8 @@ INSERT INTO artigo (id_artigo,codigoisbn,nome_artigo,categoria,descricao,utiliza
 VALUES (125545,986574321,'moto','veiculo','motociclo','pedro');
 
 INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ative,is_canceled,user_vencedor,artigo_id_artigo)
-VALUES (134,'01-06-2021','15-06-2021',1500,1500,true,false,'',123345);
+VALUES (134,'28-05-2021 12:06:12','15-06-2021 12:20:30',1500,1500,true,false,'',123345);
 INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ative,is_canceled,user_vencedor,artigo_id_artigo)
-VALUES (137,'01-06-2021','15-06-2021',1500,1500,true,false,'',132245);
+VALUES (137,'01-06-2021 21:02:03','15-06-2021 14:12:02',1500,1500,true,false,'',132245);
 INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ative,is_canceled,user_vencedor,artigo_id_artigo)
-VALUES (140,'01-06-2021','15-06-2021',1500,1500,true,false,'',125545);
+VALUES (140,'01-06-2021 06:03:01','15-06-2021 11:45:20',1500,1500,true,false,'',125545);
