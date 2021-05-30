@@ -659,18 +659,15 @@ def editar_leilao(leilaoId):
 
     conn = db_connection()
     cur = conn.cursor()
-
-    statement = """SELECT leilao.id_leilao, leilao.data_ini, leilao.data_fim, leilao.preco_base, artigo.nome_artigo, artigo.categoria, artigo.descricao, leilao.artigo_id_artigo
-                FROM leilao, artigo
-                WHERE leilao.id_leilao = %s and artigo.id_artigo = leilao.artigo_id_artigo;"""
-
+    #TODO: verificar a data e verfificar o vencedor
+    statement = """SELECT data_ini, data_fim, user_vencedor
+                FROM leilao
+                WHERE id_leilao = %s;"""
     values = (leilaoId,)
-    
+
     try:
         cur.execute(statement, values)
         cur.execute("commit")
-
-    
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
         cur.rollback()
@@ -678,108 +675,145 @@ def editar_leilao(leilaoId):
         cur.close()
         conn.close()
         return jsonify(result)
-
+    
     rows = cur.fetchall()
-    logger.debug("len(rows) = " + str(len(rows)))
     row = rows[0]
-    logger.debug("len(row) = " + str(len(row)))
-
-
-    statement = """INSERT INTO updateartigo 
-                VALUES (%s, %s ,%s, %s, %s, %s, %s, %s, %s);"""
     
-    values = (datetime.today(), row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7])
+    print(row[3]) # user_vencedor
+    if row[3] != 'null':
+        if row[1] < datetime.today() or row[0] > datetime.today():
 
-    leilaoId = row[0]
+            statement = """SELECT leilao.id_leilao, leilao.data_ini, leilao.data_fim, leilao.preco_base, artigo.nome_artigo, artigo.categoria, artigo.descricao, leilao.artigo_id_artigo
+                        FROM leilao, artigo
+                        WHERE leilao.id_leilao = %s and artigo.id_artigo = leilao.artigo_id_artigo;"""
 
-    try:
-        cur.execute(statement, values)
-        cur.execute("commit")
-    except (Exception, psycopg2.DatabaseError) as error:
-        logger.error(error)
-        cur.rollback()
-        result = {"erro":str(error)}
-        cur.close()
-        conn.close()
-        return jsonify(result)
+            values = (leilaoId,)
+            
+            try:
+                cur.execute(statement, values)
+                cur.execute("commit")
 
-    
-    logger.debug("leilaoId = " + str(leilaoId))
+            
+            except (Exception, psycopg2.DatabaseError) as error:
+                logger.error(error)
+                cur.rollback()
+                result = {"erro":str(error)}
+                cur.close()
+                conn.close()
+                return jsonify(result)
 
-    keys_leilao = ['data_ini', 'data_fim', 'preco_base']
-    keys_artigo = ['nome_artigo', 'categoria', 'descricao']
+            rows = cur.fetchall()
+            logger.debug("len(rows) = " + str(len(rows)))
+            row = rows[0]
+            logger.debug("len(row) = " + str(len(row)))
 
-    #
 
-    logger.debug(content)
-    for key,val in content.items():
-        if key in keys_leilao:
+            statement = """INSERT INTO updateartigo 
+                        VALUES (%s, %s ,%s, %s, %s, %s, %s, %s, %s);"""
+            
+            values = (datetime.today(), row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7])
+
+            leilaoId = row[0]
+
+            try:
+                cur.execute(statement, values)
+                cur.execute("commit")
+            except (Exception, psycopg2.DatabaseError) as error:
+                logger.error(error)
+                cur.rollback()
+                result = {"erro":str(error)}
+                cur.close()
+                conn.close()
+                return jsonify(result)
+
+            
+            logger.debug("leilaoId = " + str(leilaoId))
+
+            keys_leilao = ['data_ini', 'data_fim', 'preco_base']
+            keys_artigo = ['nome_artigo', 'categoria', 'descricao']
+
+            #
+
+            logger.debug(content)
+            for key,val in content.items():
+                if key in keys_leilao:
+                    statement = """UPDATE leilao
+                            SET """ + key + """ = %s
+                            WHERE id_leilao = %s"""
+                    values = (str(val), str(leilaoId))
+                elif key in keys_artigo:
+                    statement = """UPDATE artigo
+                            SET """ + key + """ = %s
+                            WHERE id_artigo = %s"""
+                    values = (str(val), str(leilaoId))
+                elif key == "token":
+                    continue
+                else:
+                    logger.debug("parametro nao existe nas tabelas leilao ou artigo")
+                    return
+                
+                try:
+                    cur.execute(statement, values)
+                    cur.execute("commit")
+                except (Exception, psycopg2.DatabaseError) as error:
+                    logger.error(error)
+                    cur.rollback()
+                    result = {"erro":str(error)}
+                    cur.close()
+                    conn.close()
+                    return jsonify(result)
+
+            # dar reset dos dados do leilao
             statement = """UPDATE leilao
-                    SET """ + key + """ = %s
-                    WHERE id_leilao = %s"""
-            values = (str(val), str(leilaoId))
-        elif key in keys_artigo:
-            statement = """UPDATE artigo
-                    SET """ + key + """ = %s
-                    WHERE id_artigo = %s"""
-            values = (str(val), str(leilaoId))
-        elif key == "token":
-            continue
-        else:
-            logger.debug("parametro nao existe nas tabelas leilao ou artigo")
-            return
-        
-        try:
-            cur.execute(statement, values)
-            cur.execute("commit")
-        except (Exception, psycopg2.DatabaseError) as error:
-            logger.error(error)
-            cur.rollback()
-            result = {"erro":str(error)}
+                        SET preco_atual = %s, is_ative = True, is_canceled = False
+                        WHERE id_leilao = %s"""
+            values = (str(content['preco_base']), str(leilaoId))
+
+            try:
+                cur.execute(statement, values)
+                cur.execute("commit")
+            except (Exception, psycopg2.DatabaseError) as error:
+                logger.error(error)
+                cur.rollback()
+                result = {"erro":str(error)}
+                cur.close()
+                conn.close()
+                return jsonify(result)
+
+
+            statement = """SELECT * FROM leilao,artigo
+                        WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s;"""
+            values = (str(leilaoId),)
+            try:
+                cur.execute(statement, values)
+                cur.execute("commit")
+
+                rows = cur.fetchall()
+            except (Exception, psycopg2.DatabaseError) as error:
+                logger.error(error)
+                cur.rollback()
+                result = {"erro":str(error)}
+                cur.close()
+                conn.close()
+                return jsonify(result)
+            finally:
+                if conn is not None:
+                    cur.close()
+                    conn.close()
+
+            return jsonify({'leilao':rows})
+        else:   
+            Erro = "Leilão a decorrer, impossível editar"
+            result = {"Erro":Erro}
             cur.close()
             conn.close()
             return jsonify(result)
-
-    # dar reset ao preco atual dos leiloes
-    statement = """UPDATE leilao
-                SET preco_atual = %s
-                WHERE id_leilao = %s"""
-    values = (str(content['preco_base']), str(leilaoId))
-
-    try:
-        cur.execute(statement, values)
-        cur.execute("commit")
-    except (Exception, psycopg2.DatabaseError) as error:
-        logger.error(error)
-        cur.rollback()
-        result = {"erro":str(error)}
+    else:
+        Erro = "Leilão já foi licitado, impossível editar"
+        result = {"Erro":Erro}
         cur.close()
         conn.close()
         return jsonify(result)
-
-
-    statement = """SELECT * FROM leilao,artigo
-                WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s;"""
-    values = (str(leilaoId),)
-    try:
-        cur.execute(statement, values)
-        cur.execute("commit")
-
-        rows = cur.fetchall()
-    except (Exception, psycopg2.DatabaseError) as error:
-        logger.error(error)
-        cur.rollback()
-        result = {"erro":str(error)}
-        cur.close()
-        conn.close()
-        return jsonify(result)
-    finally:
-        if conn is not None:
-            cur.close()
-            conn.close()
-
-    
-    return jsonify({'leilao':rows})
 
 
 #10
