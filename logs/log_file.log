@@ -4367,6 +4367,7 @@ INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
+<<<<<<< HEAD
 INFO:logger:
 ---------------------------------------------------------------
 API v1.0 online: http://localhost:8080/utilizador/
@@ -4595,12 +4596,22 @@ WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+<<<<<<< HEAD
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:(14785, 'abstrata', datetime.datetime(2021, 6, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 1675, 'quadro', 'arte')
+INFO:werkzeug:192.168.1.87 - - [29/May/2021 05:42:20] "GET /leiloes/user/alex HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> 5c1276ef2f56ba5d4ee96a431c1fd5af9d3514aa
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
 API v1.0 online: http://localhost:8080/utilizador/
 
 
+<<<<<<< HEAD
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
@@ -4632,6 +4643,8 @@ WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -4639,6 +4652,7 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -4716,6 +4730,35 @@ INFO:werkzeug:192.168.1.87 - - [30/May/2021 03:27:15] "PUT /login/ HTTP/1.1" 200
 INFO:logger:###              DEMO: GET /leilao             ###
 INFO:werkzeug:192.168.1.87 - - [30/May/2021 03:27:26] "[35m[1mGET /leilao/ HTTP/1.1[0m" 500 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:46:14] "[31m[1mGET /login/ HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:46:20] "[31m[1mPOST /login/ HTTP/1.1[0m" 405 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:46:24] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:46:54] "[31m[1mPUT /leiloes/1236/29 HTTP/1.1[0m" 405 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 1236
+ERROR:logger:can't adapt type 'builtin_function_or_method'
+DEBUG:logger:---- licitou  ----
+DEBUG:logger:(datetime.datetime(2021, 4, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 22, True)
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:47:01] "GET /leiloes/1236/29 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 1236
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:47:55] "GET /leiloes/1236/29 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 1236
+ERROR:logger:can't adapt type 'builtin_function_or_method'
+DEBUG:logger:---- licitou  ----
+DEBUG:logger:(datetime.datetime(2021, 4, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 29, True)
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:48:02] "GET /leiloes/1236/30 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -4723,6 +4766,7 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -4771,6 +4815,28 @@ WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 1236
+DEBUG:logger:{}
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:49:02] "GET /leiloes/1236/30 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:49:24] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:49:46] "[31m[1mPUT /leiloes/1236/31 HTTP/1.1[0m" 405 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 1236
+ERROR:logger:can't adapt type 'builtin_function_or_method'
+DEBUG:logger:---- licitou  ----
+DEBUG:logger:(datetime.datetime(2021, 4, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 30, True)
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:49:50] "GET /leiloes/1236/31 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -4778,11 +4844,19 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -4790,11 +4864,19 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -4802,11 +4884,19 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -4814,6 +4904,7 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -4946,6 +5037,23 @@ WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:59:10] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 1236
+ERROR:logger:can't adapt type 'builtin_function_or_method'
+DEBUG:logger:---- licitou  ----
+DEBUG:logger:(datetime.datetime(2021, 4, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 30, True)
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 01:59:46] "GET /leiloes/1236/32 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -4953,6 +5061,7 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -5117,6 +5226,23 @@ WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 02:00:15] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 1236
+ERROR:logger:can't adapt type 'builtin_function_or_method'
+DEBUG:logger:---- licitou  ----
+DEBUG:logger:(datetime.datetime(2021, 4, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 32, True)
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 02:00:23] "GET /leiloes/1236/33 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5124,6 +5250,7 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -5188,6 +5315,26 @@ WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 1236
+DEBUG:logger:{}
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 02:01:12] "GET /leiloes/1236/33 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 02:01:16] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 1236
+DEBUG:logger:---- licitou  ----
+DEBUG:logger:(datetime.datetime(2021, 4, 1, 0, 0), datetime.datetime(2021, 6, 14, 0, 0), 33, True)
+INFO:werkzeug:192.168.1.7 - - [30/May/2021 02:01:25] "GET /leiloes/1236/34 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5195,11 +5342,19 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5207,11 +5362,19 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5219,11 +5382,19 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5231,11 +5402,19 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5243,11 +5422,19 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5255,11 +5442,19 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5267,11 +5462,19 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5279,11 +5482,19 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5291,11 +5502,19 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef
 INFO:werkzeug: * Restarting with stat
 INFO:logger:
 ---------------------------------------------------------------
@@ -5303,9 +5522,18 @@ API v1.0 online: http://localhost:8080/utilizador/
 
 
 WARNING:werkzeug: * Debugger is active!
+<<<<<<< HEAD
 INFO:werkzeug: * Debugger PIN: 455-358-522
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
 INFO:werkzeug: * Restarting with stat
+=======
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+=======
+>>>>>>> 94bd09b74cea1ca07743fe7435f9aefad22def66
+>>>>>>> ec1ee1d7147fa17ba1fab3b8da44c3fe850e02ef

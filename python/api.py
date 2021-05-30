@@ -203,17 +203,17 @@ def update_departments():
 
 
 '''
-tokens_online=list()
+tokens_online={}
 
 
-def geraToken():
+def geraToken(user_name):
     global tokens_online
     aux = random.randint(1,25000)
     
     while(aux in tokens_online):
         aux = random.randint(1,25000)
     
-    tokens_online.append(aux)
+    tokens_online[aux] = user_name
     return aux
 
 
@@ -264,7 +264,7 @@ def criar_artigo():
     logger.info("###              DEMO: POST /artigo              ###");   
     payload = request.get_json()
 
-    if(payload["token"] not in tokens_online):
+    if(payload["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': payload["token"]}))
    
@@ -324,7 +324,7 @@ def get_all_leiloes():
     
     dados = request.get_json()
     
-    if(dados["token"] not in tokens_online):
+    if(dados["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
     
@@ -361,7 +361,7 @@ def search_leilao(keyword):
 
     dados = request.get_json()
     
-    if(dados["token"] not in tokens_online):
+    if(dados["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
 
@@ -398,9 +398,9 @@ def search_leilao(keyword):
 def consult_leilao(leilaoId):
     logger.info("###              DEMO: GET /leilao             ###");   
     dados = request.get_json()
+    #TODO: Imprimir msg do mural e registo de licitacoes
     #TODO: Verificar datas
-    #TODO: Dar print das msgs no mural e do historico das licitações
-    if(dados["token"] not in tokens_online):
+    if(dados["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
 
@@ -525,7 +525,7 @@ def login():
 
     values = (content["user_name"], content["password"])
 
-    token_aux = geraToken()
+    token_aux = geraToken(content["user_name"])
     try:
         res = cur.execute(statement, values)
         result = {'authToken': token_aux}
@@ -555,14 +555,15 @@ def licitar(id_leilao, licitacao):
 
     payload = request.get_json()
 
-    if(payload["token"] not in tokens_online):
+    if(payload["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': payload["token"]}))
 
     conn = db_connection()
     cur = conn.cursor()
 
-    cur.execute("begin transaction")
+    #cur.execute("begin transaction")
+    #execute -> ja comeca a transation
 
     cur.execute("SELECT data_ini, data_fim, preco_base, is_ativo FROM leilao where id_leilao = %s", (id_leilao,) )
     rows = cur.fetchall()
@@ -583,6 +584,25 @@ def licitar(id_leilao, licitacao):
                     try:
                         cur.execute(statement, values)
                         cur.execute("commit")
+                        #cur.commit()
+
+                        #por na tabela registo licitacao
+                        statement = """
+                                INSERT INTO registolicitacao (preco_licitacao,data_licitacao, leilao_id_leilao, utilizador_user_name) 
+                                VALUES (  %s,   %s ,  %s,  %s )"""
+
+        
+                        values = (licitacao,datetime.today(), id_leilao , tokens_online[payload["token"]])  
+                        
+
+                        try:
+                            cur.execute(statement, values)
+                            cur.execute("commit")
+
+                        except (Exception, psycopg2.DatabaseError) as error:
+                            logger.error(error)
+                            result = {"erro" : str(error)}
+                
 
                         content = 'Sucesso'
                     except (Exception, psycopg2.DatabaseError) as error:
@@ -745,7 +765,7 @@ def editar_leilao(leilaoId):
 
 def db_connection():
     db = psycopg2.connect(user = "postgres",
-                            password = "postgresql1",
+                            password = "bd2021",
                             host = "localhost",
                             port = "5432",
                             database = "projeto")
