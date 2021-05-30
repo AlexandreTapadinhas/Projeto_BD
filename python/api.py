@@ -740,6 +740,24 @@ def editar_leilao(leilaoId):
             conn.close()
             return jsonify(result)
 
+    # dar reset ao preco atual dos leiloes
+    statement = """UPDATE leilao
+                SET preco_atual = %s
+                WHERE id_leilao = %s"""
+    values = (str(content['preco_base']), str(leilaoId))
+
+    try:
+        cur.execute(statement, values)
+        cur.execute("commit")
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        cur.rollback()
+        result = {"erro":str(error)}
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
+
     statement = """SELECT * FROM leilao,artigo
                 WHERE leilao.artigo_id_artigo = artigo.id_artigo and leilao.id_leilao = %s;"""
     values = (str(leilaoId),)
