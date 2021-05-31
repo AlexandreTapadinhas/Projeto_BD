@@ -9313,3 +9313,2700 @@ WARNING:werkzeug: * Running on all addresses.
 INFO:werkzeug: * Running on http://192.168.1.87:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Detected change in 'C:\\Users\\Alexandre Tapadinhas\\Documents\\Universidade\\3º Ano\\2º Semestre\\BD\\ProjetoBD\\Projeto_BD\\python\\api.py', reloading
 INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\flask\\app.py', reloading
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:10:05] "[35m[1mPUT /login/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:11:36] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 3663, 'id_artigo': 1321, 'codigoisbn': 101212, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'Computador sistema operativo windows com 20 polegas', 'utilizador_user_name': 'pedro'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:14:41] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 1321, 'id_leilao': 10116, 'data_ini': '20-05-2021 12:30:30', 'data_fim': '06-06-2021 15:20:30', 'preco_base': 70, 'token': 3663}
+ERROR:logger:tuple index out of range
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:16:37] "POST /leilao/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:27:34] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 132246, 'id_leilao': 12346, 'data_ini': '01-04-2021 12:30:30', 'data_fim': '14-06-2021 13:30:30', 'preco_base': 2, 'token': 12332}
+ERROR:logger:tuple index out of range
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:29:15] "POST /leilao/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: POST /leilao              ###
+DEBUG:logger:{}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:30:28] "POST /leilao/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:31:10] "[31m[1mPOST /login/ HTTP/1.1[0m" 405 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:31:14] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 132246, 'id_leilao': 12346, 'data_ini': '01-04-2021 12:30:30', 'data_fim': '14-06-2021 13:30:30', 'preco_base': 2, 'token': 16838}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:31:34] "POST /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:abs
+DEBUG:logger:(123, 'abstrata', 987654321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'carro', 985674321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'motociclo', 986574321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'abstrata', 987654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'carro', 985674326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'motociclo', 986574326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'abstrata', 787654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'carro', 785674326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'motociclo', 786574326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(12, 'abstrata', 987654321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'carro', 985674321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'motociclo', 986574321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'abstrata', 987654326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'carro', 985674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'motociclo', 986574326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'abstrata', 787654326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'carro', 785674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'motociclo', 786574326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(1, 'abstrata', 987654321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'carro', 985674321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'carro', 985674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'motociclo', 986574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'abstrata', 787654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'carro', 785674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(2, 'abstrata', 987654321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'carro', 985674321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'carro', 985674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'motociclo', 986574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'abstrata', 787654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'carro', 785674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(4, 'abstrata', 987654321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'carro', 985674321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'motociclo', 986574321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'abstrata', 987654326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'carro', 985674326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'motociclo', 986574326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'abstrata', 787654326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'carro', 785674326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'motociclo', 786574326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(124, 'abstrata', 987654321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'carro', 985674321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'motociclo', 986574321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'abstrata', 987654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'carro', 985674326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'motociclo', 986574326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'abstrata', 787654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'carro', 785674326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'motociclo', 786574326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(11, 'abstrata', 987654321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'carro', 985674321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'motociclo', 986574321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'abstrata', 987654326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'carro', 985674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'motociclo', 986574326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'abstrata', 787654326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'carro', 785674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'motociclo', 786574326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(5, 'abstrata', 987654321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'carro', 985674321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'carro', 985674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'motociclo', 986574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'abstrata', 787654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'carro', 785674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(7, 'abstrata', 987654321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'carro', 985674321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'carro', 985674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'motociclo', 986574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'abstrata', 787654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'carro', 785674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(9, 'abstrata', 987654321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'carro', 985674321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'motociclo', 986574321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'abstrata', 987654326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'carro', 985674326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'motociclo', 986574326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'abstrata', 787654326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'carro', 785674326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'motociclo', 786574326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(12346, 'abstrata', 987654321, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'carro', 985674321, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'motociclo', 986574321, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'abstrata', 987654326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'carro', 985674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'motociclo', 986574326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'abstrata', 787654326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'carro', 785674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'motociclo', 786574326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:33:42] "GET /leiloes/abs HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_vencedores             ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:36:46] "GET /top10_vencedores HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:38:57] "[31m[1mPOST /artigo/ HTTP/1.1[0m" 400 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:39:39] "[31m[1mPOST /artigo/ HTTP/1.1[0m" 400 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 16838, 'id_artigo': '1101', 'codigoisbn': '101ac12', 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'Computador sistema operativo windows com 20 polegas', 'utilizador_user_name': 'pedro'}
+DEBUG:logger:Erro codigoisbn inserido apresenta carateres invalidos!
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:39:55] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 16838, 'id_artigo': '11c01', 'codigoisbn': '10112', 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'Computador sistema operativo windows com 20 polegas', 'utilizador_user_name': 'pedro'}
+DEBUG:logger:Erro id_artigo inserido apresenta carateres invalidos!
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:40:04] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 16838, 'id_artigo': '1101', 'codigoisbn': '10112', 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'Computador sistema operativo windows com 20 polegas', 'utilizador_user_name': 'pe1dro'}
+ERROR:logger:insert or update on table "artigo" violates foreign key constraint "artigo_fk1"
+DETAIL:  Key (utilizador_user_name)=(pe1dro) is not present in table "utilizador".
+
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:40:15] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': '112c1', 'id_leilao': 1236, 'data_ini': '01-04-2021 12:30:30', 'data_fim': '14-06-2021 13:30:30', 'preco_base': 2, 'token': 16838}
+ERROR:logger:invalid input syntax for type integer: "112c1"
+LINE 3: ...'14-06-2021 13:30:30',  2 , 2,true,   false ,  '',  '112c1')
+                                                               ^
+
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:41:24] "POST /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 1121, 'id_leilao': '12s36', 'data_ini': '01-04-2021 12:30:30', 'data_fim': '14-06-2021 13:30:30', 'preco_base': 2, 'token': 16838}
+ERROR:logger:invalid input syntax for type integer: "12s36"
+LINE 3:                     VALUES ( '12s36',   '01-04-2021 12:30:30...
+                                     ^
+
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:41:47] "POST /leilao/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:45:09] "[31m[1mPOST /login/ HTTP/1.1[0m" 405 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:45:13] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 10275, 'id_artigo': 1321, 'codigoisbn': 101052, 'nome_artigo': 'computador', 'categoria': 'tecnologia', 'descricao': 'Computador sistema operativo windows com 20 polegas', 'utilizador_user_name': 'pedro'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:47:32] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+DEBUG:logger:Erro id artigo inserido apresenta carateres invalidos!
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:47:52] "POST /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+DEBUG:logger:Erro id leilao inserido apresenta carateres invalidos!
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:48:00] "POST /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+DEBUG:logger:Erro preco base inserido apresenta carateres invalidos!
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:48:15] "POST /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 1321, 'id_leilao': 11236, 'data_ini': '01-04-2021 12:30:30', 'data_fim': '14-06-2021 13:30:30', 'preco_base': 2, 'token': 10275}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:48:32] "POST /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:Erro token inserido apresenta carateres invalidos!
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:50:46] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(123, 'abstrata', 987654321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'abstrata', 787654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(12346, 'carro', 985674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:50:53] "GET /leilao/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:{}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:56:37] "GET /leiloes/abs HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:57:26] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:abs
+DEBUG:logger:(123, 'abstrata', 987654321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'carro', 985674321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'motociclo', 986574321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'abstrata', 987654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'carro', 985674326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'motociclo', 986574326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'abstrata', 787654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'carro', 785674326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'motociclo', 786574326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(123, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(12, 'abstrata', 987654321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'carro', 985674321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'motociclo', 986574321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'abstrata', 987654326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'carro', 985674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'motociclo', 986574326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'abstrata', 787654326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'carro', 785674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'motociclo', 786574326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(12, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(1, 'abstrata', 987654321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'carro', 985674321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'carro', 985674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'motociclo', 986574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'abstrata', 787654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'carro', 785674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(1, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(2, 'abstrata', 987654321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'carro', 985674321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'carro', 985674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'motociclo', 986574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'abstrata', 787654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'carro', 785674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(2, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(4, 'abstrata', 987654321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'carro', 985674321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'motociclo', 986574321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'abstrata', 987654326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'carro', 985674326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'motociclo', 986574326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'abstrata', 787654326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'carro', 785674326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'motociclo', 786574326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(4, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(124, 'abstrata', 987654321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'carro', 985674321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'motociclo', 986574321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'abstrata', 987654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'carro', 985674326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'motociclo', 986574326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'abstrata', 787654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'carro', 785674326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'motociclo', 786574326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(124, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(11, 'abstrata', 987654321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'carro', 985674321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'motociclo', 986574321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'abstrata', 987654326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'carro', 985674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'motociclo', 986574326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'abstrata', 787654326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'carro', 785674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'motociclo', 786574326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(11, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(5, 'abstrata', 987654321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'carro', 985674321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'carro', 985674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'motociclo', 986574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'abstrata', 787654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'carro', 785674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(5, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(7, 'abstrata', 987654321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'carro', 985674321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'carro', 985674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'motociclo', 986574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'abstrata', 787654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'carro', 785674326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(7, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(9, 'abstrata', 987654321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'carro', 985674321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'motociclo', 986574321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'abstrata', 987654326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'carro', 985674326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'motociclo', 986574326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'abstrata', 787654326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'carro', 785674326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'motociclo', 786574326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(9, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(12346, 'abstrata', 987654321, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'carro', 985674321, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'motociclo', 986574321, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'abstrata', 987654326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'carro', 985674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'motociclo', 986574326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'abstrata', 787654326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'carro', 785674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'motociclo', 786574326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(12346, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'abstrata', 987654321, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'carro', 985674321, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'motociclo', 986574321, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'abstrata', 987654326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'carro', 985674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'motociclo', 986574326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'abstrata', 787654326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'carro', 785674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'motociclo', 786574326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:57:50] "GET /leiloes/abs HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:59:21] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:abs
+DEBUG:logger:(123, 'abstrata', 987654321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(12, 'carro', 985674321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(1, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(2, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(4, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(124, 'abstrata', 787654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(11, 'carro', 785674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(5, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(7, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(9, 'motociclo', 986574321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(12346, 'carro', 985674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 19:59:28] "GET /leiloes/abs HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:04:22] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:abs
+DEBUG:logger:(123, 'abstrata', 987654321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(12, 'carro', 985674321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(1, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(2, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(4, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(124, 'abstrata', 787654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(11, 'carro', 785674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(5, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(7, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(9, 'motociclo', 986574321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(12346, 'carro', 985674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:04:29] "GET /leiloes/abs HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:124
+DEBUG:logger:(123, 'abstrata', 987654321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(12, 'carro', 985674321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(1, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(2, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(4, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(124, 'abstrata', 787654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(11, 'carro', 785674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(5, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(7, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(9, 'motociclo', 986574321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(12346, 'carro', 985674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:07:11] "GET /leiloes/124 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:852
+DEBUG:logger:(123, 'abstrata', 987654321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(12, 'carro', 985674321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(1, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(2, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(4, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(124, 'abstrata', 787654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(11, 'carro', 785674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(5, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(7, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(9, 'motociclo', 986574321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(12346, 'carro', 985674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:07:45] "GET /leiloes/852 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:987654321
+DEBUG:logger:(123, 'abstrata', 987654321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(12, 'carro', 985674321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(1, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(2, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(4, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(124, 'abstrata', 787654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(11, 'carro', 785674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(5, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(7, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(9, 'motociclo', 986574321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(12346, 'carro', 985674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:08:03] "GET /leiloes/987654321 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:0
+DEBUG:logger:(123, 'abstrata', 987654321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(12, 'carro', 985674321, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(1, 'motociclo', 986574321, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(2, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(4, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(124, 'abstrata', 787654326, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(11, 'carro', 785674326, datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+DEBUG:logger:(5, 'motociclo', 786574326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(7, 'abstrata', 987654326, datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(9, 'motociclo', 986574321, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 5, 30, 20, 30, 30))
+DEBUG:logger:(12346, 'carro', 985674326, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+DEBUG:logger:(11236, 'Computador sistema operativo windows com 20 polegas', 101052, datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:09:24] "GET /leiloes/0 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:13:29] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\site-packages\\flask\\app.py', reloading
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:13:38] "[35m[1mGET /leiloes/0 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:14:03] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:14:11] "[35m[1mGET /leiloes/0 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:14:48] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:0
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:14:56] "GET /leiloes/0 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:0
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:15:26] "GET /leiloes/0 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:16:38] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:0
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:16:44] "GET /leiloes/0 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:17:33] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:0
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:17:39] "GET /leiloes/0 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:0
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:17:54] "GET /leiloes/0 HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:19:27] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:124
+DEBUG:logger:(124, 'abstrata', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3), 1600, 'quadro', 'arte', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:19:35] "GET /leilao/124 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:12474
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:19:42] "GET /leilao/12474 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:124
+DEBUG:logger:(124, 'abstrata', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3), 1600, 'quadro', 'arte', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:19:46] "GET /leilao/124 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:12
+DEBUG:logger:(12, 'carro', datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8), 1500, 'carro', 'veiculo', datetime.datetime(2021, 6, 1, 23, 3, 2), datetime.datetime(2021, 6, 15, 15, 3, 8))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:20:21] "GET /leilao/12 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:22:34] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:23:04] "[35m[1mGET /leiloes/user/tapadinhas HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:23:49] "[35m[1mGET /leiloes/user/%22tapadinhas%22 HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:23:59] "[35m[1mGET /leiloes/user/tapadinhas HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:24:31] "[35m[1mGET /leiloes/user/ines HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:24:35] "[35m[1mGET /leiloes/user/pedro HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:25:52] "[35m[1mGET /leiloes/user/%22pedro%22 HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:25:59] "[35m[1mGET /leiloes/user/'pedro' HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:{}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:26:40] "GET /leiloes/user/'pedro' HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:29:25] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:29:37] "[35m[1mGET /leiloes/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:30:46] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:31:05] "[35m[1mGET /leiloes/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:31:58] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:32:07] "[35m[1mGET /leiloes/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:34:25] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:34:33] "[35m[1mGET /leiloes/user/ HTTP/1.1[0m" 500 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:35:22] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:35:28] "[35m[1mGET /leiloes/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:38:58] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:39:06] "[35m[1mGET /leiloes/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:40:22] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:40:41] "[35m[1mGET /leiloes/user/ HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:41:52] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+ERROR:logger:'psycopg2.extensions.cursor' object has no attribute 'fecthall'
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:42:00] "GET /leiloes/user/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:42:28] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:42:38] "[35m[1mGET /leiloes/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:45:05] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:(123, 'abstrata', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3), 1500, 'quadro', 'arte')
+DEBUG:logger:(123, 'abstrata', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3), 1500, 'quadro', 'arte')
+DEBUG:logger:(124, 'abstrata', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3), 1600, 'quadro', 'arte')
+DEBUG:logger:(7, 'abstrata', datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30), 20, 'quadro', 'arte')
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:45:11] "GET /leiloes/user/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /user/leiloes             ###
+DEBUG:logger:Vou imprimir da tabela registolicitacao
+DEBUG:logger:(123, 'abstrata', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3), 1500, 'quadro', 'arte')
+DEBUG:logger:(123, 'abstrata', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3), 1500, 'quadro', 'arte')
+DEBUG:logger:(124, 'abstrata', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3), 1600, 'quadro', 'arte')
+DEBUG:logger:(7, 'abstrata', datetime.datetime(2021, 6, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30), 20, 'quadro', 'arte')
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:54:13] "GET /leiloes/user/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:57:05] "[35m[1mGET /leiloes/124/800 HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 124
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:57:15] "GET /leiloes/124/800 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 124
+DEBUG:logger:---- licitou  ----
+DEBUG:logger:(datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3), 1600, True, False)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 20:57:28] "GET /leiloes/124/1875 HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:01:04] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:02:16] "[31m[1mGET /leilao/editar/124 HTTP/1.1[0m" 405 -
+INFO:logger:###          Editar Leilão           ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:02:23] "[35m[1mPUT /leilao/editar/124 HTTP/1.1[0m" 500 -
+INFO:logger:###          Editar Leilão           ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:02:37] "[31m[1mPUT /leilao/editar/124 HTTP/1.1[0m" 400 -
+INFO:logger:###          Editar Leilão           ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:02:52] "[35m[1mPUT /leilao/editar/124 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###          Editar Leilão           ###
+DEBUG:logger:{}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:03:23] "PUT /leilao/editar/124 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:03:31] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:04:10] "[35m[1mPUT /leilao/editar/124 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:05:15] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+DEBUG:logger:len(rows) = 1
+DEBUG:logger:len(row) = 3
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:05:21] "[35m[1mPUT /leilao/editar/124 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:07:57] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+DEBUG:logger:len(rows) = 1
+DEBUG:logger:len(row) = 3
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:08:03] "PUT /leilao/editar/124 HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+DEBUG:logger:len(rows) = 1
+DEBUG:logger:len(row) = 3
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:08:50] "[35m[1mPUT /leilao/editar/5 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:09:54] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+DEBUG:logger:len(rows) = 1
+DEBUG:logger:len(row) = 3
+DEBUG:logger:len(rows) = 1
+DEBUG:logger:len(row) = 8
+DEBUG:logger:leilaoId = 5
+DEBUG:logger:{'data_ini': '22-06-2020 12:30:30', 'data_fim': '22-06-2021 13:30:30', 'preco_base': 20, 'codigoisbn': 741852963, 'nome_artigo': 'livro bd', 'categoria': 'livros', 'descricao': 'livro sobre bases de dados', 'user_vendedor': 'ines', 'utilizador_user_name': 'ines', 'token': 23169}
+DEBUG:logger:parametro nao existe nas tabelas leilao ou artigo
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:10:00] "[35m[1mPUT /leilao/editar/5 HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:15:11] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:15:29] "[35m[1mPUT /leilao/editar/5 HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:19:04] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+DEBUG:logger:len(rows) = 1
+DEBUG:logger:len(row) = 3
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:19:13] "PUT /leilao/editar/5 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:22:22] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+DEBUG:logger:len(rows) = 1
+DEBUG:logger:len(row) = 3
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:22:29] "PUT /leilao/editar/5 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Python39\\Lib\\datetime.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:25:40] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+DEBUG:logger:len(rows) = 1
+DEBUG:logger:len(row) = 3
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:25:45] "PUT /leilao/editar/5 HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:27:27] "PUT /leilao/editar/10 HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+DEBUG:logger:len(rows) = 1
+DEBUG:logger:len(row) = 3
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:27:39] "PUT /leilao/editar/11236 HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+DEBUG:logger:len(rows) = 1
+DEBUG:logger:len(row) = 3
+DEBUG:logger:len(rows) = 1
+DEBUG:logger:len(row) = 8
+DEBUG:logger:leilaoId = 11
+DEBUG:logger:{'data_ini': '22-06-2020 12:30:30', 'data_fim': '22-06-2021 13:30:30', 'preco_base': 20, 'nome_artigo': 'livro bd', 'categoria': 'livros', 'descricao': 'livro sobre bases de dados', 'token': 19473}
+ERROR:logger:no results to fetch
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:27:56] "PUT /leilao/editar/11 HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:30:00] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###          Editar Leilão           ###
+DEBUG:logger:len(rows) = 1
+DEBUG:logger:len(row) = 3
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:30:07] "PUT /leilao/editar/11 HTTP/1.1" 200 -
+INFO:logger:###             POST /escreve_msg_mural              ###
+INFO:logger:---- new msg  ----
+DEBUG:logger:content: {'type': 'comentario', 'texto': 'gostei do artigo', 'id_leilao': 123, 'token': 20246}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:33:00] "POST /escreve_msg_mural HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:36:14] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             POST /escreve_msg_mural              ###
+INFO:logger:---- new msg  ----
+DEBUG:logger:content: {'type': 'comentario', 'texto': 'gostei do artigo', 'id_leilao': 123, 'token': 21032}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:36:20] "POST /escreve_msg_mural HTTP/1.1" 200 -
+INFO:logger:###             POST /escreve_msg_mural              ###
+INFO:logger:---- new msg  ----
+DEBUG:logger:content: {'type': 'comentario', 'texto': 'gosteinb do artigo', 'id_leilao': 123, 'token': 21032}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:38:29] "POST /escreve_msg_mural HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:50:20] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             POST /escreve_msg_mural              ###
+INFO:logger:---- new msg  ----
+DEBUG:logger:content: {'type': 'comentario', 'texto': 'gosteinb do artigo', 'id_leilao': 123, 'token': 19998}
+ERROR:logger:record "new" has no field "id_leilao"
+CONTEXT:  SQL statement "select artigo_id_artigo             from leilao where id_leilao = new.id_leilao"
+PL/pgSQL function noti_novo_comentario() line 15 at SQL statement
+
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:50:27] "POST /escreve_msg_mural HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:52:08] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             POST /escreve_msg_mural              ###
+INFO:logger:---- new msg  ----
+DEBUG:logger:content: {'type': 'comentario', 'texto': 'gosteinb do artigo', 'id_leilao': 123, 'token': 6473}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:52:13] "POST /escreve_msg_mural HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+DEBUG:logger:{}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:56:50] "GET /terminarLeiloes HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:56:55] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /terminar leiloes            ###
+DEBUG:logger:---- terminar leiloes  ----
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:57:02] "GET /terminarLeiloes HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:58:38] "PUT /login/ HTTP/1.1" 200 -
+DEBUG:logger:Erro idLeilao inserido apresenta carateres invalidos!
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:58:43] "GET /cancelarLeilao/%3CidLeilao%3E HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /terminar leiloes            ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:58:54] "GET /cancelarLeilao/123 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:59:02] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /terminar leiloes            ###
+ERROR:logger:list index out of range
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 21:59:11] "GET /cancelarLeilao/123 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /terminar leiloes            ###
+ERROR:logger:list index out of range
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:00:38] "GET /cancelarLeilao/123 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:02:31] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /terminar leiloes            ###
+DEBUG:logger:---- cancelar leiloes  ----
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:02:36] "GET /cancelarLeilao/123 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'maria', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:02:56] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /terminar leiloes            ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:03:01] "GET /cancelarLeilao/123 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 123
+ERROR:logger:insert or update on table "notificacao" violates foreign key constraint "notificacao_fk1"
+DETAIL:  Key (utilizador_user_name)=() is not present in table "utilizador".
+
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:04:29] "GET /leiloes/123/1875 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:123
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:04:50] "GET /leilao/123 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'maria', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:05:05] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:123
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:05:14] "GET /leilao/123 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'maria', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:07:57] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:12346
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:08:03] "GET /leilao/12346 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:1
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:08:11] "GET /leilao/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'maria', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:09:58] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:123
+DEBUG:logger:(123, 'abstrata', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3), 1500, 'quadro', 'arte', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:10:07] "GET /leilao/123 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'maria', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:11:27] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:11:32] "PUT /login/ HTTP/1.1" 200 -
+DEBUG:logger:{17059: 'maria', 14764: 'maria', 7594: 'esdrubal'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:11:40] "GET /cancelarLeilao/123 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:13:06] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_vencedores             ###
+ERROR:logger:list index out of range
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:13:15] "GET /top10_vencedores HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:14:25] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_vencedores             ###
+ERROR:logger:list index out of range
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:14:29] "GET /top10_vencedores HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /top10_artigos            ###
+ERROR:logger:23227
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:15:15] "GET /top10_artigos HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+ERROR:logger:23227
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:15:28] "GET /top10_leiloadores HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_leiloes           ###
+ERROR:logger:23227
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:15:42] "GET /top10_leiloes HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:15:47] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_leiloes           ###
+ERROR:logger:list index out of range
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:15:51] "GET /top10_leiloes HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:17:11] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_leiloes           ###
+ERROR:logger:list index out of range
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:17:16] "GET /top10_leiloes HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:18:18] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_vencedores             ###
+ERROR:logger:list index out of range
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:18:28] "GET /top10_vencedores HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:19:11] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_vencedores             ###
+DEBUG:logger:---- top 10 vencedores  ----
+DEBUG:logger:('', 7)
+DEBUG:logger:('ines', 5)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:19:17] "GET /top10_vencedores HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:20:59] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_vencedores             ###
+DEBUG:logger:---- top 10 vencedores  ----
+DEBUG:logger:('', 7)
+DEBUG:logger:('ines', 5)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:21:05] "GET /top10_vencedores HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_artigos            ###
+DEBUG:logger:---- top 10 artigos  ----
+DEBUG:logger:('pedro', 5)
+DEBUG:logger:('tapadinhas', 3)
+DEBUG:logger:('ines', 3)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:21:14] "GET /top10_artigos HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+INFO:logger:PASSOU
+DEBUG:logger:---- top 10 a leiloar  ----
+DEBUG:logger:('pedro', 6)
+DEBUG:logger:('tapadinhas', 3)
+DEBUG:logger:('ines', 3)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:21:26] "GET /top10_leiloadores HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_leiloes           ###
+DEBUG:logger:---- leiloes nos ultimos 10 dias  ----
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:21:34] "GET /top10_leiloes HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:23:39] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_vencedores             ###
+DEBUG:logger:---- top 10 vencedores  ----
+DEBUG:logger:('', 7)
+DEBUG:logger:('ines', 5)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:23:47] "GET /top10_vencedores HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_artigos            ###
+DEBUG:logger:---- top 10 artigos  ----
+DEBUG:logger:('pedro', 5)
+DEBUG:logger:('tapadinhas', 3)
+DEBUG:logger:('ines', 3)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:23:52] "GET /top10_artigos HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+INFO:logger:PASSOU
+DEBUG:logger:---- top 10 a leiloar  ----
+DEBUG:logger:('pedro', 6)
+DEBUG:logger:('tapadinhas', 3)
+DEBUG:logger:('ines', 3)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:23:59] "GET /top10_leiloadores HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_leiloes           ###
+DEBUG:logger:---- leiloes nos ultimos 10 dias  ----
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:24:05] "GET /top10_leiloes HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'tapadinhas', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:26:27] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             GET /notificacoes/              ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:26:37] "GET /notificacoes/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:29:32] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:29:43] "[31m[1mGET /admin/ban/sofia HTTP/1.1[0m" 405 -
+INFO:logger:###            DEMO: POST /admin/ban/user           ###
+ERROR:logger:list index out of range
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:29:53] "POST /admin/ban/sofia HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:31:12] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###            DEMO: POST /admin/ban/user           ###
+ERROR:logger:list index out of range
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:31:19] "POST /admin/ban/sofia HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:31:51] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###            DEMO: POST /admin/ban/user           ###
+ERROR:logger:list index out of range
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:32:00] "POST /admin/ban/sofia HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:33:56] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###            DEMO: POST /admin/ban/user           ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:34:01] "[35m[1mPOST /admin/ban/sofia HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:34:52] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###            DEMO: POST /admin/ban/user           ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:35:02] "POST /admin/ban/sofia HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:38:00] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###            DEMO: POST /admin/ban/user           ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:38:09] "POST /admin/ban/ines HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:48:06] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###            DEMO: POST /admin/ban/user           ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:48:19] "POST /admin/ban/ines HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:50:59] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###            DEMO: POST /admin/ban/user           ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:51:04] "POST /admin/ban/ines HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:53:09] "[33mGET /123 HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:53:27] "[33mGET /123 HTTP/1.1[0m" 404 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:{16114: 'esdrubal'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:53:37] "GET /leilao/123 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:53:42] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:{16114: 'esdrubal', 21050: 'esdrubal'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:53:47] "GET /leilao/21050 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:123
+DEBUG:logger:(123, 'abstrata', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3), 1500, 'quadro', 'arte', datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:53:51] "GET /leilao/123 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:55:04] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:56:36] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines_', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 22:56:52] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:00:23] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:00:31] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'tapadinhas', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:00:43] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'tapadinhas', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:01:51] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:01:56] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'rita', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:10:48] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'rita', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:10:54] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:10:59] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'rita', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:11:30] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 4
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:11:55] "GET /leiloes/4/1875 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 12346
+DEBUG:logger:---- licitou  ----
+DEBUG:logger:(datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30), 2, True, False)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:12:18] "GET /leiloes/12346/1875 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'mariana', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:12:30] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'fernando', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:12:35] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /licitar              ###
+DEBUG:logger:id_leilao: 12346
+DEBUG:logger:---- licitou  ----
+DEBUG:logger:(datetime.datetime(2021, 4, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30), 1875, True, False)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:12:54] "GET /leiloes/12346/2700 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'asdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:13:11] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'asdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:13:16] "PUT /login/ HTTP/1.1" 200 -
+DEBUG:logger:{7303: 'rita', 13837: 'mariana', 17322: 'fernando', 18896: 'asdrubal', 15673: 'asdrubal'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:14:38] "GET /cancelarLeilao/12346 HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:14:46] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /terminar leiloes            ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:14:58] "GET /cancelarLeilao/12346 HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'gui', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:16:45] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /terminar leiloes            ###
+DEBUG:logger:---- cancelar leiloes  ----
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:16:54] "GET /cancelarLeilao/12346 HTTP/1.1" 200 -
+INFO:logger:###            DEMO: POST /admin/ban/user           ###
+DEBUG:logger:{1744: 'gui'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:18:18] "POST /admin/ban/fernando HTTP/1.1" 200 -
+INFO:logger:###            DEMO: POST /admin/ban/user           ###
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 23:18:29] "POST /admin/ban/fernando HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)

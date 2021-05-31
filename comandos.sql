@@ -128,7 +128,9 @@ AS $$
 DECLARE
 	noti_count numeric;
     msg varchar;
-	
+	ID_art BIGINT;
+	criador VARCHAR;
+
 	c1 cursor for
 		select utilizador_user_name, data_pub
 		from comentarios
@@ -136,16 +138,21 @@ DECLARE
 		    and comentarios.utilizador_user_name != new.utilizador_user_name;
 		
 BEGIN
-	noti_count := 0;
+	select artigo_id_artigo into ID_art from leilao where id_leilao = new.id_leilao;
+	select utilizador_user_name into criador from artigo where id_artigo = ID_art;
+	
 	select max(id_noti) into noti_count from notificacao;
-    msg := 'Nova mensagem no mural do leilão ' || new.leilao_id_leilao;
+    msg := 'Nova mensagem no mural no leilão ' || new.leilao_id_leilao;
 
 	for r in c1
 	loop
         noti_count := noti_count + 1;
         insert into notificacao(id_noti, msg, data, is_open, utilizador_user_name)
-		values(noti_count, msg, r.data_pub, false, new.utilizador_user_name);
+		values(noti_count, msg, new.data_pub, false, r.utilizador_user_name);
 	end loop;
+	noti_count := noti_count + 1;
+	insert into notificacao(id_noti, msg, data, is_open, utilizador_user_name)
+		values(noti_count, msg, new.data_pub, false, criador);
 	return new;
 end;
 $$;
