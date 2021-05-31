@@ -1212,6 +1212,146 @@ def cancelar_leiloes(idLeilao):
     conn.close()
     return jsonify(result)
 
+
+
+#15
+@app.route("/admin/ban/<userToBan>", methods=['POST'], strict_slashes=True)
+def ban_user(userToBan):
+    logger.info("###            DEMO: POST /admin/ban/user           ###");
+    dados = request.get_json()
+
+    if(dados["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    # verificar se é admin
+    try:
+        cur.execute("""SELECT  is_admin FROM utilizador WHERE user_name=%s;""" , (tokens_online[dados["token"]],))
+        rows = cur.fetchall()
+        if(rows[0][0] == False):
+            cur.close()
+            conn.close()
+            return 'Erro utilizador não é admin!'
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.execute("commit")
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
+    # verificar que nao está a tentar banir um admin
+    try:
+        cur.execute("""SELECT  is_admin FROM utilizador WHERE user_name=%s;""" , (str(userToBan),))
+        rows = cur.fetchall()
+        if(rows[0][0] == True):
+            cur.close()
+            conn.close()
+            return 'Não pode banir user com permissões de admin'
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.execute("commit")
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
+    # atualizar tabela utilizador
+    statement = """UPDATE utilizador
+                SET is_ban = True
+                WHERE user_name = %s;"""
+    values = (str(userToBan),)
+
+    try:
+        cur.execute(statement, values)
+        #nao dar commit pq temos de alterar todos os dados e só no fim da funçao dar commit
+
+        # cancelar leiloes criados por userToBan
+        #   ir buscar id do artigo criado pelo userToBan
+        cur.execute("""SELECT artigo.id_artigo
+                    FROM leilao, artigo
+                    WHERE leilao.artigo_id_artigo = artigo.id_artigo and artigo.utilizador_user_name = %s;""", (str(userToBan),))
+        
+        rows = cur.fetchall()
+        aux_id_artigo = rows[0][0]
+        print("id_artigo = ", aux_id_artigo)
+
+        statement = """UPDATE leilao
+                    SET is_canceled = true
+                    WHERE artigo_id_artigo = %s;"""
+        values = (str(aux_id_artigo),)
+        cur.execute(statement, values)
+
+        # cancelar licitacoes do userToBan
+        statement = """UPDATE registolicitacao
+                    SET is_canceled = true
+                    WHERE utilizador_user_name = %s"""
+        values = (str(userToBan),)
+        cur.execute(statement, values)
+
+        #encontrar leiloes com licitacoes do userToBan
+        statement = """SELECT leilao_id_leilao, preco_licitacao
+                    FROM registolicitacao
+                    WHERE utilizador_user_name = %s and is_canceled = true;"""
+        value = (str(userToBan),)
+        cur.execute(statement, values)
+
+        rows = cur.fetchall()
+        lista_leiloes = []
+        lista_preco_licitacao = []
+        for r in rows:
+            lista_leiloes.append(r[0])
+            lista_preco_licitacao.append(r[1])
+
+
+        statement = """UPDATE registolicitacao
+                    SET is_canceled = true
+                    WHERE leilao_id_leilao = %s and preco_licitacao > %s;"""
+
+        for i in range(len(lista_leiloes)):
+            values = (lista_leiloes[i], lista_preco_licitacao[i])
+            cur.execute(statement, values)
+
+
+
+
+
+
+
+
+
+    #falta atualizar valor_atual no leilao
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.close()
+        conn.close()
+        return jsonify(result)
+    
+
+
+
+
+
+
+    try:
+
+        #nao dar commit pq temos de alterar todos os dados e só no fim da funçao dar commit
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
+
+    #falta dar commit
+
 #16
 @app.route("/top10_vencedores", methods=['GET'], strict_slashes=True)
 def top10_vencedores():
