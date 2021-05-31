@@ -490,29 +490,34 @@ def consult_leilao(leilaoId):
     logger.debug("---- leiloes  ----")
     logger.debug(leilaoId)
     for row in cur.fetchall():
-        if(row[2]<= datetime.today() and row[3]>datetime.today()): 
-            comentarios = []
-            licitacoes = []
+        
+        comentarios = []
+        licitacoes = []
 
-            logger.debug(row)
-            content = {'leilaoId': row[0],'descricao': row[1],"data_ini": row[2],"data_fim":row[3],"preco_base":row[4],"nome_artigo": row[5],"categoria": row[6]}
-            payload.append(content)
-            cur.execute("""SELECT texto,type,data_pub,utilizador_user_name
-                FROM comentarios
-                WHERE leilao_id_leilao = %s""",(row[0],))
-            for line in cur.fetchall():
-                content = {'comentario': line[0],'tipo': line[1],'user': line[3]}
-                comentarios.append(content)
-            
-            cur.execute("""SELECT preco_licitacao,data_licitacao,utilizador_user_name
-                FROM registolicitacao
-                WHERE leilao_id_leilao = %s""",(row[0],))
-            for line in cur.fetchall():
-                content = {'preco da licitacao': line[0],'data da licitacao': line[1],'utilizador': line[2]}
-                licitacoes.append(content)
+        logger.debug(row)
+        content = {'leilaoId': row[0],'descricao': row[1],"data_ini": row[2],"data_fim":row[3],"preco_base":row[4],"nome_artigo": row[5],"categoria": row[6]}
+        payload.append(content)
+        cur.execute("""SELECT texto,type,data_pub,utilizador_user_name
+            FROM comentarios
+            WHERE leilao_id_leilao = %s""",(row[0],))
+        for line in cur.fetchall():
+            content = {'comentario': line[0],'tipo': line[1],'user': line[3]}
+            comentarios.append(content)
+        
+        cur.execute("""SELECT preco_licitacao,data_licitacao,utilizador_user_name
+            FROM registolicitacao
+            WHERE leilao_id_leilao = %s""",(row[0],))
+        for line in cur.fetchall():
+            content = {'preco da licitacao': line[0],'data da licitacao': line[1],'utilizador': line[2]}
+            licitacoes.append(content)
 
-            payload.append({'Comentarios': comentarios})
-            payload.append({'Licitacoes': licitacoes})
+        payload.append({'Comentarios': comentarios})
+        payload.append({'Licitacoes': licitacoes})
+
+        if(row[2]<= datetime.today() and row[3]>datetime.today()):
+            payload.append({'Estado': 'A decorrer'})
+        else:
+            payload.append({'Estado': 'Terminado'})
             
     cur.close()
     conn.close()
