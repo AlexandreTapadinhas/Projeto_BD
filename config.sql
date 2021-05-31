@@ -9,36 +9,34 @@ CREATE TABLE artigo (
 );
 
 CREATE TABLE registolicitacao (
-	id_licitacao	 INTEGER DEFAULT 0,
-	preco_licitacao	 BIGINT UNIQUE NOT NULL,
+	preco_licitacao	 BIGINT NOT NULL,
 	data_licitacao	 TIMESTAMP NOT NULL,
+	is_canceled		 BOOL NOT NULL DEFAULT false,
 	leilao_id_leilao	 INTEGER NOT NULL,
-	utilizador_user_name VARCHAR(512) NOT NULL,
-	PRIMARY KEY(id_licitacao)
+	utilizador_user_name VARCHAR(512) NOT NULL
 );
 
 CREATE TABLE comentarios (
-	id_comentario	 INTEGER DEFAULT 0,
 	type		 VARCHAR(512) NOT NULL,
 	texto		 VARCHAR(512) NOT NULL,
 	data_pub		 TIMESTAMP NOT NULL,
 	leilao_id_leilao	 INTEGER NOT NULL,
-	utilizador_user_name VARCHAR(512) NOT NULL,
-	PRIMARY KEY(id_comentario)
+	utilizador_user_name VARCHAR(512) NOT NULL
 );
 
 CREATE TABLE utilizador (
-	user_name VARCHAR(512) UNIQUE NOT NULL,
+	user_name	 VARCHAR(512) UNIQUE NOT NULL,
 	email	 VARCHAR(512) UNIQUE NOT NULL,
 	nome	 VARCHAR(512) NOT NULL,
 	password	 VARCHAR(512) NOT NULL,
 	genero	 VARCHAR(512) DEFAULT null,
-	nif	 BIGINT UNIQUE NOT NULL,
-	data_nasc DATE NOT NULL,
+	nif		 BIGINT UNIQUE NOT NULL,
+	data_nasc	 DATE NOT NULL,
 	estado	 VARCHAR(512),
 	contacto	 BIGINT UNIQUE NOT NULL,
 	is_ban	 BOOL NOT NULL DEFAULT false,
 	is_admin	 BOOL NOT NULL,
+	admin_banner VARCHAR(512),
 	PRIMARY KEY(user_name)
 );
 
