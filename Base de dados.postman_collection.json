@@ -1,0 +1,378 @@
+{
+	"info": {
+		"_postman_id": "93ac9728-5b10-4291-bd4c-c27e179f7ff7",
+		"name": "Base de dados",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\": \"ines\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.4.6:5000/login/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"4",
+						"6"
+					],
+					"port": "5000",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criar artigo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": 3663,\r\n    \"id_artigo\": 1321,\r\n    \"codigoisbn\": 101212,\r\n    \"nome_artigo\": \"computador\",\r\n    \"categoria\": \"tecnologia\",\r\n    \"descricao\": \"Computador sistema operativo windows com 20 polegas\",\r\n    \"utilizador_user_name\": \"pedro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.4.6:5000/artigo/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"4",
+						"6"
+					],
+					"port": "5000",
+					"path": [
+						"artigo",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criar leilao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_artigo\": 1321,\r\n    \"id_leilao\": 11236,\r\n    \"data_ini\": \"01-04-2021 12:30:30\",\r\n    \"data_fim\": \"14-06-2021 13:30:30\",\r\n    \"preco_base\": 2,\r\n    \"token\": 10275\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.4.6:5000/leilao/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"4",
+						"6"
+					],
+					"port": "5000",
+					"path": [
+						"leilao",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leiloes a decorrer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": 10275\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.4.6:5000/leilao/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"4",
+						"6"
+					],
+					"port": "5000",
+					"path": [
+						"leilao",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar leiloes existentes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.4.6:5000/leiloes/<keyword>",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"4",
+						"6"
+					],
+					"port": "5000",
+					"path": [
+						"leiloes",
+						"<keyword>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar leilao",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Listar onde utilizador tem ativade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Licitar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": 23526\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.4.6:5000/leiloes/124/1875",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"4",
+						"6"
+					],
+					"port": "5000",
+					"path": [
+						"leiloes",
+						"124",
+						"1875"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar leilao",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data_ini\":\"22-06-2020 12:30:30\",\r\n    \"data_fim\":\"22-06-2021 13:30:30\",\r\n    \"preco_base\":20,\r\n    \"nome_artigo\":\"livro bd\",\r\n    \"categoria\":\"livros\",\r\n    \"descricao\":\"livro sobre bases de dados\",\r\n    \"token\": 9607\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.4.6:5000/leilao/editar/5",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"4",
+						"6"
+					],
+					"port": "5000",
+					"path": [
+						"leilao",
+						"editar",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Escrever no mural",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Terminar leilao",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Cancelar leilao",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.4.6:5000/cancelarLeilao/<idLeilao>",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"4",
+						"6"
+					],
+					"port": "5000",
+					"path": [
+						"cancelarLeilao",
+						"<idLeilao>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "top10_vencedores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "top10_artigos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "top10_leiloadores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "top10_leiloes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.4.6:5000/top10_leiloes",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"4",
+						"6"
+					],
+					"port": "5000",
+					"path": [
+						"top10_leiloes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Receber notificacoes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Banir",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
