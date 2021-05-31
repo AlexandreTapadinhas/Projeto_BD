@@ -353,6 +353,11 @@ def criar_artigo():
         logger.debug(msg)
         return(jsonify(msg))
 
+    if(str(payload["descricao"]).isdecimal() == True):
+        msg = "Erro descricao inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
     if(str(payload["utilizador_user_name"]).isdecimal() == True):
         msg = "Erro utilizador_user_name inserido apresenta carateres invalidos!"
         logger.debug(msg)
@@ -576,6 +581,15 @@ def get_all_leiloes_from_user(user):
 
     dados = request.get_json()
 
+    if(str(dados["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(str(user).isdecimal() == True):
+        msg = "Erro user inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
     if(dados["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
@@ -588,7 +602,6 @@ def get_all_leiloes_from_user(user):
                     WHERE utilizador_user_name = %s;"""
 
     values = (user,)
-
 
     try:
         cur.execute(statement, values)
@@ -841,10 +854,38 @@ def editar_leilao(leilaoId):
     logger.info("###          Editar Leilão           ###");   
     content = request.get_json()
 
+    if(str(content["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
+    if(str(content["preco_base"]).isdecimal() == False):
+        msg = "Erro preco_base inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
+    if(str(content["codigoisbn"]).isdecimal() == False):
+        msg = "Errocodigoisbn inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(str(content["categoria"]).isdecimal() == True):
+        msg = "Erro categoria inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
+    if(str(content["user_vencedor"]).isdecimal() == True):
+        msg = "Erro user_vencedor inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    
+    if(str(content["utilizador_user_name"]).isdecimal() == True):
+        msg = "Erro utilizador_user_name inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
     if(content["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': content["token"]}))
-
 
     conn = db_connection()
     cur = conn.cursor()
@@ -965,7 +1006,13 @@ def editar_leilao(leilaoId):
                     return jsonify(result)
 
 
-                # dar reset ao preco atual dos leiloes
+            
+            if(str(content["preco_base"]).isdecimal() == False):
+                msg = "Erro token inserido apresenta carateres invalidos!"
+                logger.debug(msg)
+                return(jsonify(msg))
+
+                        # dar reset ao preco atual dos leiloes
             statement = """UPDATE leilao
                         SET preco_atual = %s, is_ativo = True, is_canceled = False
                         WHERE id_leilao = %s"""
