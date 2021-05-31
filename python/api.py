@@ -1132,11 +1132,10 @@ def top10_artigo():
         content = {'user': row[0], 'total de artigos': row[1]}
         payload.append(content) # appending to the payload to be returned
 
-<<<<<<< HEAD
     cur.close()
     conn.close()
     return jsonify(payload)
-=======
+
 #14
 @app.route("/cancelarLeilao/<idLeilao>", methods=['GET'])
 def cancelar_leiloes(idLeilao):
@@ -1199,7 +1198,6 @@ def cancelar_leiloes(idLeilao):
     conn.close()
     return jsonify(result)
 
->>>>>>> 67a40788cd2bb49d187a3517d5ba5c9b34a93047
 
 @app.route("/estatisticas/vencedor", methods=['GET'], strict_slashes=True)
 def top10_vencedores():
@@ -1229,6 +1227,41 @@ def top10_vencedores():
             break
         logger.debug(row)
         content = {'user': row[0], 'total de artigos comprados': row[1]}
+        payload.append(content) # appending to the payload to be returned
+
+    cur.close()
+    conn.close()
+    return jsonify(payload)
+
+
+@app.route("/estatisticas/artigo", methods=['GET'], strict_slashes=True)
+def top10_leiloadores():
+    logger.info("###              DEMO: GET /estatisticas/leilao            ###");   
+    
+    dados = request.get_json()
+    
+    if(dados["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+    
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("""SELECT utilizador.user_name,count(*)
+    FROM utilizador,artigo 
+    WHERE utilizador.user_name = artigo.utilizador_user_name
+    GROUP BY utilizador.user_name
+    ORDER BY count(*) DESC""")
+    
+    rows = cur.fetchall()
+    payload = []
+    logger.debug("---- top 10 a leiloar  ----")
+    for row in rows:
+        count = count + 1
+        if count > 10: 
+            break
+        logger.debug(row)
+        content = {'user': row[0], 'total de artigos leiloados': row[1]}
         payload.append(content) # appending to the payload to be returned
 
     cur.close()
