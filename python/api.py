@@ -1151,7 +1151,7 @@ def cancelar_leiloes(idLeilao):
     cur = conn.cursor()
 
     try:
-        cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online(dados["token"]),))
+        cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online[dados["token"]],))
         rows = cur.fetchall()
         if(rows[0][0] == False):
             cur.close()
