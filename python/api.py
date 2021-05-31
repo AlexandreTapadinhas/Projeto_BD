@@ -1097,6 +1097,68 @@ def terminar_leiloes():
     return jsonify(result)
 
 
+#14
+@app.route("/cancelarLeilao/<idLeilao>", methods=['GET'])
+def cancelar_leiloes(idLeilao):
+    dados = request.get_json()
+    if(dados["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+
+        
+    logger.info("###              DEMO: GET /terminar leiloes            ###");   
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    try:
+        cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online(dados["token"]),))
+        rows = cur.fetchall()
+        if(rows[0][0] == False):
+            cur.close()
+            conn.close()
+            return 'Erro utilizador não é admin!'
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.execute("commit")
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
+    
+
+    logger.debug("---- cancelar leiloes  ----")
+
+    statement = """
+            UPDATE leilao
+            SET is_canceled = %s
+            WHERE id_leilao = %s"""
+
+
+    values = (True, idLeilao)  
+
+    #notificar os users
+    cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online(dados["token"]),))
+    rows = cur.fetchall()
+    
+
+    try:
+        cur.execute(statement, values)
+        cur.execute("commit")
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        cur.execute("rollback")
+        logger.error(error)
+
+
+
+
+    result={"Leiloes Cancelado!!":idLeilao}
+    cur.close()
+    conn.close()
+    return jsonify(result)
+
 
 ##########################################################
 ## DATABASE ACCESS
