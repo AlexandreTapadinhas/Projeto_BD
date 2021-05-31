@@ -72,13 +72,13 @@ INSERT INTO leilao (id_leilao,data_ini,data_fim,preco_base,preco_atual,is_ativo,
 VALUES (9,'30-05-2021 20:02:02','30-05-2021 20:30:30',20,1500,true,false,'ines',125545);
 
 
-INSERT INTO comentarios(id_comentario, type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES (0, 'comentario','queixa1','30-05-2021 12:02:03',123,'pedro');
-INSERT INTO comentarios(id_comentario, type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES (1, 'queixa','queixa2','29-05-2021 15:02:03 ',123,'ines');
-INSERT INTO comentarios(id_comentario, type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES (2, 'comentario','queixa3','29-05-2021 21:02:06',123,'tapadinhas');
+INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('comentario','queixa1','30-05-2021 12:02:03',123,'pedro');
+INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('queixa','queixa2','29-05-2021 15:02:03 ',123,'ines');
+INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_name) VALUES ('comentario','queixa3','29-05-2021 21:02:06',123,'tapadinhas');
 
-INSERT INTO registolicitacao(id_licitacao, preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (0, 123,'30-05-2021 12:30:03',123,'pedro');
-INSERT INTO registolicitacao(id_licitacao, preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (1, 156,'28-05-2021 06:02:15',123,'tapadinhas');
-INSERT INTO registolicitacao(id_licitacao, preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (2, 196,'29-05-2021 19:19:19',123,'ines');
+INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (123,'30-05-2021 12:30:03',123,'pedro');
+INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (156,'28-05-2021 06:02:15',123,'tapadinhas');
+INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (196,'29-05-2021 19:19:19',123,'ines');
 
 INSERT INTO notificacao(id_noti, msg,data,is_open,utilizador_user_name) VALUES (0, 'init notificacao','29-05-2000 21:02:06',FALSE,'tapadinhas');
 

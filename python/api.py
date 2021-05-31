@@ -265,8 +265,8 @@ def registo_utilizadores():
         msg = "Erro contacto inserido apresenta carateres invalidos!"
         logger.debug(msg)
         return(jsonify(msg))
-    if(payload["is_admin"] != True or payload["is_admin"] != False):
-        msg = "Erro is_admin inserido invalido! Apenas pode ser true or false"
+    if(type(payload["is_admin"]) == bool()):
+        msg = "Erro is_admin inserido invalido! Apenas pode ser true ou false"
         logger.debug(msg)
         return(jsonify(msg))
 
@@ -282,7 +282,7 @@ def registo_utilizadores():
                           VALUES ( %s,   %s ,  %s,  %s , %s,   %s ,   %s, %s,   %s ,  %s,  %s )"""
 
     
-    values = (payload["user_name"], payload["email"], payload["nome"], payload["password"],payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,payload["is_admin"])
+    values = (payload["user_name"], payload["email"], payload["nome"], str(encrypt_password(payload["password"])),payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,payload["is_admin"])
 
     try:
         cur.execute(statement, values)
@@ -331,7 +331,7 @@ def login():
                 where user_name = %s and password = %s """
 
 
-    values = (content["user_name"], content["password"])
+    values = (content["user_name"], str(encrypt_password(content["password"])))
     token_aux = geraToken(content["user_name"])
 
     try:
@@ -640,7 +640,7 @@ def get_all_leiloes_from_user(user):
     conn = db_connection()
     cur = conn.cursor()
 
-    statement = """SELECT id_leilao
+    statement = """SELECT leilao_id_leilao
                     FROM registolicitacao
                     WHERE utilizador_user_name = %s;"""
 
@@ -1753,7 +1753,7 @@ def top10_leiloes():
 ##########################################################
 
 def db_connection():
-    db = psycopg2.connect(user = "postgres",
+    db = psycopg2.connect(user = "bd_user",
                             password = "bd2021",
                             host = "localhost",
                             port = "5432",
