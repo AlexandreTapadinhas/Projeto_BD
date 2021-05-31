@@ -518,7 +518,7 @@ def consult_leilao(leilaoId):
             payload.append({'Estado': 'A decorrer'})
         else:
             payload.append({'Estado': 'Terminado'})
-            
+
     cur.close()
     conn.close()
     return jsonify(payload)
@@ -1100,7 +1100,41 @@ def terminar_leiloes():
     cur.close()
     conn.close()
     return jsonify(result)
+#16
+@app.route("/estatisticas/artigo", methods=['GET'], strict_slashes=True)
+def top10_artigo():
+    logger.info("###              DEMO: GET /estatisticas/artigo             ###");   
+    
+    dados = request.get_json()
+    
+    if(dados["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+    
+    conn = db_connection()
+    cur = conn.cursor()
 
+    cur.execute("""SELECT utilizador.user_name,count(*)
+    FROM utilizador,artigo 
+    WHERE utilizador.user_name = artigo.utilizador_user_name
+    GROUP BY utilizador.user_name
+    ORDER BY count(*) DESC""")
+    
+    rows = cur.fetchall()
+    payload = []
+    logger.debug("---- top 10 artigos  ----")
+    count = 0
+    for row in rows:
+        count = count + 1
+        if count > 10: 
+            break
+        logger.debug(row)
+        content = {'user': row[0], 'total de artigos': row[1]}
+        payload.append(content) # appending to the payload to be returned
+
+    cur.close()
+    conn.close()
+    return jsonify(payload)
 
 #14
 @app.route("/cancelarLeilao/<idLeilao>", methods=['GET'])
@@ -1214,13 +1248,115 @@ def cancelar_leiloes(idLeilao):
     return jsonify(result)
 
 
+@app.route("/estatisticas/vencedor", methods=['GET'], strict_slashes=True)
+def top10_vencedores():
+    logger.info("###              DEMO: GET /estatisticas/vencedor             ###");   
+    
+    dados = request.get_json()
+    
+    if(dados["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+    
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute(""" SELECT leilao.user_vencedor,count(*)
+    FROM leilao
+    GROUP BY leilao.user_vencedor
+    ORDER BY count(*) DESC""")
+    
+    rows = cur.fetchall()
+    payload = []
+    count = 0
+    logger.debug("---- top 10 vencedores  ----")
+    for row in rows:
+        count = count + 1
+        if count > 10: 
+            break
+        logger.debug(row)
+        content = {'user': row[0], 'total de artigos comprados': row[1]}
+        payload.append(content) # appending to the payload to be returned
+
+    cur.close()
+    conn.close()
+    return jsonify(payload)
+
+
+@app.route("/estatisticas/artigo", methods=['GET'], strict_slashes=True)
+def top10_leiloadores():
+    logger.info("###              DEMO: GET /estatisticas/leilao            ###");   
+    
+    dados = request.get_json()
+    
+    if(dados["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+    
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("""SELECT utilizador.user_name,count(*)
+    FROM utilizador,artigo 
+    WHERE utilizador.user_name = artigo.utilizador_user_name
+    GROUP BY utilizador.user_name
+    ORDER BY count(*) DESC""")
+    
+    rows = cur.fetchall()
+    payload = []
+    logger.debug("---- top 10 a leiloar  ----")
+    for row in rows:
+        count = count + 1
+        if count > 10: 
+            break
+        logger.debug(row)
+        content = {'user': row[0], 'total de artigos leiloados': row[1]}
+        payload.append(content) # appending to the payload to be returned
+
+    cur.close()
+    conn.close()
+    return jsonify(payload)
+
+@app.route("/estatisticas/leilao", methods=['GET'], strict_slashes=True)
+def top10_leiloadores():
+    logger.info("###              DEMO: GET /estatisticas/leilao            ###");   
+    
+    dados = request.get_json()
+    
+    if(dados["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+    
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("""SELECT utilizador.user_name,count(*)
+    FROM utilizador,artigo,leilao 
+    WHERE utilizador.user_name = artigo.utilizador_user_name and artigo.id_artigo = leilao.artigo_id_artigo
+    GROUP BY utilizador.user_name
+    ORDER BY count(*) DESC""")
+    
+    rows = cur.fetchall()
+    payload = []
+    logger.debug("---- top 10 a leiloar  ----")
+    for row in rows:
+        count = count + 1
+        if count > 10: 
+            break
+        logger.debug(row)
+        content = {'user': row[0], 'total de artigos leiloados': row[1]}
+        payload.append(content) # appending to the payload to be returned
+
+    cur.close()
+    conn.close()
+    return jsonify(payload)
 ##########################################################
 ## DATABASE ACCESS
 ##########################################################
 
 def db_connection():
     db = psycopg2.connect(user = "postgres",
-                            password = "bd2021",
+                            password = "django500",
                             host = "localhost",
                             port = "5432",
                             database = "projeto")  #dbname

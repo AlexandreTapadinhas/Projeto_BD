@@ -270,10 +270,42 @@ def comparaDatas(inicio,now,fim):
 def teste(data):
     return data.year
    
+def getNumLeiloes():
+    con = getConnection()
+    cursor = con.cursor()
 
+    #TOP 10 artigos
+    #cursor.execute("""SELECT utilizador.user_name,count(*)
+    #FROM utilizador,artigo 
+    #WHERE utilizador.user_name = artigo.utilizador_user_name
+    #GROUP BY utilizador.user_name""")
+
+
+    cursor.execute("""SELECT utilizador.user_name,count(*)
+    FROM utilizador,artigo,leilao 
+    WHERE utilizador.user_name = artigo.utilizador_user_name and artigo.id_artigo = leilao.artigo_id_artigo
+    GROUP BY utilizador.user_name
+    ORDER BY count(*) DESC""")
+
+    #cursor.execute("""SELECT artigo.utilizador_user_name,count(*)
+    #FROM artigo,leilao,utilizador
+    #WHERE artigo.id_artigo = leilao.artigo_id_artigo and artigo.utilizador_user_name = utilizador.user_name
+    #GROUP BY artigo.utilizador_user_name""")
+
+    #TOP10 vencedores de leiloes
+    #cursor.execute(""" SELECT leilao.user_vencedor,count(*)
+   # FROM leilao
+    #GROUP BY leilao.user_vencedor
+    # """)
+    
+    for row in cursor.fetchall():
+        print(row)
+
+    cursor.close()
+    con.close()
 #print(comparaDatas("01-06-2021","02-06-2021","03-07-2021"))
 
-print(teste(datetime.now()))
+getNumLeiloes()
 #"data_ini": "01-06-2021",
 #    "data_fim": "14-06-2021",
 #print(geraId())
