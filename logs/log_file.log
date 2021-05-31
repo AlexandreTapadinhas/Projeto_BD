@@ -8491,3 +8491,306 @@ WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
 >>>>>>> 67a40788cd2bb49d187a3517d5ba5c9b34a93047
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'esdrubal', 'email': 'trool@hotmail.com', 'nome': 'esdrubal grave', 'password': 'password', 'genero': 'masculino', 'nif': 12365333, 'data_nasc': '18-12-2000', 'estado': 'solteiro', 'contacto': 74733589, 'is_admin': True}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 13:51:41] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 13:52:16] "[31m[1mPOST /login/ HTTP/1.1[0m" 405 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 13:52:21] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/vencedor             ###
+ERROR:logger:'dict' object is not callable
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 13:53:00] "GET /estatisticas/vencedor HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/vencedor             ###
+ERROR:logger:'dict' object is not callable
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 13:53:31] "GET /estatisticas/vencedor HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+ERROR:logger:'dict' object is not callable
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 13:53:38] "GET /estatisticas/artigo HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+ERROR:logger:'dict' object is not callable
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 13:53:47] "GET /estatisticas/leilao HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'asdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:27:44] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+ERROR:logger:'dict' object is not callable
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:28:08] "GET /estatisticas/artigo HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:33:41] "[35m[1mPUT /login HTTP/1.1[0m" 500 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:33:47] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+ERROR:logger:'dict' object is not callable
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:34:06] "GET /estatisticas/leilao HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:35:14] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+INFO:logger:ANTERIOR 
+ERROR:logger:'dict' object is not callable
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:35:28] "GET /estatisticas/leilao HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:38:46] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+INFO:logger:PASSOU
+DEBUG:logger:---- top 10 a leiloar  ----
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:39:06] "[35m[1mGET /top10_leiloadores HTTP/1.1[0m" 500 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:40:00] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+ERROR:logger:'token'
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:40:14] "GET /top10_artigos HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+DEBUG:logger:---- top 10 artigos  ----
+DEBUG:logger:('pedro', 4)
+DEBUG:logger:('tapadinhas', 3)
+DEBUG:logger:('ines', 3)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:40:23] "GET /top10_artigos HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/vencedor             ###
+DEBUG:logger:---- top 10 vencedores  ----
+DEBUG:logger:('', 6)
+DEBUG:logger:('ines', 4)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:40:34] "GET /top10_vencedores HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+INFO:logger:PASSOU
+DEBUG:logger:---- top 10 a leiloar  ----
+DEBUG:logger:('pedro', 5)
+DEBUG:logger:('ines', 3)
+DEBUG:logger:('tapadinhas', 2)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 14:40:48] "GET /top10_leiloadores HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:00:30] "[31m[1mGET /login/ HTTP/1.1[0m" 405 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:00:33] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_leiloes           ###
+ERROR:logger:can't execute an empty query
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:01:03] "GET /top10_leiloes HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:02:30] "[31m[1mGET /login/ HTTP/1.1[0m" 405 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:02:34] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+DEBUG:logger:---- top 10 artigos  ----
+DEBUG:logger:('pedro', 4)
+DEBUG:logger:('tapadinhas', 3)
+DEBUG:logger:('ines', 3)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:02:52] "GET /top10_artigos HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_leiloes           ###
+ERROR:logger:can't execute an empty query
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:03:02] "GET /top10_leiloes HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:04:18] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /estatisticas/leilao            ###
+DEBUG:logger:---- top 10 artigos  ----
+DEBUG:logger:('pedro', 4)
+DEBUG:logger:('tapadinhas', 3)
+DEBUG:logger:('ines', 3)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:04:36] "GET /top10_artigos HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /top10_leiloes           ###
+ERROR:logger:can't execute an empty query
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:04:49] "GET /top10_leiloes HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:05:20] "[31m[1mGET /login/ HTTP/1.1[0m" 405 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:05:23] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:05:34] "[31m[1mPUT /top10_leiloes HTTP/1.1[0m" 405 -
+INFO:logger:###              DEMO: GET /top10_leiloes           ###
+DEBUG:logger:---- leiloes nos ultimos 10 dias  ----
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:05:37] "GET /top10_leiloes HTTP/1.1" 200 -

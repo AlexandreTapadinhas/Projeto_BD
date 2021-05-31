@@ -17,7 +17,7 @@
 
  
 from flask import Flask, jsonify, request
-from datetime import datetime
+from datetime import datetime,timedelta
 import logging, psycopg2, time
 import random
 
@@ -1100,41 +1100,6 @@ def terminar_leiloes():
     cur.close()
     conn.close()
     return jsonify(result)
-#16
-@app.route("/estatisticas/artigo", methods=['GET'], strict_slashes=True)
-def top10_artigo():
-    logger.info("###              DEMO: GET /estatisticas/artigo             ###");   
-    
-    dados = request.get_json()
-    
-    if(dados["token"] not in tokens_online.keys()):
-        logger.debug(tokens_online)
-        return(jsonify({'token invalido': dados["token"]}))
-    
-    conn = db_connection()
-    cur = conn.cursor()
-
-    cur.execute("""SELECT utilizador.user_name,count(*)
-    FROM utilizador,artigo 
-    WHERE utilizador.user_name = artigo.utilizador_user_name
-    GROUP BY utilizador.user_name
-    ORDER BY count(*) DESC""")
-    
-    rows = cur.fetchall()
-    payload = []
-    logger.debug("---- top 10 artigos  ----")
-    count = 0
-    for row in rows:
-        count = count + 1
-        if count > 10: 
-            break
-        logger.debug(row)
-        content = {'user': row[0], 'total de artigos': row[1]}
-        payload.append(content) # appending to the payload to be returned
-
-    cur.close()
-    conn.close()
-    return jsonify(payload)
 
 #14
 @app.route("/cancelarLeilao/<idLeilao>", methods=['GET'])
@@ -1247,19 +1212,31 @@ def cancelar_leiloes(idLeilao):
     conn.close()
     return jsonify(result)
 
-
-@app.route("/estatisticas/vencedor", methods=['GET'], strict_slashes=True)
+#16
+@app.route("/top10_vencedores", methods=['GET'], strict_slashes=True)
 def top10_vencedores():
-    logger.info("###              DEMO: GET /estatisticas/vencedor             ###");   
+    logger.info("###              DEMO: GET /top10_vencedores             ###");   
     
     dados = request.get_json()
     
-    if(dados["token"] not in tokens_online.keys()):
-        logger.debug(tokens_online)
-        return(jsonify({'token invalido': dados["token"]}))
     
     conn = db_connection()
     cur = conn.cursor()
+
+    try:
+        cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online[dados["token"]],))
+        rows = cur.fetchall()
+        if(rows[0][0] == False):
+            cur.close()
+            conn.close()
+            return 'Erro utilizador não é admin!'
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.execute("commit")
+        cur.close()
+        conn.close()
+        return jsonify(result)
 
     cur.execute(""" SELECT leilao.user_vencedor,count(*)
     FROM leilao
@@ -1270,6 +1247,7 @@ def top10_vencedores():
     payload = []
     count = 0
     logger.debug("---- top 10 vencedores  ----")
+    count = 0
     for row in rows:
         count = count + 1
         if count > 10: 
@@ -1283,19 +1261,31 @@ def top10_vencedores():
     return jsonify(payload)
 
 
-@app.route("/estatisticas/artigo", methods=['GET'], strict_slashes=True)
-def top10_leiloadores():
-    logger.info("###              DEMO: GET /estatisticas/leilao            ###");   
+@app.route("/top10_artigos", methods=['GET'], strict_slashes=True)
+def top10_artigos():
+    logger.info("###              DEMO: GET /top10_artigos            ###");   
     
     dados = request.get_json()
     
-    if(dados["token"] not in tokens_online.keys()):
-        logger.debug(tokens_online)
-        return(jsonify({'token invalido': dados["token"]}))
     
     conn = db_connection()
     cur = conn.cursor()
 
+    try:
+        cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online[dados["token"]],))
+        rows = cur.fetchall()
+        if(rows[0][0] == False):
+            cur.close()
+            conn.close()
+            return 'Erro utilizador não é admin!'
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.execute("commit")
+        cur.close()
+        conn.close()
+        return jsonify(result)
+    
     cur.execute("""SELECT utilizador.user_name,count(*)
     FROM utilizador,artigo 
     WHERE utilizador.user_name = artigo.utilizador_user_name
@@ -1304,7 +1294,8 @@ def top10_leiloadores():
     
     rows = cur.fetchall()
     payload = []
-    logger.debug("---- top 10 a leiloar  ----")
+    logger.debug("---- top 10 artigos  ----")
+    count = 0
     for row in rows:
         count = count + 1
         if count > 10: 
@@ -1317,18 +1308,31 @@ def top10_leiloadores():
     conn.close()
     return jsonify(payload)
 
-@app.route("/estatisticas/leilao", methods=['GET'], strict_slashes=True)
+@app.route("/top10_leiloadores", methods=['GET'], strict_slashes=True)
 def top10_leiloadores():
     logger.info("###              DEMO: GET /estatisticas/leilao            ###");   
     
     dados = request.get_json()
     
-    if(dados["token"] not in tokens_online.keys()):
-        logger.debug(tokens_online)
-        return(jsonify({'token invalido': dados["token"]}))
-    
     conn = db_connection()
     cur = conn.cursor()
+
+    try:
+        
+        cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online[dados["token"]],))
+        logger.info("PASSOU")
+        rows = cur.fetchall()
+        if(rows[0][0] == False):
+            cur.close()
+            conn.close()
+            return 'Erro utilizador não é admin!'
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.execute("commit")
+        cur.close()
+        conn.close()
+        return jsonify(result)
 
     cur.execute("""SELECT utilizador.user_name,count(*)
     FROM utilizador,artigo,leilao 
@@ -1339,6 +1343,7 @@ def top10_leiloadores():
     rows = cur.fetchall()
     payload = []
     logger.debug("---- top 10 a leiloar  ----")
+    count = 0
     for row in rows:
         count = count + 1
         if count > 10: 
@@ -1346,6 +1351,48 @@ def top10_leiloadores():
         logger.debug(row)
         content = {'user': row[0], 'total de artigos leiloados': row[1]}
         payload.append(content) # appending to the payload to be returned
+
+    cur.close()
+    conn.close()
+    return jsonify(payload)
+
+
+@app.route("/top10_leiloes", methods=['GET'], strict_slashes=True)
+def top10_leiloes():
+    logger.info("###              DEMO: GET /top10_leiloes           ###");   
+    
+    dados = request.get_json()
+    
+    conn = db_connection()
+    cur = conn.cursor()
+
+    now = datetime.now()
+    limite = datetime.now() -timedelta(days = 10)
+    
+    try:
+        cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online[dados["token"]],))
+        rows = cur.fetchall()
+        if(rows[0][0] == False):
+            cur.close()
+            conn.close()
+            return 'Erro utilizador não é admin!'
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.execute("commit")
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
+    print("CHEGOU")
+    cur.execute("""SELECT count(*) FROM leilao WHERE data_ini > %s and data_ini < %s""",(limite,now))
+    
+    rows = cur.fetchall()
+    payload = []
+    logger.debug("---- leiloes nos ultimos 10 dias  ----")
+
+    content = {'total_leiloes': rows[0]}
+    payload.append(content) # appending to the payload to be returned
 
     cur.close()
     conn.close()
