@@ -1142,14 +1142,63 @@ def cancelar_leiloes(idLeilao):
 
 
     values = (True, idLeilao)  
-
-    #notificar os users
-    cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online(dados["token"]),))
-    rows = cur.fetchall()
     
 
     try:
+        #cancela o leilao
         cur.execute(statement, values)
+
+        #notificar os users
+        cur.execute("SELECT  artigo_id_artigo FROM leilao where id_leilao=%s" , (idLeilao,))
+        id_artigo_aux = cur.fetchall()
+        id_artigo = id_artigo_aux[0][0]
+
+        cur.execute("SELECT  utilizador_user_name FROM artigo where id_artigo=%s" , (id_artigo,))
+        username_aux = cur.fetchall()
+        username = username_aux[0][0]
+
+        #notifica vendedor
+
+        statement1 = """
+                INSERT INTO notificacao (id_noti,msg, data, is_open, utilizador_user_name) 
+                VALUES (  %s,   %s ,  %s,  %s ,%s)"""
+
+
+        msg="Leilao "+str(idLeilao)+" foi cancelado."
+
+        cur.execute("""
+                select max(id_noti)
+                from notificacao """)
+        id_noti_aux=cur.fetchall()
+
+        if(id_noti_aux[0][0] == None):
+            id_noti=0
+        else:
+            id_noti = id_noti_aux[0][0]
+        id_noti+=1
+
+        values1 = (id_noti, msg, datetime.today(), False, username) 
+        cur.execute(statement1, values1)
+
+        #notifica quem licitou neste leilao
+        cur.execute("SELECT  utilizador_user_name FROM registolicitacao where leilao_id_leilao=%s" , (idLeilao,))
+
+        for username_aux in cur.fetchall():
+            username = username_aux[0]
+            statement = """
+                INSERT INTO notificacao (id_noti,msg, data, is_open, utilizador_user_name) 
+                VALUES (  %s,   %s ,  %s,  %s ,%s)"""
+
+
+            msg="O leilao "+str(idLeilao)+" que licitou foi cancelado."
+
+            id_noti+=1
+
+            values1 = (id_noti, msg, datetime.today(), False, username) 
+            cur.execute(statement1, values1)
+
+
+
         cur.execute("commit")
 
     except (Exception, psycopg2.DatabaseError) as error:
@@ -1159,7 +1208,7 @@ def cancelar_leiloes(idLeilao):
 
 
 
-    result={"Leiloes Cancelado!!":idLeilao}
+    result={"Leilao Cancelado!!":idLeilao}
     cur.close()
     conn.close()
     return jsonify(result)
