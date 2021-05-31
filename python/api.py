@@ -230,13 +230,53 @@ def registo_utilizadores():
     logger.info("###             POST /utilizador              ###");   
     payload = request.get_json()
 
+    #protecao de dados
+    if(str(payload["user_name"]).isdecimal() == True):
+        msg = "Erro username invalido! Username deve conter letras e/ou numeros"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(len(payload["email"].split('@')) != 2):
+        msg = "Erro email inserido invalido!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(str(payload["nome"]).isdecimal() == True):
+        msg = "Erro nome inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(str(payload["genero"]).isdecimal() == True):
+        msg = "Erro genero inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(str(payload["nif"]).isdecimal() == False):
+        msg = "Erro nif inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    data=(payload["data_nasc"].split('-'))
+    if(len(data) > 3):
+        if(data[0].isdecimal() == False or data[1].isdecimal() == False or data[2].isdecimal() == False):
+            msg = "Erro data_nasc inserido invalido!"
+            logger.debug(msg)
+            return(jsonify(msg))
+    if(str(payload["estado"]).isdecimal() == True):
+        msg = "Erro estado inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(str(payload["contacto"]).isdecimal() == False):
+        msg = "Erro contacto inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(payload["is_admin"] != True or payload["is_admin"] != False):
+        msg = "Erro is_admin inserido invalido! Apenas pode ser true or false"
+        logger.debug(msg)
+        return(jsonify(msg))
+
+
     conn = db_connection()
     cur = conn.cursor()
 
     logger.info("---- new utilizador  ----")
     logger.debug(f'payload: {payload}')
 
-    # parameterized queries, good for security and performance
     statement = """
                   INSERT INTO utilizador (user_name, email,nome, password, genero, nif, data_nasc, estado, contacto, is_ban, is_admin) 
                           VALUES ( %s,   %s ,  %s,  %s , %s,   %s ,   %s, %s,   %s ,  %s,  %s )"""
@@ -262,15 +302,20 @@ def registo_utilizadores():
 #2
 @app.route("/login/", methods=['PUT'])
 def login():
-    logger.info("###             Login              ###");   
+     
     content = request.get_json()
+
+    #protecao de dados
+    if(content["user_name"].isdecimal() == True):
+        msg = "Erro username invalido! Username tem letras e/ou numeros"
+        logger.debug(msg)
+        return(jsonify(msg))
+
+    logger.info("###             Login              ###");  
 
     conn = db_connection()
     cur = conn.cursor()
 
-
-    #if content["ndep"] is None or content["nome"] is None :
-    #    return 'ndep and nome are required to update'
 
     if "user_name" not in content or "password" not in content:
         return 'user_name and password are required to login'
@@ -279,8 +324,6 @@ def login():
     logger.info("---- login  ----")
     logger.info(f'content: {content}')
 
-    # parameterized queries, good for security and performance
-    #como o user_name e unico basta fazermos assim e nao temos que contar as rows
     statement ="""
 
                 select user_name , password
@@ -746,12 +789,27 @@ def put_is_ativo_false( id_leilao):
 #8
 @app.route("/leiloes/<id_leilao>/<licitacao>", methods=['GET'])
 def licitar(id_leilao, licitacao):
+    #protecao de dados
+    if(id_leilao.isdecimal() == False):
+        msg = "Erro id leilao inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(licitacao.isdecimal() == False):
+        msg = "Erro licitacao inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
+    payload = request.get_json()
+
+    #protecao de dados
+    if(str(payload["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
     logger.info("###              DEMO: GET /licitar              ###");   
 
     logger.debug(f'id_leilao: {id_leilao}')
-
-
-    payload = request.get_json()
 
     if(payload["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
@@ -1071,6 +1129,24 @@ def editar_leilao(leilaoId):
 def escreve_msg_mural():
 
     content = request.get_json()
+    #protecao de dados
+    if(str(content["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(str(content["type"]).isdecimal() == True ):
+        msg = "Erro type inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(str(content["id_leilao"]).isdecimal() == False):
+        msg = "Erro id leilao inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(str(content["texto"]).isdecimal() == True):
+        msg = "Erro texto inserido invalido!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    
 
     if(content["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
@@ -1150,6 +1226,11 @@ def atualizaLicitacoes():
 @app.route("/terminarLeiloes", methods=['GET'])
 def terminar_leiloes():
     dados = request.get_json()
+    #protecao de dados
+    if(str(dados["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
     if(dados["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
@@ -1198,6 +1279,17 @@ def terminar_leiloes():
 @app.route("/cancelarLeilao/<idLeilao>", methods=['GET'])
 def cancelar_leiloes(idLeilao):
     dados = request.get_json()
+    #protecao de dados
+    if(str(dados["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    
+    if (idLeilao.isdecimal() == False):
+        msg = "Erro idLeilao inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
     if(dados["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
@@ -1304,6 +1396,146 @@ def cancelar_leiloes(idLeilao):
     cur.close()
     conn.close()
     return jsonify(result)
+
+
+
+#15
+@app.route("/admin/ban/<userToBan>", methods=['POST'], strict_slashes=True)
+def ban_user(userToBan):
+    logger.info("###            DEMO: POST /admin/ban/user           ###");
+    dados = request.get_json()
+
+    if(dados["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    # verificar se é admin
+    try:
+        cur.execute("""SELECT  is_admin FROM utilizador WHERE user_name=%s;""" , (tokens_online[dados["token"]],))
+        rows = cur.fetchall()
+        if(rows[0][0] == False):
+            cur.close()
+            conn.close()
+            return 'Erro utilizador não é admin!'
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.execute("commit")
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
+    # verificar que nao está a tentar banir um admin
+    try:
+        cur.execute("""SELECT  is_admin FROM utilizador WHERE user_name=%s;""" , (str(userToBan),))
+        rows = cur.fetchall()
+        if(rows[0][0] == True):
+            cur.close()
+            conn.close()
+            return 'Não pode banir user com permissões de admin'
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.execute("commit")
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
+    # atualizar tabela utilizador
+    statement = """UPDATE utilizador
+                SET is_ban = True
+                WHERE user_name = %s;"""
+    values = (str(userToBan),)
+
+    try:
+        cur.execute(statement, values)
+        #nao dar commit pq temos de alterar todos os dados e só no fim da funçao dar commit
+
+        # cancelar leiloes criados por userToBan
+        #   ir buscar id do artigo criado pelo userToBan
+        cur.execute("""SELECT artigo.id_artigo
+                    FROM leilao, artigo
+                    WHERE leilao.artigo_id_artigo = artigo.id_artigo and artigo.utilizador_user_name = %s;""", (str(userToBan),))
+        
+        rows = cur.fetchall()
+        aux_id_artigo = rows[0][0]
+        print("id_artigo = ", aux_id_artigo)
+
+        statement = """UPDATE leilao
+                    SET is_canceled = true
+                    WHERE artigo_id_artigo = %s;"""
+        values = (str(aux_id_artigo),)
+        cur.execute(statement, values)
+
+        # cancelar licitacoes do userToBan
+        statement = """UPDATE registolicitacao
+                    SET is_canceled = true
+                    WHERE utilizador_user_name = %s"""
+        values = (str(userToBan),)
+        cur.execute(statement, values)
+
+        #encontrar leiloes com licitacoes do userToBan
+        statement = """SELECT leilao_id_leilao, preco_licitacao
+                    FROM registolicitacao
+                    WHERE utilizador_user_name = %s and is_canceled = true;"""
+        value = (str(userToBan),)
+        cur.execute(statement, values)
+
+        rows = cur.fetchall()
+        lista_leiloes = []
+        lista_preco_licitacao = []
+        for r in rows:
+            lista_leiloes.append(r[0])
+            lista_preco_licitacao.append(r[1])
+
+
+        statement = """UPDATE registolicitacao
+                    SET is_canceled = true
+                    WHERE leilao_id_leilao = %s and preco_licitacao > %s;"""
+
+        for i in range(len(lista_leiloes)):
+            values = (lista_leiloes[i], lista_preco_licitacao[i])
+            cur.execute(statement, values)
+
+
+
+
+
+
+
+
+
+    #falta atualizar valor_atual no leilao
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.close()
+        conn.close()
+        return jsonify(result)
+    
+
+
+
+
+
+
+    try:
+
+        #nao dar commit pq temos de alterar todos os dados e só no fim da funçao dar commit
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
+
+    #falta dar commit
 
 #16
 @app.route("/top10_vencedores", methods=['GET'], strict_slashes=True)
@@ -1515,7 +1747,7 @@ def top10_leiloes():
 
 def db_connection():
     db = psycopg2.connect(user = "postgres",
-                            password = "django500",
+                            password = "bd2021",
                             host = "localhost",
                             port = "5432",
                             database = "projeto")  #dbname
