@@ -1533,10 +1533,7 @@ def ban_user(userToBan):
         conn.close()
         return jsonify(result)
     
-
-
-    #falta dar commit
-
+    
 #16
 @app.route("/top10_vencedores", methods=['GET'], strict_slashes=True)
 def top10_vencedores():
