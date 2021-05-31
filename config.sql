@@ -9,20 +9,22 @@ CREATE TABLE artigo (
 );
 
 CREATE TABLE registolicitacao (
+	id_licitacao	 INTEGER DEFAULT 0,
 	preco_licitacao	 BIGINT UNIQUE NOT NULL,
 	data_licitacao	 TIMESTAMP NOT NULL,
-	leilao_id_leilao	 INTEGER,
-	utilizador_user_name VARCHAR(512),
-	PRIMARY KEY(leilao_id_leilao,utilizador_user_name)
+	leilao_id_leilao	 INTEGER NOT NULL,
+	utilizador_user_name VARCHAR(512) NOT NULL,
+	PRIMARY KEY(id_licitacao)
 );
 
 CREATE TABLE comentarios (
+	id_comentario	 INTEGER DEFAULT 0,
 	type		 VARCHAR(512) NOT NULL,
 	texto		 VARCHAR(512) NOT NULL,
 	data_pub		 TIMESTAMP NOT NULL,
-	leilao_id_leilao	 INTEGER,
-	utilizador_user_name VARCHAR(512),
-	PRIMARY KEY(leilao_id_leilao,utilizador_user_name)
+	leilao_id_leilao	 INTEGER NOT NULL,
+	utilizador_user_name VARCHAR(512) NOT NULL,
+	PRIMARY KEY(id_comentario)
 );
 
 CREATE TABLE utilizador (
@@ -54,7 +56,7 @@ CREATE TABLE leilao (
 );
 
 CREATE TABLE notificacao (
-	id_noti		 INTEGER UNIQUE NOT NULL,
+	id_noti		 INTEGER UNIQUE NOT NULL DEFAULT 0,
 	msg			 VARCHAR(512) NOT NULL,
 	data		 TIMESTAMP NOT NULL,
 	is_open		 BOOL NOT NULL DEFAULT false,
