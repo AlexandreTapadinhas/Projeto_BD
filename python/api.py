@@ -1132,9 +1132,74 @@ def top10_artigo():
         content = {'user': row[0], 'total de artigos': row[1]}
         payload.append(content) # appending to the payload to be returned
 
+<<<<<<< HEAD
     cur.close()
     conn.close()
     return jsonify(payload)
+=======
+#14
+@app.route("/cancelarLeilao/<idLeilao>", methods=['GET'])
+def cancelar_leiloes(idLeilao):
+    dados = request.get_json()
+    if(dados["token"] not in tokens_online.keys()):
+        logger.debug(tokens_online)
+        return(jsonify({'token invalido': dados["token"]}))
+
+        
+    logger.info("###              DEMO: GET /terminar leiloes            ###");   
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    try:
+        cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online(dados["token"]),))
+        rows = cur.fetchall()
+        if(rows[0][0] == False):
+            cur.close()
+            conn.close()
+            return 'Erro utilizador não é admin!'
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        result = {"erro" : str(error)}
+        cur.execute("commit")
+        cur.close()
+        conn.close()
+        return jsonify(result)
+
+    
+
+    logger.debug("---- cancelar leiloes  ----")
+
+    statement = """
+            UPDATE leilao
+            SET is_canceled = %s
+            WHERE id_leilao = %s"""
+
+
+    values = (True, idLeilao)  
+
+    #notificar os users
+    cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online(dados["token"]),))
+    rows = cur.fetchall()
+    
+
+    try:
+        cur.execute(statement, values)
+        cur.execute("commit")
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        cur.execute("rollback")
+        logger.error(error)
+
+
+
+
+    result={"Leiloes Cancelado!!":idLeilao}
+    cur.close()
+    conn.close()
+    return jsonify(result)
+
+>>>>>>> 67a40788cd2bb49d187a3517d5ba5c9b34a93047
 
 @app.route("/estatisticas/vencedor", methods=['GET'], strict_slashes=True)
 def top10_vencedores():
