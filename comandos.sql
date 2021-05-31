@@ -45,3 +45,36 @@ INSERT INTO comentarios(type,texto,data_pub,leilao_id_leilao,utilizador_user_nam
 INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (123,'30-05-2021 12:30:03',134,'pedro');
 INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (156,'28-05-2021 06:02:15',134,'tapadinhas');
 INSERT INTO registolicitacao(preco_licitacao,data_licitacao,leilao_id_leilao,utilizador_user_name) VALUES (196,'29-05-2021 19:19:19',134,'ines');
+
+
+CREATE function novalicitacao() returns trigger
+language plpgsql
+AS $$
+DECLARE
+	noti_count numeric;
+	
+	c1 cursor for
+		select data_licitacao
+		from registolicitacao
+        where registolicitacao.leilao_id_leilao = new.leilao_id_leilao 
+		and new.preco_licitacao > registolicitacao.preco_licitacao;
+		
+BEGIN
+	select max(id_noti) into noti_count from notificacao;
+	for r in c1
+	loop
+        noti_count :=  noti_count + 1;
+        insert into notificacao(id_noti,msg,data,is_open,utilizador_user_name)
+		values(noti_count,'nova licitacao',r.data_licitacao,true,new.utilizador_user_name); 
+	end loop;
+	return new;
+end;
+$$;
+
+create trigger avisolicitacao
+after insert or update or delete on registolicitacao
+for each row
+execute procedure novalicitacao();
+
+DROP trigger if exists avisolicitacao on registolicitacao;
+DROP function if exists novalicitacao cascade;
