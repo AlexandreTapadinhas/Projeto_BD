@@ -1,5 +1,5 @@
 import psycopg2
-from datetime import datetime
+from datetime import datetime,timedelta
 
 
 #artigo(ID_Artigo,ID_Leilao,Inicio,Fim),leilao(ID_Leilao,Inicio,Fim),utilizador(ID_Utilizador,NOME,IDADE,MORADA,GENERO,NACIONALIDADE,SEXO,TELEFONE)
@@ -305,9 +305,26 @@ def getNumLeiloes():
     con.close()
 #print(comparaDatas("01-06-2021","02-06-2021","03-07-2021"))
 
-getNumLeiloes()
+
 #"data_ini": "01-06-2021",
 #    "data_fim": "14-06-2021",
 #print(geraId())
 #testeArgumentos(778451,1750)
 
+def testeDatas():
+    con = getConnection()
+    cursor = con.cursor()
+
+    now = datetime.now()
+    limite = datetime.now() -timedelta(days = 10)
+
+    print(limite)
+    cursor.execute("""SELECT count(*) FROM leilao WHERE data_ini > %s and data_ini < %s""",(limite,now))
+
+    for row in cursor.fetchall():
+        print(row)
+
+    cursor.close()
+    con.close()
+
+testeDatas()
