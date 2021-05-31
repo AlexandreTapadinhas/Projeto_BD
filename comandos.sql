@@ -89,7 +89,7 @@ language plpgsql
 AS $$
 DECLARE
 	noti_count numeric;
-
+    msg varchar;
 	c1 cursor for
 		select data_licitacao
 		from registolicitacao
@@ -98,11 +98,12 @@ DECLARE
 		
 BEGIN
 	select max(id_noti) into noti_count from notificacao;
+    msg := 'nova licitacao no leilao' || new.leilao_id_leilao;
 	for r in c1
 	loop
         noti_count :=  noti_count + 1;
         insert into notificacao(id_noti,msg,data,is_open,utilizador_user_name)
-		values(noti_count,'nova licitacao',r.data_licitacao,false,new.utilizador_user_name); 
+		values(noti_count,msg,r.data_licitacao,false,new.utilizador_user_name); 
 	end loop;
 	return new;
 end;
@@ -133,7 +134,7 @@ DECLARE
 		
 BEGIN
 	select max(id_noti) into noti_count from notificacao;
-    msg := 'Nova mensagem no mural no leilão ' || new.leilao_id_leilao;
+    msg := 'Nova mensagem no mural do leilão ' || new.leilao_id_leilao;
 
 	for r in c1
 	loop
