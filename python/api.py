@@ -923,7 +923,7 @@ def editar_leilao(leilaoId):
         return(jsonify(msg))
 
     if(str(content["codigoisbn"]).isdecimal() == False):
-        msg = "Errocodigoisbn inserido apresenta carateres invalidos!"
+        msg = "Erro codigoisbn inserido apresenta carateres invalidos!"
         logger.debug(msg)
         return(jsonify(msg))
     if(str(content["categoria"]).isdecimal() == True):
@@ -1405,6 +1405,16 @@ def ban_user(userToBan):
     logger.info("###            DEMO: POST /admin/ban/user           ###");
     dados = request.get_json()
 
+    if(str(dados["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
+    if(str(userToBan).isdecimal() == True):
+        msg = "Erro user_name inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
     if(dados["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
@@ -1533,7 +1543,7 @@ def ban_user(userToBan):
         conn.close()
         return jsonify(result)
     
-    
+
 #16
 @app.route("/top10_vencedores", methods=['GET'], strict_slashes=True)
 def top10_vencedores():
