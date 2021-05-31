@@ -1361,13 +1361,29 @@ def ban_user(userToBan):
             values = (lista_leiloes[i], lista_preco_licitacao[i])
             cur.execute(statement, values)
 
+        # encontrar o preco da ultima licitacao nao cancelada de cada leilao com licitacoes canceladas
+        statement = """SELECT max(preco_licitacao)
+                    FROM registolicitacao
+                    WHERE leilao_id_leilao = %s and is_canceled = false;"""
 
+        lista_preco_licitacao_nao_cancelada = []
+        for i in range(len(lista_leiloes)):
+            values = (lista_leiloes[i],)
+            cur.execute(statement, values)
+            rows = cur.fetchall()
+            lista_preco_licitacao_nao_cancelada.append(rows[0][0])
 
+        #atualizar os precos atuais dos leiloes
+        statement = """UPDATE leilao
+                    SET preco_atual = %s
+                    WHERE id_leilao = %s;"""
 
+        for i in range(len(lista_leiloes)):
+            values = (lista_preco_licitacao_nao_cancelada[i], lista_leiloes[i])
+            cur.execute(statement, values)
 
-
-
-
+        cur.execute('commit')
+        return jsonify({"User banned": userToBan, "Leilões atualizados": lista_leiloes})
 
     #falta atualizar valor_atual no leilao
 
@@ -1378,22 +1394,6 @@ def ban_user(userToBan):
         conn.close()
         return jsonify(result)
     
-
-
-
-
-
-
-    try:
-
-        #nao dar commit pq temos de alterar todos os dados e só no fim da funçao dar commit
-
-    except (Exception, psycopg2.DatabaseError) as error:
-        logger.error(error)
-        result = {"erro" : str(error)}
-        cur.close()
-        conn.close()
-        return jsonify(result)
 
 
     #falta dar commit
