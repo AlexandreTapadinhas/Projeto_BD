@@ -8794,3 +8794,68 @@ INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:05:34] "[31m[1mPUT /top10_leiloe
 INFO:logger:###              DEMO: GET /top10_leiloes           ###
 DEBUG:logger:---- leiloes nos ultimos 10 dias  ----
 INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:05:37] "GET /top10_leiloes HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:20:19] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:20:20] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:20:21] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:20:22] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'esdrubal', 'password': 'password'}
+INFO:werkzeug:192.168.4.6 - - [31/May/2021 15:20:23] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\miaup\\Desktop\\Universidade\\3ano\\2º semestre\\BD\\Nova_pasta\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 109-500-291
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.4.6:5000/ (Press CTRL+C to quit)

@@ -314,6 +314,11 @@ def criar_artigo():
     logger.info("###              DEMO: POST /artigo              ###");   
     payload = request.get_json()
 
+    if(str(payload["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
     if(payload["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': payload["token"]}))
@@ -330,6 +335,28 @@ def criar_artigo():
                           VALUES (%s ,  %s,  %s , %s,   %s, %s)"""
 
     values = (payload["id_artigo"],payload["codigoisbn"],payload["nome_artigo"],payload["categoria"],payload["descricao"],payload["utilizador_user_name"])
+
+    if(str(payload["id_artigo"]).isdecimal() == False):
+        msg = "Erro id_artigo inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(str(payload["codigoisbn"]).isdecimal() == False):
+        msg = "Erro codigoisbn inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(str(payload["nome_artigo"]).isdecimal() == True):
+        msg = "Erro nome_artigo inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+    if(str(payload["categoria"]).isdecimal() == True):
+        msg = "Erro categoria inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
+    if(str(payload["utilizador_user_name"]).isdecimal() == True):
+        msg = "Erro utilizador_user_name inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
 
     try:
         cur.execute(statement, values)
@@ -391,7 +418,11 @@ def get_all_leiloes():
     logger.info("###              DEMO: GET /leilao             ###");   
     
     dados = request.get_json()
-    
+    if(str(dados["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
     if(dados["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
@@ -433,6 +464,11 @@ def search_leilao(keyword):
 
     dados = request.get_json()
     
+    if(str(dados["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
     if(dados["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
@@ -473,6 +509,16 @@ def consult_leilao(leilaoId):
     dados = request.get_json()
     #TODO: Imprimir msg do mural e registo de licitacoes
     #TODO: Verificar datas
+    if(str(dados["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
+    if(str(leilaoId).isdecimal() == False):
+        msg = "Erro id inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
     if(dados["token"] not in tokens_online.keys()):
         logger.debug(tokens_online)
         return(jsonify({'token invalido': dados["token"]}))
@@ -1362,6 +1408,10 @@ def top10_vencedores():
     
     conn = db_connection()
     cur = conn.cursor()
+    if(str(dados["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
 
     try:
         cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online[dados["token"]],))
@@ -1411,6 +1461,11 @@ def top10_artigos():
     conn = db_connection()
     cur = conn.cursor()
 
+    if(str(dados["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
+
     try:
         cur.execute("SELECT  is_admin FROM utilizador where user_name=%s" , (tokens_online[dados["token"]],))
         rows = cur.fetchall()
@@ -1456,6 +1511,11 @@ def top10_leiloadores():
     
     conn = db_connection()
     cur = conn.cursor()
+
+    if(str(dados["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
 
     try:
         
@@ -1505,6 +1565,11 @@ def top10_leiloes():
     
     conn = db_connection()
     cur = conn.cursor()
+
+    if(str(dados["token"]).isdecimal() == False):
+        msg = "Erro token inserido apresenta carateres invalidos!"
+        logger.debug(msg)
+        return(jsonify(msg))
 
     now = datetime.now()
     limite = datetime.now() -timedelta(days = 10)
