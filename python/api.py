@@ -116,7 +116,8 @@ def registo_utilizadores():
                           VALUES ( %s,   %s ,  %s,  %s , %s,   %s ,   %s, %s,   %s ,  %s,  %s )"""
 
     
-    values = (payload["user_name"], payload["email"], payload["nome"], str(encrypt_password(payload["password"])),payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,payload["is_admin"])
+    #values = (payload["user_name"], payload["email"], payload["nome"], str(encrypt_password(payload["password"])),payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,payload["is_admin"])
+    values = (payload["user_name"], payload["email"], payload["nome"], payload["password"],payload["genero"],payload["nif"],payload["data_nasc"],payload["estado"],payload["contacto"], False ,payload["is_admin"])
 
     try:
         cur.execute(statement, values)
@@ -404,14 +405,14 @@ def search_leilao(keyword):
 
     logger.debug("---- leiloes  ----")
     logger.debug(keyword)
-
-    if(cur.fetchall() == []):
+    rows = cur.fetchall()
+    if(rows == []):
         payload.append({'leilao nao encontrado':keyword})
         cur.close()
         conn.close()
         return jsonify(payload)
   
-    for row in cur.fetchall():
+    for row in rows:
         logger.debug(row)
         if(row[3]<= datetime.today() and row[4]>datetime.today()):    
             if(keyword.isdecimal()):
@@ -1702,7 +1703,6 @@ def top10_leiloes():
         conn.close()
         return jsonify(result)
 
-    print("CHEGOU")
     cur.execute("""SELECT count(*) FROM leilao WHERE data_ini > %s and data_ini < %s""",(limite,now))
     
     rows = cur.fetchall()
@@ -1721,7 +1721,7 @@ def top10_leiloes():
 
 def db_connection():
     db = psycopg2.connect(user = "postgres",
-                            password = "django500",
+                            password = "bd2021",
                             host = "localhost",
                             port = "5432",
                             database = "projeto")  #dbname

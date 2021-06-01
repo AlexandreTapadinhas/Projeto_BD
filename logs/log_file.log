@@ -9144,3 +9144,371 @@ INFO:werkzeug: * Debugger PIN: 755-629-396
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'ines', 'email': 'ines@hotmail.com', 'nome': 'ines teixeira', 'password': 'password', 'genero': 'feminino', 'nif': 12365478, 'data_nasc': '18-12-2000', 'estado': 'solteiro', 'contacto': 96258741, 'is_admin': True}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:08:13] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'pedro', 'email': 'pedro@hotmail.com', 'nome': 'pedro tavares', 'password': 'password', 'genero': 'masculino', 'nif': 63254187, 'data_nasc': '21-02-2000', 'estado': 'solteiro', 'contacto': 937592165, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:09:14] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'tapadinhas', 'email': 'tapadinhas@hotmail.com', 'nome': 'rui tapadinhas', 'password': 'password', 'genero': 'masculino', 'nif': 8546972, 'data_nasc': '02-09-2000', 'estado': 'solteiro', 'contacto': 924510364, 'is_admin': True}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:10:11] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'teresa', 'email': 'teresa@hotmail.com', 'nome': 'teresa tapadinhas', 'password': 'password', 'genero': 'feminino', 'nif': 1236549, 'data_nasc': '28-09-2000', 'estado': 'casada', 'contacto': 982036365, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:11:10] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'fernando', 'email': 'fernando@hotmail.com', 'nome': 'fernando tapadinhas', 'password': 'password', 'genero': 'masculino', 'nif': 1987532645, 'data_nasc': '15-01-1999', 'estado': 'casado', 'contacto': 906548231, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:12:01] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'maria', 'email': 'maria@hotmail.com', 'nome': 'maria alves', 'password': 'password', 'genero': 'feminino', 'nif': 3219853, 'data_nasc': '09-03-1999', 'estado': 'solteira', 'contacto': 916548234, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:12:49] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'kiko', 'email': 'kiko@hotmail.com', 'nome': 'kiko alves', 'password': 'password', 'genero': 'masculino', 'nif': 25631987, 'data_nasc': '03-04-1999', 'estado': 'solteiro', 'contacto': 958632147, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:13:34] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'tibursio', 'email': 'tibursio@hotmail.com', 'nome': 'tibursio alves', 'password': 'password', 'genero': 'masculino', 'nif': 3215864, 'data_nasc': '12-04-1999', 'estado': 'solteiro', 'contacto': 965812370, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:14:23] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'jose', 'email': 'jose@hotmail.com', 'nome': 'jose pereira', 'password': 'password', 'genero': 'masculino', 'nif': 632541987, 'data_nasc': '23-04-1999', 'estado': 'solteiro', 'contacto': 945328614, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:15:02] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'filipe', 'email': 'filipe@hotmail.com', 'nome': 'filipe abreu', 'password': 'password', 'genero': 'masculino', 'nif': 987321654, 'data_nasc': '09-07-1999', 'estado': 'solteiro', 'contacto': 903842651, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:15:46] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'sofia', 'email': 'sofia@hotmail.com', 'nome': 'sofia abreu', 'password': 'password', 'genero': 'feminino', 'nif': 987456325, 'data_nasc': '01-07-1999', 'estado': 'solteiro', 'contacto': 987365214, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:16:50] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'mike', 'email': 'mike@hotmail.com', 'nome': 'mike silva', 'password': 'password', 'genero': 'masculino', 'nif': 987523641, 'data_nasc': '01-12-1999', 'estado': 'solteiro', 'contacto': 976325841, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:18:09] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'rita', 'email': 'rita@hotmail.com', 'nome': 'rita rodrigues', 'password': 'password', 'genero': 'feminino', 'nif': 932165487, 'data_nasc': '11-12-1999', 'estado': 'solteiro', 'contacto': 936521486, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:19:21] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'joana', 'email': 'joana@hotmail.com', 'nome': 'joana marques', 'password': 'password', 'genero': 'feminino', 'nif': 976325841, 'data_nasc': '19-12-1999', 'estado': 'solteiro', 'contacto': 986325410, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:20:05] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:34:12] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:35:30] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:36:10] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:36:23] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+ERROR:logger:name 'values' is not defined
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:36:52] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:37:39] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:38:14] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'pedro', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:38:19] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'tapadinhas', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 13:38:26] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'tapadinhas', 'password': 'password'}
+ERROR:logger:operator does not exist: character varying = bytea
+LINE 5: ...      where user_name = 'tapadinhas' and password = '\x67414...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:14:02] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###             POST /utilizador              ###
+INFO:logger:---- new utilizador  ----
+DEBUG:logger:payload: {'user_name': 'test', 'email': 'test@hotmail.com', 'nome': 'test marques', 'password': 'password', 'genero': 'feminino', 'nif': 852369741, 'data_nasc': '19-12-1999', 'estado': 'solteiro', 'contacto': 789654102, 'is_admin': False}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:14:35] "POST /registoUtilizador/ HTTP/1.1" 200 -
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'test', 'password': 'password'}
+ERROR:logger:operator does not exist: character varying = bytea
+LINE 5: ...            where user_name = 'test' and password = '\x67414...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:14:46] "PUT /login/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:logger:###             Login              ###
+INFO:logger:---- login  ----
+INFO:logger:content: {'user_name': 'ines', 'password': 'password'}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:17:29] "PUT /login/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /artigo              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'token': 6724, 'id_artigo': 6321, 'codigoisbn': 789654, 'nome_artigo': 'rato', 'categoria': 'tecnologia', 'descricao': 'rato com luzinhas do aliexpress', 'utilizador_user_name': 'joana'}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:21:11] "POST /artigo/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+INFO:logger:---- new artigo  ----
+DEBUG:logger:payload: {'id_artigo': 6321, 'id_leilao': 3, 'data_ini': '01-06-2021 12:30:30', 'data_fim': '14-06-2021 13:30:30', 'preco_base': 5, 'token': 6724}
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:21:56] "POST /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:(123, 'abstrata', 987654321, datetime.datetime(2021, 5, 28, 21, 30, 12), datetime.datetime(2021, 6, 2, 14, 12, 3))
+DEBUG:logger:(2, 'carro', 985674326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 6, 30, 20, 30, 30))
+DEBUG:logger:(4, 'motociclo', 986574326, datetime.datetime(2021, 5, 30, 20, 2, 2), datetime.datetime(2021, 7, 15, 20, 30, 30))
+DEBUG:logger:(7, 'atrigo para leilao terminado', 852, datetime.datetime(2021, 5, 20, 20, 2, 2), datetime.datetime(2021, 6, 1, 15, 0))
+DEBUG:logger:(3, 'rato com luzinhas do aliexpress', 789654, datetime.datetime(2021, 6, 1, 12, 30, 30), datetime.datetime(2021, 6, 14, 13, 30, 30))
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:22:19] "GET /leilao/ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:3
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:23:49] "GET /leiloes/3 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:luzinhas
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:24:17] "GET /leiloes/luzinhas HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:rato
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:24:22] "GET /leiloes/rato HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:rato
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:25:04] "GET /leiloes/rato HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:artigo
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:26:01] "GET /leiloes/artigo HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:carro
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:26:44] "GET /leiloes/carro HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:852
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:27:16] "GET /leiloes/852 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:28:48] "GET /leilao/852 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:Erro id inserido apresenta carateres invalidos!
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:28:55] "GET /leilao/rato HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /leilao             ###
+DEBUG:logger:---- leiloes  ----
+DEBUG:logger:rato
+INFO:werkzeug:192.168.1.7 - - [01/Jun/2021 14:29:20] "GET /leiloes/rato HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/utilizador/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 755-629-396
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.7:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Inês Margarida\\Desktop\\BD\\Projeto_Meta2\\Projeto_BD\\python\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
